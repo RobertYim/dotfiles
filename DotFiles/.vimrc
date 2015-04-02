@@ -18,6 +18,10 @@ if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
 
+" remap
+nmap L $
+nmap H ^
+
 "--------
 " Vim UI
 "--------

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# /etc/rc.sleep
+
+# Unload discoveryd to disable maintenance wakeup every two hours
+launchctl unload /System/Library/LaunchDaemons/com.apple.discoveryd.plist
+

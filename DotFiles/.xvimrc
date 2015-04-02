@@ -1,9 +1,6 @@
 " no status bar
 set laststatus=0
 
-" set leader
-let mapleader=","
-
 " proper search
 set incsearch
 set ignorecase
@@ -16,7 +13,7 @@ set gdefault
 set noerrorbells
 
 " use system pasteboard
-set pasteboard
+set clipboard=unnamed
 
 " move between assistant editors
 nnoremap <C-j> <C-w>j
@@ -27,23 +24,28 @@ nnoremap <C-h> <C-w>h
 " quick open
 nnoremap <C-p> :xccmd openQuickly<cr>
 
-" navigator
+" navigator and utility area
 nnoremap <C-n> :xccmd toggleNavigatorsVisibility<cr>
+nmap <C-m> :xccmd toggleUtilitiesVisibility<cr>
 
 " comments
-nnoremap gcc :xccmd commentAndUncommentCurrentLines<cr>
-vnoremap gc  :xccmd commentAndUncommentCurrentLines<cr>
+" nnoremap gcc :xccmd commentAndUncommentCurrentLines<cr>
+" vnoremap gc  :xccmd commentAndUncommentCurrentLines<cr>
 
 " jump to issues
-nmap ;e :xcmenucmd Jump to Next Issue<cr>
-nmap ;E :xcmenucmd Jump to Previous Issue<cr>
+nmap ,e :xcmenucmd Jump to Next Issue<cr>
+nmap ,E :xcmenucmd Jump to Previous Issue<cr>
+
+" go forward and backward
+nmap ,l :xccmd goForwardInHistoryByCommand<cr>
+nmap ,h :xccmd goBackInHistoryByCommand<cr>
 
 " jump between .h/.m
-nnoremap <leader>f :xccmd jumpToNextCounterpart<cr>
-inoremap <leader>f :xccmd jumpToNextCounterpart<cr>
+nnoremap ,f :xccmd jumpToNextCounterpart<cr>
+inoremap ,f :xccmd jumpToNextCounterpart<cr>
 
 " make
-nmap ;m :xmenucmd Run<cr>
+" nmap ,m :xmenucmd Run<cr>
 
 " quicker indentation
 nnoremap > >>
@@ -65,7 +67,7 @@ nnoremap Y y$
 " better line begin (H) and end (L)
 noremap H ^
 noremap L $
-vnoremap L g_
+" vnoremap L g_
 
 " apply macros with Q
 nnoremap Q @q
@@ -75,7 +77,7 @@ vnoremap Q :norm @q<cr>
 map <tab> %
 
 " new tab
-nnoremap ;T :xccmd newTab<cr>
+nnoremap ,t :xccmd newTab<cr>
 nnoremap gT :xccmd selectPreviousTab<cr>
 nnoremap gt :xccmd selectNextTab<cr>
 
@@ -85,14 +87,14 @@ nnoremap zo :xccmd unfold<cr>
 
 " remove whitespace
 command! KillWhitespace :normal :%s/\s\+$//g<cr>
-nnoremap <silent> ;k :KillWhitespace<cr>:nohlsearch<cr>
+nnoremap <silent> ,k :KillWhitespace<cr>:nohlsearch<cr>
 
 " select whole buffer
-nnoremap ;va ggVG
+nnoremap ,va ggVG
 
 " yank whole buffer
-nnoremap ;ya :let yank_view=winsaveview()<cr>ggyG<cr>:call winrestview(yank_view)<cr>
+nnoremap ,ya :let yank_view=winsaveview()<cr>ggyG<cr>:call winrestview(yank_view)<cr>
 
 " align block
-nnoremap ;a :let align_view=winsaveview()<cr>=i}<cr>:call winrestview(align_view)<cr>
+nnoremap ,a :let align_view=winsaveview()<cr>=i}<cr>:call winrestview(align_view)<cr>
 

@@ -1,0 +1,34 @@
+{
+	// set color scheme
+    "color_scheme": "Packages/User/Monokai Soda.tmTheme",
+
+    // highlight current line
+	"highlight_line": true,
+
+    // ignored packages
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+
+    // set theme
+	"theme": "Soda Dark.sublime-theme",
+
+    // translate tabs to spaces
+	"translate_tabs_to_spaces": true,
+
+    // set font
+    "font_face": "Monaco",
+
+    // don't show the tab-close-button
+    "show_tab_close_buttons": false,
+
+    // set line-ending style
+    "default_line_ending": "unix",
+
+    // remove unnecessary white space on the end of each line
+    "trim_trailing_white_space_on_save": true,
+
+    // incert a new line on save
+    "ensure_newline_at_eof_on_save": true
+}

@@ -217,8 +217,10 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Disable shadow in screenshots
 # defaults write com.apple.screencapture disable-shadow -bool true
 
-# Enable subpixel font rendering on non-Apple LCDs
-defaults write NSGlobalDomain AppleFontSmoothing -int 2
+# Enable subpixel font rendering on non-Apple LCDs, Possible values: 0 - 3 (from thin to thick):
+# defaults write NSGlobalDomain AppleFontSmoothing -int 2
+# Restore to default:
+# defaults delete NSGlobalDomain AppleFontSmoothing
 
 # Enable HiDPI display modes (requires restart)
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true

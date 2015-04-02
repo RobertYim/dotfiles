@@ -1,6 +1,9 @@
 " no status bar
 set laststatus=0
 
+" set leader
+let mapleader=","
+
 " proper search
 set incsearch
 set ignorecase
@@ -34,6 +37,10 @@ vnoremap gc  :xccmd commentAndUncommentCurrentLines<cr>
 " jump to issues
 nmap ;e :xcmenucmd Jump to Next Issue<cr>
 nmap ;E :xcmenucmd Jump to Previous Issue<cr>
+
+" jump between .h/.m
+nnoremap <leader>f :xccmd jumpToNextCounterpart<cr>
+inoremap <leader>f :xccmd jumpToNextCounterpart<cr>
 
 " make
 nmap ;m :xmenucmd Run<cr>

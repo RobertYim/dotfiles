@@ -10,7 +10,7 @@ syntax on
 let mapleader=","
 let maplocalleader="\\"
 " use system pasteboard
-set clipboard=unnamed
+" set clipboard=unnamed
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps

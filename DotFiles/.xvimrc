@@ -1,3 +1,6 @@
+""" Behaviors
+""" https://github.com/XVimProject/XVim/blob/master/Documents/Users/FeatureList.md
+
 " no status bar
 set laststatus=0
 
@@ -15,6 +18,9 @@ set noerrorbells
 " use system pasteboard
 set clipboard=unnamed
 
+""" MenuActionList
+""" https://github.com/XVimProject/XVim/blob/master/Documents/Developers/MenuActionList.txt
+
 " move between assistant editors
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -22,10 +28,10 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
 
 " quick open
-nnoremap <C-p> :xccmd openQuickly<cr>
+nmap <C-p> :xccmd openQuickly<cr>
 
 " navigator and utility area
-nnoremap <C-n> :xccmd toggleNavigatorsVisibility<cr>
+nmap <C-n> :xccmd toggleNavigatorsVisibility<cr>
 nmap <C-m> :xccmd toggleUtilitiesVisibility<cr>
 
 " comments
@@ -43,9 +49,6 @@ nmap ,h :xccmd goBackInHistoryByCommand<cr>
 " jump between .h/.m
 nnoremap ,f :xccmd jumpToNextCounterpart<cr>
 inoremap ,f :xccmd jumpToNextCounterpart<cr>
-
-" make
-" nmap ,m :xmenucmd Run<cr>
 
 " quicker indentation
 nnoremap > >>

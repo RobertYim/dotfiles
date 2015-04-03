@@ -78,4 +78,6 @@ export MITSCHEME_LIBRARY_PATH="/Applications/MIT\:GNU\ Scheme.app/Contents/Resou
 # android
 export PATH="$HOME/Documents/development/android-sdk-macosx/platform-tools:$PATH"
 
+# Path alias
+export HDD="/Volumes/HDD/Storage"
 

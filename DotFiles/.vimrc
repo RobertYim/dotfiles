@@ -20,7 +20,9 @@ endif
 
 " remap
 nmap L $
+vmap L $
 nmap H ^
+vmap H ^
 
 "--------
 " Vim UI

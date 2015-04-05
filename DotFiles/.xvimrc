@@ -16,7 +16,7 @@ set gdefault
 set noerrorbells
 
 " use system pasteboard
-set clipboard=unnamed
+" set clipboard=unnamed
 
 """ MenuActionList
 """ https://github.com/XVimProject/XVim/blob/master/Documents/Developers/MenuActionList.txt

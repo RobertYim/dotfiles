@@ -49,7 +49,7 @@ plugins=(git z)
 source $ZSH/oh-my-zsh.sh
 
 # Source aliases
-source ~/Documents/dotfiles/DotFiles/ShellAlias.sh
+source $HOME/Documents/dotfiles/DotFiles/ShellAlias.sh
 
 # User configuration
 

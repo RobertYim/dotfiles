@@ -17,12 +17,12 @@ Bundle 'mattn/gist-vim'
 "------------------
 " Code Completions
 "------------------
-Bundle 'Shougo/neocomplcache'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'mattn/emmet-vim'
 Bundle 'Raimondi/delimitMate'
-Bundle 'ervandew/supertab'
 " snippets
-Bundle 'garbas/vim-snipmate'
+Bundle 'SirVer/ultisnips'
+" Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 "------ snipmate dependencies -------
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -46,7 +46,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 "--------------
 " IDE features
 "--------------
-" Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
 " Bundle 'humiaozuzu/TabBar'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'

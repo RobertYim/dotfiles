@@ -159,36 +159,40 @@ if executable('coffeetags')
 endif
 
 " Nerd Tree
-" let NERDChristmasTree=0
-" let NERDTreeWinSize=30
-" let NERDTreeChDirMode=2
-" let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$', '\.DS_Store$']
-" " let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
-" let NERDTreeShowBookmarks=1
-" let NERDTreeWinPos = \"right\"
+let NERDChristmasTree=0
+let NERDTreeWinSize=30
+let NERDTreeChDirMode=2
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$', '\.DS_Store$']
+" let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
+let NERDTreeShowBookmarks=1
 
 " nerdcommenter
 let NERDSpaceDelims=1
-nmap <D-/> <plug>NERDCommenterToggle
+" nmap <D-/> <plug>NERDCommenterToggle
 let NERDCompactSexyComs=1
-
+"
 " ZenCoding
 let g:user_emmet_expandabbr_key='<C-j>'
 
 " NeoComplCache
-let g:neocomplcache_enable_at_startup=1
-let g:neoComplcache_disableautocomplete=1
+" let g:neocomplcache_enable_at_startup=1
+" let g:neoComplcache_disableautocomplete=1
 "let g:neocomplcache_enable_underbar_completion = 1
 "let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_smart_case=1
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-set completeopt-=preview
+" let g:neocomplcache_enable_smart_case=1
+" let g:neocomplcache_min_syntax_length = 3
+" let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+" set completeopt-=preview
 
-imap <C-k> <Plug>(neocomplcache_snippets_force_expand)
-smap <C-k> <Plug>(neocomplcache_snippets_force_expand)
-imap <C-l> <Plug>(neocomplcache_snippets_force_jump)
-smap <C-l> <Plug>(neocomplcache_snippets_force_jump)
+" imap <C-k> <Plug>(neocomplcache_snippets_force_expand)
+" smap <C-k> <Plug>(neocomplcache_snippets_force_expand)
+" imap <C-l> <Plug>(neocomplcache_snippets_force_jump)
+" smap <C-l> <Plug>(neocomplcache_snippets_force_jump)
+
+" Ultisnips
+let g:UltiSnipsExpandTrigger="<c-f>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -214,8 +218,8 @@ let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 nmap <F5> :TagbarToggle<cr>
-" nmap <F6> :NERDTreeToggle<cr>
-nmap <F3> :GundoToggle<cr>
+nmap <F3> :NERDTreeToggle<cr>
+" nmap <F3> :GundoToggle<cr>
 nmap <F4> :IndentGuidesToggle<cr>
 nnoremap <leader>a :Ack
 nnoremap <leader>v V`]

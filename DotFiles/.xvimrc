@@ -80,9 +80,9 @@ vnoremap Q :norm @q<cr>
 map <tab> %
 
 " new tab
-nnoremap ,t :xccmd newTab<cr>
-nnoremap gT :xccmd selectPreviousTab<cr>
-nnoremap gt :xccmd selectNextTab<cr>
+" nnoremap ,t :xccmd newTab<cr>
+" nnoremap gT :xccmd selectPreviousTab<cr>
+" nnoremap gt :xccmd selectNextTab<cr>
 
 " fold
 nnoremap zc :xccmd fold<cr>

@@ -271,7 +271,7 @@ if has("gui_running")
     " set guifont=Source\ Code\ Pro:r14
     set showtabline=2
     set columns=120
-    set lines=43
+    set lines=50
     noremap <D-M-Left> :tabprevious<cr>
     noremap <D-M-Right> :tabnext<cr>
     map <D-1> 1gt

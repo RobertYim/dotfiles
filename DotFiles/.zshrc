@@ -72,6 +72,10 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# gitignore api
+# www.gitignore.io/docs
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+
 # scheme
 export MITSCHEME_LIBRARY_PATH="/Applications/MIT\:GNU\ Scheme.app/Contents/Resources"
 

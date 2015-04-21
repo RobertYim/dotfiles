@@ -1,0 +1,55 @@
+# Doc:
+# https://github.com/jigish/slate
+# quakex 的 slate 配置文件
+# http://quakex.github.io/2015/04/10/Slate-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97
+
+# Global Configs 全局配置
+config defaultToCurrentScreen true
+# show icons & letters on all windows w/ Window Hints
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+config windowHintsSpread true
+
+# Show a positioning grid for each monitor
+# bind g:cmd grid padding:5 0:2,2 1:2,1       #将第一个窗口分成4份，第二分成两份
+
+# Monitor Aliases
+# alias mon-left 1                # 外接左边的显示器
+# alias mon-macbook 0             # 笔记本屏幕
+
+# General aliases
+alias hyper cmd;ctrl            # 组合键
+alias hyperApp alt;cmd
+# alias sox screenOriginX
+# alias soy screenOriginY
+# alias ssx screenSizeX
+# alias ssy screenSizeY
+
+# Focus Bindings
+bind h:${hyperApp}    focus left
+bind l:${hyperApp}    focus right
+bind k:${hyperApp}    focus up
+bind j:${hyperApp}    focus down
+
+# undo
+# bind z:${hyper} undo
+
+# App bindings
+alias editor 'MacVim'
+alias browser 'Google Chrome'
+bind c:${hyperApp} focus ${browser}
+bind v:${hyperApp} focus ${editor}
+bind x:${hyperApp} focus 'Xcode'
+bind m:${hyperApp} focus 'Mailbox (Beta)'
+bind t:${hyperApp} focus 'Terminal'
+bind f:${hyperApp} focus 'Finder'
+bind p:${hyperApp} focus 'Preview'
+bind i:${hyperApp} focus 'iTunes'
+# bind 1:ctrl focus ${browser}
+# bind 4:ctrl focus ${editor}
+# bind 2:ctrl focus 'Xcode'
+# bind 6:ctrl focus 'Mailbox (Beta)'
+# bind 5:ctrl focus 'Terminal'
+# bind 3:ctrl focus 'Preview'
+# bind 7:ctrl focus 'iTunes'
+

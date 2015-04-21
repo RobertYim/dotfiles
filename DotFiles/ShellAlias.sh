@@ -49,4 +49,5 @@ alias brewUpdateCleanup="brew update && brew upgrade brew-cask && brew cleanup &
 alias mountEFI="mkdir /Volumes/EFI && sudo mount -t msdos /dev/disk0s1 /Volumes/EFI"
 alias wifi='networksetup -setairportnetwork en0 ccr629@fast 013257489@h'
 alias vim="mvim"
+alias displaySleep="pmset displaysleepnow"
 

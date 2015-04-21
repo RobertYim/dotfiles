@@ -50,4 +50,5 @@ alias mountEFI="mkdir /Volumes/EFI && sudo mount -t msdos /dev/disk0s1 /Volumes/
 alias wifi='networksetup -setairportnetwork en0 ccr629@fast 013257489@h'
 alias vim="mvim"
 alias displaySleep="pmset displaysleepnow"
+alias trash="$HOME/Documents/dotfiles/DotFiles/trash.sh"
 

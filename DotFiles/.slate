@@ -18,33 +18,69 @@ config windowHintsSpread true
 # alias mon-macbook 0             # 笔记本屏幕
 
 # General aliases
-alias hyper cmd;ctrl            # 组合键
-alias hyperApp alt;cmd
+alias CmdCtr cmd;ctrl            # 组合键
+alias CmdAlt cmd;alt
+alias CtrAlt ctrl;alt
+alias SftAlt shift;alt
+alias SftCtr shift;ctrl
 # alias sox screenOriginX
 # alias soy screenOriginY
 # alias ssx screenSizeX
 # alias ssy screenSizeY
 
+# Relaunch
+# bind z:${CmdCtr} relaunch
+
+# Hint
+# bind s:${CmdAlt} hint ASDFGQWERTZXCVBN
+
+# Resize Bindings
+bind h:${CtrAlt}       resize +8% +0
+bind l:${CtrAlt}       resize -8% +0
+bind k:${CtrAlt}       resize +0   -8%
+bind j:${CtrAlt}       resize +0   +8%
+
+# Nudge Bindings
+bind l:${SftAlt}        nudge +10% +0
+bind h:${SftAlt}        nudge -10% +0
+bind k:${SftAlt}        nudge +0   -10%
+bind j:${SftAlt}        nudge +0   +10%
+
+# Push
+# 让窗口移动到屏幕右侧边缘，窗口宽度为屏幕的1/3；如果不指定 style 参数，默认为屏幕的1/2
+# bind l:${CmdCtr}  push right bar-resize:screenSizeX/3
+# bind h:${CmdCtr}  push left  bar-resize:screenSizeX/3
+# bind k:${CmdCtr}  push up    bar-resize:screenSizeY/2
+# bind j:${CmdCtr}  push down  bar-resize:screenSizeY/2
+
+# Coner
+# bind h:${CmdCtr}  corner top-left
+# bind l:${CmdCtr}  corner top-right
+# bind j:${CmdCtr}  corner bottom-left
+# bind k:${CmdCtr}  corner bottom-right
+bind u:${SftAlt} chain corner top-left | corner top-right
+bind i:${SftAlt} chain corner bottom-left | corner bottom-right
+
 # Focus Bindings
-bind h:${hyperApp}    focus left
-bind l:${hyperApp}    focus right
-bind k:${hyperApp}    focus up
-bind j:${hyperApp}    focus down
+bind h:${CmdAlt}    focus left
+bind l:${CmdAlt}    focus right
+bind k:${CmdAlt}    focus up
+bind j:${CmdAlt}    focus down
 
 # undo
-# bind z:${hyper} undo
+# bind z:${CmdCtr} undo
 
 # App bindings
 alias editor 'MacVim'
 alias browser 'Google Chrome'
-bind c:${hyperApp} focus ${browser}
-bind v:${hyperApp} focus ${editor}
-bind x:${hyperApp} focus 'Xcode'
-bind m:${hyperApp} focus 'Mailbox (Beta)'
-bind t:${hyperApp} focus 'Terminal'
-bind f:${hyperApp} focus 'Finder'
-bind p:${hyperApp} focus 'Preview'
-bind i:${hyperApp} focus 'iTunes'
+bind c:${CmdAlt} focus ${browser}
+bind v:${CmdAlt} focus ${editor}
+bind x:${CmdAlt} focus 'Xcode'
+bind m:${CmdAlt} focus 'Mailbox (Beta)'
+bind t:${CmdAlt} focus 'Terminal'
+bind d:${CmdAlt} focus 'Finder'
+bind p:${CmdAlt} focus 'Preview'
+bind i:${CmdAlt} focus 'iTunes'
 # bind 1:ctrl focus ${browser}
 # bind 4:ctrl focus ${editor}
 # bind 2:ctrl focus 'Xcode'

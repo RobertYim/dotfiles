@@ -74,7 +74,8 @@ bind j:${CmdAlt}    focus down
 alias editor 'MacVim'
 alias browser 'Google Chrome'
 bind c:${CmdAlt} focus ${browser}
-bind v:${CmdAlt} focus ${editor}
+bind e:${CmdAlt} focus ${editor}
+bind a:${CmdAlt} focus 'WeChat'
 bind x:${CmdAlt} focus 'Xcode'
 bind m:${CmdAlt} focus 'Mailbox (Beta)'
 bind t:${CmdAlt} focus 'Terminal'

@@ -53,13 +53,16 @@ bind j:${SftAlt}        nudge +0   +10%
 # bind k:${CmdCtr}  push up    bar-resize:screenSizeY/2
 # bind j:${CmdCtr}  push down  bar-resize:screenSizeY/2
 
+# Throw
+bind t:${SftAlt} chain throw 0 | throw 1
+
 # Coner
 # bind h:${CmdCtr}  corner top-left
 # bind l:${CmdCtr}  corner top-right
 # bind j:${CmdCtr}  corner bottom-left
 # bind k:${CmdCtr}  corner bottom-right
 bind u:${SftAlt} chain corner top-left | corner top-right
-bind i:${SftAlt} chain corner bottom-left | corner bottom-right
+bind y:${SftAlt} chain corner bottom-left | corner bottom-right
 
 # Focus Bindings
 bind h:${CmdAlt}    focus left
@@ -73,11 +76,11 @@ bind j:${CmdAlt}    focus down
 # App bindings
 alias editor 'MacVim'
 alias browser 'Google Chrome'
+alias email 'Mailbox (Beta)'
 bind c:${CmdAlt} focus ${browser}
 bind e:${CmdAlt} focus ${editor}
-bind a:${CmdAlt} focus 'WeChat'
 bind x:${CmdAlt} focus 'Xcode'
-bind m:${CmdAlt} focus 'Mailbox (Beta)'
+bind m:${CmdAlt} focus ${email}
 bind t:${CmdAlt} focus 'Terminal'
 bind d:${CmdAlt} focus 'Finder'
 bind p:${CmdAlt} focus 'Preview'

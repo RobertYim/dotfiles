@@ -55,3 +55,8 @@ alias vim="mvim"
 alias displaySleep="pmset displaysleepnow"
 alias trash="$HOME/Documents/dotfiles/DotFiles/trash.sh"
 
+# OpenWrt Scripts
+alias listWiFiDevices="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/listDevice.sh"
+alias rebootRouter="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/rebootRouter.sh"
+alias reloadRouter="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/reloadNetwork.sh"
+

@@ -90,6 +90,10 @@ defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 # Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
 
+# Disable daily system-diagnostic-report
+# See: http://www.tonymacx86.com/hp-probook-mavericks/115880-anyway-suppress-powerstats-diag-reports.html
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.systemstats.daily.plist
+
 # Set Help Viewer windows to non-floating mode
 defaults write com.apple.helpviewer DevMode -bool true
 

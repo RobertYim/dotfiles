@@ -85,4 +85,5 @@ export PATH="$HOME/Documents/development/android-sdk-macosx/platform-tools:$PATH
 # Path alias
 export HDD="/Volumes/HDD/Storage"
 export DOWNLOAD="$HOME/Downloads/"
+export BOOKS="$HOME/Documents/books"
 

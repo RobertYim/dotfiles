@@ -1,3 +1,4 @@
+alias crul="curl"
 alias df='df -h'
 alias systemLog='less +F /var/log/system.log'
 #alias xflux='$HOME/Downloads/software/xflux -l 23.2 -g 113.2 -k 4600'

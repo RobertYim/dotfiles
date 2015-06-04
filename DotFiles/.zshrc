@@ -76,11 +76,18 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 # www.gitignore.io/docs
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
+# finding IP infomation
+# www.ipinfo.io
+function ipInfo() { curl ipinfo.io/$@ ;}
+
 # scheme
 export MITSCHEME_LIBRARY_PATH="/Applications/MIT\:GNU\ Scheme.app/Contents/Resources"
 
+# Java
+export JAVA_HOME=`/usr/libexec/java_home`
+
 # android
-export PATH="$HOME/Documents/development/android-sdk-macosx/platform-tools:$PATH"
+export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 
 # Path alias
 export HDD="/Volumes/HDD/Storage"

@@ -80,11 +80,11 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 # www.ipinfo.io
 function ipInfo() { curl ipinfo.io/$@ ;}
 
-# scheme
-export MITSCHEME_LIBRARY_PATH="/Applications/MIT\:GNU\ Scheme.app/Contents/Resources"
-
 # Java
 export JAVA_HOME=`/usr/libexec/java_home`
+
+# Go root
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # android
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"

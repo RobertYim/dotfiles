@@ -65,10 +65,10 @@ bind u:${SftAlt} chain corner top-left | corner top-right
 bind y:${SftAlt} chain corner bottom-left | corner bottom-right
 
 # Focus Bindings
-bind h:${CmdAlt}    focus left
-bind l:${CmdAlt}    focus right
-bind k:${CmdAlt}    focus up
-bind j:${CmdAlt}    focus down
+# bind h:${CmdAlt}    focus left
+# bind l:${CmdAlt}    focus right
+# bind k:${CmdAlt}    focus up
+# bind j:${CmdAlt}    focus down
 
 # undo
 # bind z:${CmdCtr} undo
@@ -79,12 +79,16 @@ alias browser 'Google Chrome'
 alias email 'Mailbox (Beta)'
 bind c:${CmdAlt} focus ${browser}
 bind e:${CmdAlt} focus ${editor}
-bind x:${CmdAlt} focus 'Xcode'
+# bind x:${CmdAlt} focus 'Xcode'
 bind m:${CmdAlt} focus ${email}
 bind .:${CmdAlt} focus 'Terminal'
 bind d:${CmdAlt} focus 'Finder'
 bind p:${CmdAlt} focus 'Preview'
-bind i:${CmdAlt} focus 'iTunes'
+bind i:${CmdAlt} focus 'IntelliJ IDEA'
+bind i:${CmdAlt} focus 'PyCharm'
+bind x:${CmdAlt} focus 'Xcode'
+bind ;:${CmdAlt} focus 'Dash'
+
 # bind 1:ctrl focus ${browser}
 # bind 4:ctrl focus ${editor}
 # bind 2:ctrl focus 'Xcode'

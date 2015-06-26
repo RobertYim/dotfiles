@@ -7,8 +7,8 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [user]
-	email = 
-	name = 
+	email = nikolai.jon@gmail.com
+	name = Robert Yim
 [github]
 	user = RobertYan
 [https]

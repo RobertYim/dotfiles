@@ -150,6 +150,10 @@ sudo chflags uchg /Private/var/vm/sleepimage
 # Disable the sudden motion sensor as it’s not useful for SSDs
 sudo pmset -a sms 0
 
+# Enable Third part SSD Trim:
+# http://www.macrumors.com/2015/06/12/os-x-el-capitan-trim-support/
+sudo trimforce enable
+
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################

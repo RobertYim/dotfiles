@@ -48,6 +48,7 @@ alias closeFTPServer="sudo launchctl unload -w /System/Library/LaunchDaemons/ftp
 alias reloadSound='sudo kextunload /System/Library/Extensions/AppleHDA.kext && sudo kextload /System/Library/Extensions/AppleHDA.kext'
 alias flushDNS="sudo killall -HUP mDNSResponder" ## 10.9
 # alias flushDNS="sudo discoveryutil udnsflushcaches" ## 10.10
+# alias flushDNS="dscacheutil -flushcache" ## 10.6
 alias mountSsdEFI="diskutil mount /dev/disk0s1"
 alias mountHddEFI="diskutil mount /dev/disk1s1"
 alias wifi="networksetup -setairportnetwork en0 ccr629@fast #01325h#"

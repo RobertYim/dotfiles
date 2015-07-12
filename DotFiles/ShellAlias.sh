@@ -39,6 +39,7 @@ alias btPy="/Users/niko/Documents/development/repos/iScript/bt.py"
 alias rsync="rsync -avP"
 alias du="du -sh"
 alias traceWithIPinfo="$HOME/Documents/tools/trace.sh"
+alias wifiMasterKey="$HOME/Documents/tools/wifiMasterKey/wifiKeySearch.py"
 
 
 # Mac only

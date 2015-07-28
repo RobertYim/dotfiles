@@ -11,10 +11,10 @@
 	name = Robert Yim
 [github]
 	user = RobertYan
-; [https]
-	; proxy = socks5://127.0.0.1:1080
-; [http]
-	; proxy = socks5://127.0.0.1:1080
+[https]
+    proxy = socks5://127.0.0.1:1080
+[http]
+    proxy = socks5://127.0.0.1:1080
 [filter "lfs"]
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f

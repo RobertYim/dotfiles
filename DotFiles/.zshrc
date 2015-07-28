@@ -53,9 +53,6 @@ source $HOME/Documents/dotfiles/DotFiles/ShellAlias.sh
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -81,16 +78,21 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 function ipInfo() { curl ipinfo.io/$@ ;}
 
 # Java
-export JAVA_HOME=`/usr/libexec/java_home`
+export JAVA_HOME="/usr/libexec/java_home"
 
-# Go root
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+# Go
+# export GOROOT="/usr/local/opt/go/libexec"
+export GOPATH="$HOME/Library/go"
 
 # android
-export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+export ANDROID="$HOME/Library/Android/sdk/platform-tools"
 
 # Path alias
 export HDD="/Volumes/HDD/Storage"
-export DOWNLOAD="$HOME/Downloads/"
+export DOWNLOADS="$HOME/Downloads/"
 export BOOKS="$HOME/Documents/books"
 
+# PATH
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH=$PATH:$GOPATH/bin:$ANDROID
+# export MANPATH="/usr/local/man:$MANPATH"

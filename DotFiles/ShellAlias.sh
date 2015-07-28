@@ -23,8 +23,8 @@ alias ping="ping -c 10"
 alias gen.psd="$HOME/Documents/tools/generate_password.py"
 #alias remove_old_kernel='$HOME/Dropbox/dotfiles/remove_old_kernel.sh'
 alias h="history"
-alias editAlias='vim /Users/niko/Documents/dotfiles/DotFiles/ShellAlias.sh'
-alias editPac='vim $HOME/.ShadowsocksX/user-rule.txt'
+alias editAlias='mvim /Users/niko/Documents/dotfiles/DotFiles/ShellAlias.sh'
+alias editPac='mvim $HOME/.ShadowsocksX/user-rule.txt'
 alias tt='tmux attach'
 alias l='ls -alh'
 alias luTorrent="$HOME/Documents/development/repos/LuTorrent/lutorrent.py"
@@ -40,6 +40,7 @@ alias rsync="rsync -avP"
 alias du="du -sh"
 alias traceWithIPinfo="$HOME/Documents/tools/trace.sh"
 alias wifiMasterKey="$HOME/Documents/tools/wifiMasterKey/wifiKeySearch.py"
+alias sslocal="$HOME/Documents/development/repos/shadowsocks/shadowsocks/local.py"
 
 
 # Mac only
@@ -52,8 +53,8 @@ alias flushDNS="sudo killall -HUP mDNSResponder" ## 10.9
 # alias flushDNS="dscacheutil -flushcache" ## 10.6
 alias mountSsdEFI="diskutil mount /dev/disk0s1"
 alias mountHddEFI="diskutil mount /dev/disk1s1"
-alias wifi="networksetup -setairportnetwork en0 ccr629@fast #01325h#"
-alias vim="mvim"
+alias wifi="networksetup -setairportnetwork en0 '(╯‵□′)╯︵┻━┻'"
+# alias vim="mvim"
 alias monitorSleep="pmset displaysleepnow"
 alias trash="$HOME/Documents/tools/trash.sh"
 
@@ -62,3 +63,5 @@ alias listWiFiDevices="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScri
 alias rebootRouter="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/rebootRouter.sh"
 alias reloadRouter="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/reloadNetwork.sh"
 
+# ADB Android
+alias adbMountReadWriteSystem="adb shell mount -o remount -o rw /system"

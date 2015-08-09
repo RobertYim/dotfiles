@@ -20,6 +20,7 @@ alias you-get='python3 $HOME/Documents/development/repos/you-get/you-get'
 #alias G='cd /media/niko/Storage'
 alias t="$HOME/Documents/tools/tTrans.py"
 alias ping="ping -c 10"
+alias ping6="ping6 -c 10"
 alias gen.psd="$HOME/Documents/tools/generate_password.py"
 #alias remove_old_kernel='$HOME/Dropbox/dotfiles/remove_old_kernel.sh'
 alias h="history"
@@ -57,6 +58,8 @@ alias wifi="networksetup -setairportnetwork en0 '(╯‵□′)╯︵┻━┻'"
 # alias vim="mvim"
 alias monitorSleep="pmset displaysleepnow"
 alias trash="$HOME/Documents/tools/trash.sh"
+alias spotify="$HOME/Documents/development/repos/SpotifyControl/SpotifyControl"
+alias brewUpdate="brew update && brew upgrade && brew cleanup"
 
 # OpenWrt Scripts
 alias listWiFiDevices="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/listDevice.sh"

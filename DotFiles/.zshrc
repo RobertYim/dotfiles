@@ -78,14 +78,14 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 function ipInfo() { curl ipinfo.io/$@ ;}
 
 # Java
-export JAVA_HOME="/usr/libexec/java_home"
+export JAVA_HOME="/usr/libexec/java_home -v 1.8"
 
 # Go
 # export GOROOT="/usr/local/opt/go/libexec"
 export GOPATH="$HOME/Library/go"
 
 # android
-export ANDROID="$HOME/Library/Android/sdk/platform-tools"
+# export ANDROID="$HOME/Library/Android/sdk/platform-tools"
 
 # Path alias
 export HDD="/Volumes/HDD/Storage"

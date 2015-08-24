@@ -52,14 +52,16 @@ alias reloadSound='sudo kextunload /System/Library/Extensions/AppleHDA.kext && s
 alias flushDNS="sudo killall -HUP mDNSResponder" ## 10.9
 # alias flushDNS="sudo discoveryutil udnsflushcaches" ## 10.10
 # alias flushDNS="dscacheutil -flushcache" ## 10.6
-alias mountSsdEFI="diskutil mount /dev/disk0s1"
-alias mountHddEFI="diskutil mount /dev/disk1s1"
+alias mountDisk0EFI="diskutil mount /dev/disk0s1"
+alias mountDisk1EFI="diskutil mount /dev/disk1s1"
 alias wifi="networksetup -setairportnetwork en0 '(╯‵□′)╯︵┻━┻'"
 # alias vim="mvim"
 alias monitorSleep="pmset displaysleepnow"
 alias trash="$HOME/Documents/tools/trash.sh"
-alias spotify="$HOME/Documents/development/repos/SpotifyControl/SpotifyControl"
+# alias spotify="$HOME/Documents/development/repos/SpotifyControl/SpotifyControl"
 alias brewUpdate="brew update && brew upgrade && brew cleanup"
+alias silverBox="hdiutil attach $HOME/Dropbox/SilverBox.sparsebundle"
+alias silverBoxEject="hdiutil detach /Volumes/SilverBox"
 
 # OpenWrt Scripts
 alias listWiFiDevices="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/listDevice.sh"

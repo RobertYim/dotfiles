@@ -4,24 +4,15 @@
 
 patch:
   us_keyboard_layout: true                 # 键盘选项：应用美式键盘布局状态通知，适当，也可设为全开（always）全关（never）
-  style/color_scheme: ink                 # 选择配色方案
+  style/color_scheme: google                 # 选择配色方案
   style/horizontal: true                   # 候选窗横向显示
   style/inline_preedit: true               # 关闭内嵌编码，这样就可以显示首行的拼音
-  style/font_face: "Lucida Grande"         # 字体名称
+  style/font_face: "Helvetica Neue"         # 字体名称
   style/font_point: 15                     # 字号
   style/corner_radius: 2                   # 窗口圆角半径
   style/border_height: 3                   # 窗口边界高度，大于圆角半径才有效果
   style/border_width: 6                    # 窗口边界宽度，大于圆角半径才有效果
   style/line_spacing: 1                    # 候选词的行间距
-  # style/spacing: 5                         # 在非内嵌编码模式下，预编辑和候选词之间的间距
-  # style/back_color: 0xffffffff
-  # style/hilited_candidate_back_color: 0x00000000
-  # style/hilited_candidate_label_color: 0xaaaaaa
-  # style/hilited_candidate_text_color: 0x000000
-  # style/candidate_text_color: 0x666666
-  # style/label_color: 0xaaaaaa
-  # style/label_font_point: 11
-  # style/comment_text_color: 0xeeffffff
 
 # 等程序裏很少需要輸入中文，於是鼠鬚管在這些程序裏默認不開啓中文輸入。
 # 自定義 Mac 應用程序的初始轉換狀態，首先查看應用的 Info.plist 文件得到 該應用的 Bundle Identifier，通常是形如 com.apple.Xcode 的字符串。
@@ -35,24 +26,16 @@ patch:
     ascii_mode: true
   app_options/com.google.Chrome:
     ascii_mode: true
-  
-  
 
-  # "style/color_scheme": dust    # 這項用於選中下面定義的新方案
-  # "preset_color_schemes/dust":  # 在配色方案列表裏加入標識爲 dust 的新方案
-    # author: "Superoutman <asticosmo@gmail.com>"
-    # back_color: 0xeeffffff
-    # border_height: 3
-    # border_width: 6
-    # candidate_format: "%c %@ "
-    # comment_text_color: 0xeeffffff
-    # candidate_text_color: 0x666666
-    # corner_radius: 2
-    # font_point: 15
-    # hilited_candidate_back_color: 0x00000000
-    # hilited_candidate_label_color: 0xaaaaaa
-    # hilited_candidate_text_color: 0x000000
-    # horizontal: true
-    # label_color: 0xaaaaaa
-    # label_font_point: 11
-    # name: "浮尘／Dust"
+    "style/color_scheme": Google
+    "preset_color_schemes/Google":
+        author: "skoj <skoj@qq.com>"
+        back_color: 0xFFFFFF #背景
+        border_color: 0xE2E2E2 #边框
+        candidate_text_color: 0x000000 #非第一候选项
+        hilited_back_color: 0x0099FF #拼音串高亮背景
+        hilited_candidate_back_color: 0x0099FF #第一候选项背景
+        hilited_candidate_text_color: 0xFFFFFF #第一候选项
+        hilited_text_color: 0x000000 #拼音串高亮
+        name: "Google"
+        text_color: 0x666666 #拼音串

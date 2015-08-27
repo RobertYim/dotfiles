@@ -7,8 +7,8 @@ patch:
   style/color_scheme: google                 # 选择配色方案
   style/horizontal: true                   # 候选窗横向显示
   style/inline_preedit: true               # 关闭内嵌编码，这样就可以显示首行的拼音
-  style/font_face: "Helvetica Neue"         # 字体名称
-  style/font_point: 15                     # 字号
+  style/font_face: "Noto Sans CJK SC"         # 字体名称
+  style/font_point: 13                     # 字号
   style/corner_radius: 2                   # 窗口圆角半径
   style/border_height: 3                   # 窗口边界高度，大于圆角半径才有效果
   style/border_width: 6                    # 窗口边界宽度，大于圆角半径才有效果
@@ -20,11 +20,15 @@ patch:
 # example squirrel.custom.yaml
   app_options/com.apple.Xcode:
     ascii_mode: true
+  app_options/com.apple.Safari:
+    ascii_mode: true
   app_options/org.vim.MacVim:
     ascii_mode: true
   app_options/com.runningwithcrayons.Alfred-2:
     ascii_mode: true
   app_options/com.google.Chrome:
+    ascii_mode: true
+  app_options/com.agilebits.onepassword-osx:
     ascii_mode: true
 
     "style/color_scheme": Google

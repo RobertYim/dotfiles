@@ -87,6 +87,9 @@ export GOPATH="$HOME/Library/go"
 # android
 # export ANDROID="$HOME/Library/Android/sdk/platform-tools"
 
+# MacGPG2
+export GPG2="/usr/local/MacGPG2"
+
 # Path alias
 export HDD="/Volumes/HDD/Storage"
 export DOWNLOADS="$HOME/Downloads/"
@@ -94,5 +97,5 @@ export BOOKS="$HOME/Documents/books"
 
 # PATH
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH=$PATH:$GOPATH/bin:$ANDROID
+export PATH=$PATH:$GOPATH/bin:$GPG2/bin
 # export MANPATH="/usr/local/man:$MANPATH"

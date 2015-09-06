@@ -42,6 +42,8 @@ alias du="du -sh"
 alias traceWithIPinfo="$HOME/Documents/tools/trace.sh"
 alias wifiMasterKey="$HOME/Documents/tools/wifiMasterKey/wifiKeySearch.py"
 alias sslocal="$HOME/Documents/development/repos/shadowsocks/shadowsocks/local.py"
+alias ccal="cal | grep -C 6 --color -e ' $(date +%e)' -e '^$(date +%e)'"
+alias fakeBusy="cat /dev/urandom|hexdump -C | ag 'ca fe'"
 
 
 # Mac only

@@ -76,7 +76,7 @@ bind y:${SftAlt} chain corner bottom-left | corner bottom-right
 # App bindings
 alias editor 'MacVim'
 alias browser 'Google Chrome'
-alias email 'Mailbox (Beta)'
+alias email 'Mail'
 bind c:${CmdAlt} focus ${browser}
 bind e:${CmdAlt} focus ${editor}
 # bind x:${CmdAlt} focus 'Xcode'

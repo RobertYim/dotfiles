@@ -32,7 +32,7 @@ alias luTorrent="python $HOME/Documents/development/repos/LuTorrent/lutorrent.py
 alias proxyIP="proxychains4 curl ipinfo.io"
 alias rentCalculatior="python $HOME/Documents/tools/rent_calculator.py"
 alias fetchMail="python $HOME/Documents/tools/mailinator.py"
-alias WoW="cat $HOME/Dropbox/PDS/WOWO.txt"
+alias WoW="cat $HOME/Dropbox/WOWO.txt"
 alias baiduPan="python $HOME/Documents/development/repos/iScript/pan.baidu.com.py"
 alias 115py="python $HOME/Documents/development/repos/iScript/115.py"
 alias unzip="python $HOME/Documents/development/repos/iScript/unzip.py"
@@ -42,7 +42,7 @@ alias du="du -sh"
 alias traceWithIPinfo="$HOME/Documents/tools/trace.sh"
 alias wifiMasterKey="python $HOME/Documents/tools/wifiMasterKey/wifiKeySearch.py"
 alias sslocal="python $HOME/Documents/development/repos/shadowsocks/shadowsocks/local.py"
-alias ccal="cal | grep -C 6 --color -e ' $(date +%e)' -e '^$(date +%e)'"
+alias ccal="cal | grep -E --color '(\b$(date +%d)\b|$)'"
 alias fakeBusy="cat /dev/urandom|hexdump -C | ag 'ca fe'"
 
 
@@ -51,7 +51,7 @@ alias openFTPServer="sudo launchctl load -w /System/Library/LaunchDaemons/ftp.pl
 alias closeFTPServer="sudo launchctl unload -w /System/Library/LaunchDaemons/ftp.plist"
 #alias openWinDisk='open /Volumes/win7/Users/niko/Downloads'
 alias reloadSound='sudo kextunload /System/Library/Extensions/AppleHDA.kext && sudo kextload /System/Library/Extensions/AppleHDA.kext'
-alias flushDNS="sudo killall -HUP mDNSResponder" ## 10.9
+alias flushDNS="sudo killall -HUP mDNSResponder" ## 10.9 and 10.11
 # alias flushDNS="sudo discoveryutil udnsflushcaches" ## 10.10
 # alias flushDNS="dscacheutil -flushcache" ## 10.6
 alias mountDisk0EFI="diskutil mount /dev/disk0s1"

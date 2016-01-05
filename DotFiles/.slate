@@ -81,7 +81,7 @@ bind c:${CmdAlt} focus ${browser}
 bind e:${CmdAlt} focus ${editor}
 # bind x:${CmdAlt} focus 'Xcode'
 bind m:${CmdAlt} focus ${email}
-bind .:${CmdAlt} focus 'iTerm'
+bind .:${CmdAlt} focus 'Terminal'
 bind d:${CmdAlt} focus 'Finder'
 bind p:${CmdAlt} focus 'Preview'
 bind i:${CmdAlt} focus 'IntelliJ IDEA'

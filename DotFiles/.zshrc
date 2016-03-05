@@ -50,6 +50,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Source aliases
 source $HOME/Documents/dotfiles/DotFiles/ShellAlias.sh
+# private aliases
+source $HOME/Dropbox/backup/privateShellAlias.sh
 
 # User configuration
 

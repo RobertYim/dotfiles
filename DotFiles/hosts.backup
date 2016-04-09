@@ -9,6 +9,11 @@
 ::1             localhost
 fe80::1%lo0     localhost
 
+# Hijack
+# app store
+# 127.0.0.1   osxapps.itunes.apple.com
+# googlecode for gfwlist
+# 127.0.0.1 autoproxy-gfwlist.googlecode.com
 
 # WoW
 122.198.64.135  us.patch.battle.net
@@ -17,6 +22,7 @@ fe80::1%lo0     localhost
 180.97.214.10   download008.dbu.telssr.chinacache.net
 58.221.69.15    download008.dbu.telssr.chinacache.net
 58.215.108.16   download008.dbu.telssr.chinacache.net
+180.97.208.5    client01.pdl.wow.battlenet.com.cn
 218.92.209.70   client02.pdl.wow.battlenet.com.cn
 222.186.20.10   client03.pdl.wow.battlenet.com.cn
 58.221.38.181   client04.pdl.wow.battlenet.com.cn.fastcdn.com
@@ -25,27 +31,16 @@ fe80::1%lo0     localhost
 #91.218.38.224   bt.inmac.org
 #91.218.38.224   inmac.org
 
-# Fastly CDN
-global.ssl.fastly.net 103.245.222.249
-global-ssl.fastly.net 103.245.222.249
+# Apple CDN
+17.253.85.201   osxapps.itunes.apple.com
 
 # Google
 # Map
-203.208.41.148  google.com/maps
-#
-# 74.125.136.125    gmail.google.com
-# 74.125.136.125    gmail.com
-# 74.125.136.125    gmail-imap.l.google.com
-# 74.125.136.125    gmail-pop.l.google.com
-# 74.125.136.125    gmail-smtp-in.l.google.com
-# 74.125.136.125    gmail-smtp.l.google.com
-# 74.125.136.125    gmail-smtp-msa.l.google.com
-# 74.125.136.125    gmr-smtp-in.l.google.com
-# 74.125.136.125    googlemail-imap.l.google.com
-# 74.125.136.125    googlemail.l.google.com
-# 74.125.136.125    googlemail-pop.l.google.com
-# 74.125.136.125    googlemail-smtp.l.google.com
-# 74.125.136.125    googlemashups.l.google.com
+# Gmail
+64.233.188.109  smtp.gmail.com
+64.233.188.109  pop.gmail.com
+64.233.188.109  imap.gmail.com
+64.233.162.83   gmail.com
 
 # Baidupan
 # 183.232.22.39 bcscdn.baidu.com
@@ -73,8 +68,13 @@ global-ssl.fastly.net 103.245.222.249
 # 183.232.22.39 small.cdn.baidupcs.com
 # 183.232.22.39 ws.cdn.baidupcs.com
 # 183.232.22.39 www.baidupcs.com
-#115.231.28.219 video.cdn.baidupcs.com
-171.107.189.135 video.cdn.baidupcs.com
+#171.107.189.135 video.cdn.baidupcs.com
+#183.131.122.153 video.cdn.baidupcs.com
+218.75.225.60 video.cdn.baidupcs.com #
+#115.231.132.70 video.cdn.baidupcs.com
+#182.247.232.230 video.cdn.baidupcs.com
+#116.211.122.101 video.cdn.baidupcs.com
+
 
 # Black List
 #127.0.0.1       user.qzone.qq.com
@@ -144,4 +144,6 @@ global-ssl.fastly.net 103.245.222.249
 127.0.0.1 hm.baidu.com
 #127.0.0.1 www.baidu.com
 127.0.0.1 dup.baidustatic.com
+
+# Modify hosts start
 

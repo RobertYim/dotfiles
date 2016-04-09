@@ -191,8 +191,8 @@ let g:user_emmet_expandabbr_key='<C-j>'
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger="<c-f>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<c-z>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS

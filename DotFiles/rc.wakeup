@@ -6,5 +6,5 @@
 launchctl load /System/Library/LaunchDaemons/com.apple.discoveryd.plist
 
 # Set static arp
-# arp -f /Users/niko/Dropbox/dotfiles/LinuxScripts/ArpBinding.sh
+# arp -f $HOME/Dropbox/dotfiles/LinuxScripts/ArpBinding.sh
 

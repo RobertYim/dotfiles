@@ -29,7 +29,10 @@ vmap H ^
 "--------
 " color scheme
 " set background=dark
-color monokai
+"
+color molokai
+" Uncomment next line to set original monokai background color
+" let g:molokai_original = 1
 
 " highlight current line
 " au WinLeave * set nocursorline nocursorcolumn
@@ -67,7 +70,7 @@ set matchpairs+=<:>                                               " specially fo
 
 " Default Indentation
 set autoindent
-set smartindent     " indent when
+" set smartindent     " indent when
 set tabstop=4       " tab width
 set softtabstop=4   " backspace
 set shiftwidth=4    " indent width
@@ -93,6 +96,15 @@ let g:html_indent_style1 = "inc"
 "-----------------
 " Plugin settings
 "-----------------
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " Rainbow parentheses for Lisp and variants
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
@@ -118,14 +130,13 @@ autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
 " tabbar
 let g:Tb_MaxSize = 2
 let g:Tb_TabWrap = 1
-
 hi Tb_Normal guifg=white ctermfg=white
 hi Tb_Changed guifg=green ctermfg=green
 hi Tb_VisibleNormal ctermbg=252 ctermfg=235
 hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
 
 " easy-motion
-let g:EasyMotion_leader_key = '<Leader>'
+let g:EasyMotion_leader_key = '<Leader><Leader>'
 
 " Tagbar
 let g:tagbar_left=1
@@ -148,7 +159,6 @@ if executable('coffeetags')
         \ 'o' : 'object',
         \ }
         \ }
-
   let g:tagbar_type_markdown = {
     \ 'ctagstype' : 'markdown',
     \ 'sort' : 0,
@@ -173,21 +183,6 @@ let NERDCompactSexyComs=1
 "
 " ZenCoding
 let g:user_emmet_expandabbr_key='<C-j>'
-
-" NeoComplCache
-" let g:neocomplcache_enable_at_startup=1
-" let g:neoComplcache_disableautocomplete=1
-"let g:neocomplcache_enable_underbar_completion = 1
-"let g:neocomplcache_enable_camel_case_completion = 1
-" let g:neocomplcache_enable_smart_case=1
-" let g:neocomplcache_min_syntax_length = 3
-" let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-" set completeopt-=preview
-
-" imap <C-k> <Plug>(neocomplcache_snippets_force_expand)
-" smap <C-k> <Plug>(neocomplcache_snippets_force_expand)
-" imap <C-l> <Plug>(neocomplcache_snippets_force_jump)
-" smap <C-l> <Plug>(neocomplcache_snippets_force_jump)
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger="<c-f>"
@@ -219,7 +214,7 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 nmap <F5> :TagbarToggle<cr>
 nmap <F3> :NERDTreeToggle<cr>
-" nmap <F3> :GundoToggle<cr>
+nmap <F6> :GundoToggle<cr>
 nmap <F4> :IndentGuidesToggle<cr>
 nnoremap <leader>a :Ack
 nnoremap <leader>v V`]

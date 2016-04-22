@@ -48,10 +48,6 @@ plugins=(git z)
 
 source $ZSH/oh-my-zsh.sh
 
-# Source aliases
-source $HOME/Documents/dotfiles/DotFiles/ShellAlias.sh
-# private aliases
-source $HOME/Dropbox/backup/privateShellAlias.sh
 
 # User configuration
 
@@ -70,6 +66,11 @@ source $HOME/Dropbox/backup/privateShellAlias.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Source aliases
+source $HOME/Documents/dotfiles/DotFiles/ShellAlias.bash
+# private aliases
+source $HOME/Dropbox/backup/privateShellAlias.bash
 
 # gitignore api
 # www.gitignore.io/docs
@@ -101,3 +102,6 @@ export BOOKS="$HOME/Documents/books"
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH=$PATH:$GOPATH/bin:$GPG2/bin
 # export MANPATH="/usr/local/man:$MANPATH"
+
+# Opt out Homebrew analytics
+export HOMEBREW_NO_ANALYTICS=1

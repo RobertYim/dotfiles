@@ -13,6 +13,8 @@ Bundle 'terryma/vim-multiple-cursors'
 " Gist
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
+" Plist support
+Bundle 'darfink/vim-plist'
 
 "------------------
 " Code Completions
@@ -25,8 +27,8 @@ Bundle 'SirVer/ultisnips'
 " Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 "------ snipmate dependencies -------
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
+" Bundle 'MarcWeber/vim-addon-mw-utils'
+" Bundle 'tomtom/tlib_vim'
 
 "-----------------
 " Fast navigation
@@ -68,7 +70,7 @@ Bundle 'bronson/vim-trailing-whitespace'
 "------- web backend ---------
 " Bundle '2072/PHP-Indenting-for-VIm'
 "Bundle 'tpope/vim-rails'
-Bundle 'lepture/vim-jinja'
+" Bundle 'lepture/vim-jinja'
 "Bundle 'digitaltoad/vim-jade'
 
 "------- web frontend ----------
@@ -82,14 +84,14 @@ Bundle 'nono/jquery.vim'
 " Bundle 'nono/vim-handlebars'
 
 "------- markup language -------
-Bundle 'tpope/vim-markdown'
+Bundle 'plasticboy/vim-markdown'
 " Bundle 'timcharper/textile.vim'
 
 "------- Ruby --------
 " Bundle 'tpope/vim-endwise'
 
 "------- Go ----------
-Bundle 'jnwhiteh/vim-golang'
+Bundle 'fatih/vim-go'
 
 "------- FPs ------
 " Bundle 'kien/rainbow_parentheses.vim'
@@ -100,10 +102,7 @@ Bundle 'jnwhiteh/vim-golang'
 "--------------
 " Color Schemes
 "--------------
-Bundle 'altercation/vim-colors-solarized'
-" Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'tomasr/molokai'
-Bundle 'lsdr/monokai'
 
 call vundle#end()             " required!
 filetype plugin indent on     " required!

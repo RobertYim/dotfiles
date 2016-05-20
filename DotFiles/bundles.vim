@@ -20,7 +20,7 @@ Bundle 'darfink/vim-plist'
 " Code Completions
 "------------------
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'mattn/emmet-vim'
+" Bundle 'mattn/emmet-vim'
 Bundle 'Raimondi/delimitMate'
 " snippets
 Bundle 'SirVer/ultisnips'
@@ -74,17 +74,17 @@ Bundle 'bronson/vim-trailing-whitespace'
 "Bundle 'digitaltoad/vim-jade'
 
 "------- web frontend ----------
-Bundle 'othree/html5.vim'
+" Bundle 'othree/html5.vim'
 " Bundle 'tpope/vim-haml'
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'nono/jquery.vim'
+" Bundle 'pangloss/vim-javascript'
+" Bundle 'kchmck/vim-coffee-script'
+" Bundle 'nono/jquery.vim'
 " Bundle 'groenewege/vim-less'
 " Bundle 'wavded/vim-stylus'
 " Bundle 'nono/vim-handlebars'
 
 "------- markup language -------
-Bundle 'plasticboy/vim-markdown'
+" Bundle 'plasticboy/vim-markdown'
 " Bundle 'timcharper/textile.vim'
 
 "------- Ruby --------

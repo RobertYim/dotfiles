@@ -24,7 +24,7 @@ alias ping6="ping6 -c 10"
 alias gen.psd="python $HOME/Documents/tools/generate_password.py"
 #alias remove_old_kernel='$HOME/Dropbox/dotfiles/remove_old_kernel.sh'
 alias h="history"
-alias editAlias='mvim $HOME/Documents/dotfiles/DotFiles/ShellAlias.sh'
+alias editAlias='mvim $HOME/Documents/dotfiles/DotFiles/ShellAlias.bash'
 alias editPac='mvim $HOME/.ShadowsocksX/user-rule.txt'
 alias tt='tmux attach'
 alias l='ls -alh'
@@ -57,13 +57,14 @@ alias mountDisk0EFI="diskutil mount /dev/disk0s1"
 alias mountDisk1EFI="diskutil mount /dev/disk1s1"
 # alias wifi="networksetup -setairportnetwork en1 '(╯‵□′)╯︵┻━┻'"
 alias vim="mvim"
-alias vi="vim"
+alias vi="find /usr/local/Cellar/macvim -name "Vim" -exec {} \;"
 alias monitorSleep="pmset displaysleepnow"
 alias trash="$HOME/Documents/tools/trash.sh"
 # alias spotify="$HOME/Documents/development/repos/SpotifyControl/SpotifyControl"
 alias brewUpdate="brew update && brew upgrade && brew cleanup"
 alias silverBox="hdiutil attach $HOME/Dropbox/SilverBox.sparsebundle"
 alias silverBoxEject="hdiutil detach /Volumes/SilverBox"
+alias tmux="tmux -CC"
 
 # OpenWrt Scripts
 alias listWiFiDevices="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/listDevice.sh"

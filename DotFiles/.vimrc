@@ -23,6 +23,7 @@ nmap L $
 vmap L $
 nmap H ^
 vmap H ^
+inoremap jk <ESC>
 
 "--------
 " Vim UI
@@ -264,11 +265,11 @@ if has("gui_running")
     "set transparency=30
     set guifont=Monaco:h12
     " set guifont=Source\ Code\ Pro:r14
-    set showtabline=2
+    set showtabline=1
     set columns=120
-    set lines=50
-    noremap <D-M-Left> :tabprevious<cr>
-    noremap <D-M-Right> :tabnext<cr>
+    set lines=60
+    " noremap <D-M-Left> :tabprevious<cr>
+    " noremap <D-M-Right> :tabnext<cr>
     map <D-1> 1gt
     map <D-2> 2gt
     map <D-3> 3gt

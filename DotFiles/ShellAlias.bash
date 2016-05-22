@@ -40,7 +40,7 @@ alias rsync="rsync -avP"
 alias du="du -sh"
 alias traceWithIPinfo="$HOME/Documents/tools/trace.sh"
 alias wifiMasterKey="python $HOME/Documents/tools/wifiMasterKey/wifiKeySearch.py"
-alias sslocal="python $HOME/Documents/development/repos/shadowsocks/shadowsocks/local.py"
+# alias sslocal="python $HOME/Documents/development/repos/shadowsocks/shadowsocks/local.py"
 alias ccal='cal | grep --color -EC6 "\b$(date +%e | sed "s/ //g")"'
 alias fakeBusy="cat /dev/urandom|hexdump -C | ag 'ca fe'"
 

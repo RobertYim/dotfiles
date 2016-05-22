@@ -20,6 +20,7 @@ Bundle 'darfink/vim-plist'
 " Code Completions
 "------------------
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'rdnetto/YCM-Generator'
 " Bundle 'mattn/emmet-vim'
 Bundle 'Raimondi/delimitMate'
 " snippets

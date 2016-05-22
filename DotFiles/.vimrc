@@ -94,6 +94,11 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
+" Explore Mode
+let g:netrw_liststyle=3
+" map <F3> :Explore<cr>   " conflict with NERDTree
+
+
 "-----------------
 " Plugin settings
 "-----------------
@@ -219,6 +224,9 @@ nmap <F6> :GundoToggle<cr>
 nmap <F4> :IndentGuidesToggle<cr>
 nnoremap <leader>a :Ack
 nnoremap <leader>v V`]
+
+" YouCompleteMe
+let g:ycm_global_ycm_extra_conf = "~/Documents/dotfiles/DotFiles/.ycm_extra_conf.py"
 
 "------------------
 " Useful Functions

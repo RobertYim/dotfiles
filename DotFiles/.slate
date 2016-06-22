@@ -87,7 +87,8 @@ bind p:${CmdAlt} focus 'Preview'
 bind i:${CmdAlt} focus 'IntelliJ IDEA'
 bind i:${CmdAlt} focus 'PyCharm'
 bind x:${CmdAlt} focus 'Xcode'
-bind ;:${CmdAlt} focus 'Dash'
+# bind ;:${CmdAlt} focus 'Dash'
+bind ;:${CmdAlt} focus "iBooks"
 
 # bind 1:ctrl focus ${browser}
 # bind 4:ctrl focus ${editor}

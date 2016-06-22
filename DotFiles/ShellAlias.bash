@@ -10,8 +10,8 @@ alias ...='../..'
 alias roll="python $HOME/Documents/tools/roll.py"
 # alias goagent='python $HOME/Downloads/goagent/local/proxy.py'
 alias editHosts='sudo mvim /etc/hosts'
-alias you-get-proxy='proxychains4 python3 $HOME/Documents/development/repos/you-get/you-get'
-alias you-get='python3 $HOME/Documents/development/repos/you-get/you-get'
+# alias you-get-proxy='proxychains4 python3 $HOME/Documents/development/repos/you-get/you-get'
+# alias you-get='python3 $HOME/Documents/development/repos/you-get/you-get'
 #alias drbox='$HOME/Documents/tools/Dropbox-Uploader/dropbox_uploader.sh'
 #alias suspend.lock='$HOME/Dropbox/dotfiles/suspend_script.sh'
 #alias D='cd /media/niko/PersonalData/'
@@ -43,6 +43,8 @@ alias wifiMasterKey="python $HOME/Documents/tools/wifiMasterKey/wifiKeySearch.py
 # alias sslocal="python $HOME/Documents/development/repos/shadowsocks/shadowsocks/local.py"
 alias ccal='cal | grep --color -EC6 "\b$(date +%e | sed "s/ //g")"'
 alias fakeBusy="cat /dev/urandom|hexdump -C | ag 'ca fe'"
+alias updateGFWList="zsh $HOME/Documents/tools/updateGFWlist.sh"
+alias simpleHTTPSServer="python $HOME/Documents/tools/simpleHTTPSServer.py $HOME/Documents/tools/server.pem"
 
 
 # Mac only

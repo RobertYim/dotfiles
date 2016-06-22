@@ -10,7 +10,7 @@ syntax on
 let mapleader=","
 let maplocalleader="\\"
 " use system pasteboard
-" set clipboard=unnamed
+set clipboard=unnamed
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
@@ -188,7 +188,7 @@ let NERDSpaceDelims=1
 let NERDCompactSexyComs=1
 "
 " ZenCoding
-let g:user_emmet_expandabbr_key='<C-j>'
+let g:user_emmet_expandabbr_key='<C-g>'
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger="<c-f>"

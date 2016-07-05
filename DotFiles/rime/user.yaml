@@ -1,0 +1,13 @@
+var:
+  option:
+    simplification: true
+  previously_selected_schema: luna_pinyin_simp
+  schema_access_time:
+    cangjie5: 1440387895
+    emoji: 1467708718
+    luna_pinyin: 1467708741
+    luna_pinyin_simp: 1467708792
+    luna_pinyin_tw: 1465498050
+    wubi86: 1440684311
+    wubi98: 1444800143
+    wubi_pinyin: 1440409672

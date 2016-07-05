@@ -1,0 +1,124 @@
+# Rime user dictionary
+#@/db_name	wubi86.userdb
+#@/db_type	userdb
+#@/rime_version	1.2.9
+#@/tick	49
+#@/user_id	rime
+adk 	若	c=1 d=1 t=49
+amyy 	英文	c=2 d=1.97521 t=49
+cnh 	巴	c=1 d=0.970446 t=49
+dk 	右	c=1 d=0.798516 t=49
+e 	有	c=1 d=1 t=49
+et 	用	c=1 d=1 t=49
+fhw 	真	c=1 d=1 t=49
+fiy 	求	c=1 d=0.847894 t=49
+fk 	吉	c=1 d=1 t=49
+ftrt 	老手	c=1 d=0.806541 t=49
+ftx 	老	c=1 d=1 t=49
+gg 	五	c=1 d=1 t=49
+ggg 	王	c=1 d=1 t=49
+ggtt 	五笔	c=4 d=3.83664 t=49
+gi 	不	c=2 d=1.64219 t=49
+gkbw 	带队	c=1 d=0.873716 t=49
+gkp 	带	c=1 d=0.856415 t=49
+hcef 	皮肤	c=1 d=0.790571 t=49
+hko 	点	c=1 d=0.891366 t=49
+hx 	此	c=1 d=1 t=49
+i 	不	c=2 d=1.97531 t=49
+ig 	汪	c=3 d=2.38762 t=49
+j 	是	c=1 d=1 t=49
+jb 	最	c=1 d=0.794534 t=49
+kb 	啊	c=1 d=1 t=49
+kcg 	吗	c=1 d=0.878095 t=49
+lfyw 	默认	c=2 d=1.97516 t=49
+mmgj 	删	c=1 d=1 t=49
+nnvy 	忌妒	c=1 d=0.83527 t=49
+nnw 	快	c=1 d=0.786628 t=49
+nv 	恨	c=1 d=0.839457 t=49
+p 	这	c=1 d=0.932394 t=49
+puhc 	被	c=2 d=1.97531 t=49
+pyj 	神	c=1 d=0.97531 t=49
+q 	我	c=2 d=1.7744 t=49
+qg 	钱	c=1 d=1 t=49
+qnq 	饮	c=1 d=1 t=49
+r 	的	c=2 d=1.83244 t=49
+rhgc 	看到	c=1 d=0.965605 t=49
+s 	要	c=1 d=1 t=49
+shn 	想	c=2 d=1.76942 t=49
+skna 	可惜	c=1 d=0.900325 t=49
+skny 	可以	c=1 d=0.869358 t=49
+su 	样	c=1 d=0.937067 t=49
+tfqm 	赞	c=1 d=0.895834 t=49
+tmg 	微	c=1 d=1 t=49
+ts 	条	c=1 d=1 t=49
+ugaj 	羡慕	c=1 d=0.831104 t=49
+vcvc 	妈妈	c=1 d=0.923116 t=49
+vkws 	如何	c=1 d=0.951229 t=49
+wagj 	代理	c=3 d=2.84904 t=49
+wfc 	会	c=1 d=1 t=49
+wget 	使用	c=1 d=0.955997 t=49
+wy 	信	c=1 d=1 t=49
+xdlk 	绑架	c=1 d=1 t=49
+yijg 	就是	c=1 d=0.927743 t=49
+ynyl 	词库	c=1 d=1 t=49
+encadgi 	若不	c=0 d=0.1 t=49
+encagjg 	若不是	c=0 d=0.1 t=49
+encagjp 	若不是被	c=0 d=0.1 t=49
+encayly 	英文默认	c=0 d=0.0985112 t=49
+encdeqg 	有钱	c=0 d=0.1 t=49
+encdqkb 	有钱啊	c=0 d=0.1 t=49
+encettm 	用微	c=0 d=0.1 t=49
+encetwy 	用微信	c=0 d=0.1 t=49
+encfgwe 	真不会用	c=0 d=0.1 t=49
+encfgwf 	真不会	c=0 d=0.1 t=49
+encfhgi 	真不	c=0 d=0.1 t=49
+encftfk 	老吉	c=0 d=0.1 t=49
+encgbkc 	带队吗	c=0 d=0.0878095 t=49
+encgifr 	不汪老手	c=0 d=0.0806541 t=49
+encgiig 	不汪	c=0 d=0.0802519 t=49
+encgijg 	不是	c=0 d=0.1 t=49
+encgiwf 	不会	c=0 d=0.1 t=49
+encgjpu 	不是被	c=0 d=0.1 t=49
+encgwet 	不会用	c=0 d=0.1 t=49
+encgwet 	不会用微	c=0 d=0.1 t=49
+enchktf 	点赞	c=0 d=0.0895834 t=49
+enchtsp 	此条要被	c=0 d=0.1 t=49
+enchtsv 	此条要	c=0 d=0.1 t=49
+enchxts 	此条	c=0 d=0.1 t=49
+encifrt 	汪老手	c=0 d=0.0806541 t=49
+enciggi 	汪不	c=0 d=0.0798516 t=49
+encigig 	汪不汪	c=0 d=0.0802519 t=49
+encigig 	汪汪	c=0 d=0.0794534 t=49
+enciigi 	汪汪不	c=0 d=0.0798516 t=49
+enciigi 	汪汪不汪	c=0 d=0.0802519 t=49
+encjbdk 	最右	c=1 d=0.822835 t=49
+encjgpu 	是被	c=0 d=0.1 t=49
+encjpxl 	是被绑架	c=0 d=0.1 t=49
+encnvnv 	忌妒恨	c=0 d=0.0839457 t=49
+encpumm 	被删	c=0 d=0.1 t=49
+encpxlf 	被绑架真	c=0 d=0.1 t=49
+encpxlk 	被绑架	c=0 d=0.1 t=49
+encqgkb 	钱啊	c=0 d=0.1 t=49
+encrvvc 	的妈妈	c=0 d=0.0923116 t=49
+encshhk 	想点	c=0 d=0.0891366 t=49
+encshtf 	想点赞	c=0 d=0.0895834 t=49
+encsngb 	可以带队	c=0 d=0.0873716 t=49
+encspmm 	要被删	c=0 d=0.1 t=49
+encsvpu 	要被	c=0 d=0.1 t=49
+enctmwy 	微信	c=0 d=0.1 t=49
+enctrrq 	我的	c=0 d=0.0913931 t=49
+enctsny 	我可以	c=0 d=0.0869358 t=49
+enctspm 	条要被删	c=0 d=0.1 t=49
+enctspu 	条要被	c=0 d=0.1 t=49
+enctssv 	条要	c=0 d=0.1 t=49
+encuanv 	羡慕忌妒	c=0 d=0.083527 t=49
+encvvyj 	妈妈就是	c=0 d=0.0927743 t=49
+encvwwe 	如何使用	c=0 d=0.0955997 t=49
+encwetm 	会用微	c=0 d=0.1 t=49
+encwetw 	会用微信	c=0 d=0.1 t=49
+encwfet 	会用	c=0 d=0.1 t=49
+encxlfg 	绑架真不	c=0 d=0.1 t=49
+encxlfh 	绑架真	c=0 d=0.1 t=49
+encyjyp 	就是这	c=0 d=0.0932394 t=49
+encyjys 	就是这样	c=0 d=0.0937067 t=49
+encypsu 	这样	c=0 d=0.0937067 t=49

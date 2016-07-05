@@ -3,53 +3,55 @@
 # 用法：想要哪项生效，就删去该行行首的 "#" 字符，但注意保留用于缩进的空格
 
 patch:
-  us_keyboard_layout: true                 # 键盘选项：应用美式键盘布局状态通知，适当，也可设为全开（always）全关（never）
-  style/color_scheme: google                 # 选择配色方案
-  style/horizontal: true                   # 候选窗横向显示
-  style/inline_preedit: true               # 关闭内嵌编码，这样就可以显示首行的拼音
-  style/font_face: "PingFang SC"           # 字体名称
-  style/font_point: 13                     # 字号
-  style/corner_radius: 2                   # 窗口圆角半径
-  style/border_height: 3                   # 窗口边界高度，大于圆角半径才有效果
-  style/border_width: 6                    # 窗口边界宽度，大于圆角半径才有效果
-  style/line_spacing: 1                    # 候选词的行间距
+  show_notifications_via_notification_center: true
+  us_keyboard_layout: true                               # 美式键盘布局
+  show_notifications_when: appropriate                   # 状态通知，适当，也可设为全开（always）全关（never）
+  style/color_scheme: custom                             # 选择配色方案
+
 
 # 等程序裏很少需要輸入中文，於是鼠鬚管在這些程序裏默認不開啓中文輸入。
 # 自定義 Mac 應用程序的初始轉換狀態，首先查看應用的 Info.plist 文件得到 該應用的 Bundle Identifier，通常是形如 com.apple.Xcode 的字符串。
 # 例如，要在 Xcode 裏面默認關閉中文輸入，又要在 Alfred 裏面恢復開啓中文輸入，可如此設定：
 # example squirrel.custom.yaml
-  app_options/com.apple.Xcode:
-    ascii_mode: true
-  app_options/com.apple.Safari:
-    ascii_mode: true
-  app_options/org.vim.MacVim:
-    ascii_mode: true
-  app_options/com.runningwithcrayons.Alfred-2:
-    ascii_mode: true
-  app_options/com.google.Chrome:
-    ascii_mode: true
-  app_options/com.agilebits.onepassword-osx:
-    ascii_mode: true
+  app_options:
+    com.apple.Xcode:
+      ascii_mode: true
+    com.apple.dt.Xcode.Playground:
+      ascii_mode: true
+    com.apple.Safari:
+      ascii_mode: true
+    org.vim.MacVim:
+      ascii_mode: true
+    com.runningwithcrayons.Alfred-3:
+      ascii_mode: true
+    com.google.Chrome:
+      ascii_mode: true
+    com.agilebits.onepassword-osx:
+      ascii_mode: true
+    com.microsoft.VSCode:
+      ascii_mode: true
 
-    # "style/color_scheme": Google
-    # "preset_color_schemes/Google":
-        # author: "skoj <skoj@qq.com>"
-        # back_color: 0xFFFFFF #背景
-        # border_color: 0xE2E2E2 #边框
-        # candidate_text_color: 0x000000 #非第一候选项
-        # hilited_back_color: 0x0099FF #拼音串高亮背景
-        # hilited_candidate_back_color: 0x0099FF #第一候选项背景
-        # hilited_candidate_text_color: 0xFFFFFF #第一候选项
-        # hilited_text_color: 0x000000 #拼音串高亮
-        # name: "Google"
-        # text_color: 0x666666 #拼音串
+  preset_color_schemes:
+    custom:
+      horizontal: true                                   # 候选条横向显示
+      inline_preedit: true                               # 启用内嵌编码模式，候选条首行不显示拼音
+      candidate_format: "%c\u2005%@\u2005"               # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。
+      corner_radius: 0                                   # 候选条圆角半径
+      border_height: 1                                   # 窗口边界高度，大于圆角半径才生效
+      border_width: 6                                    # 窗口边界宽度，大于圆角半径才生效
+      back_color: 0xFFFFFF                               # 候选条背景色
+      border_color: 0xE0B693                             # 边框色
+      font_face: "PingFangSC-Medium"                     # 候选词字体
+      font_point: 13                                     # 预选栏文字字号
+      label_font_face: "PingFangSC-Medium"               # 候选词编号字体
+      label_font_point: 13                               # 预选栏编号字号
+      candidate_text_color: 0x000000                     # 预选项文字颜色
+      text_color: 0x000000                               # 拼音行文字颜色，24位色值，16进制，BGR顺序
+      comment_text_color: 0x999999                       # 拼音等提示文字颜色
+      hilited_text_color: 0xFF6941                       # 高亮拼音 (需要开启内嵌编码)
+      hilited_candidate_text_color: 0xFF6941             # 第一候选项文字颜色
+      hilited_candidate_back_color: 0xFFFFFF             # 第一候选项背景背景色
+      hilited_comment_text_color: 0xFF6941               # 注解文字高亮
 
-    "style/color_scheme": custom
-    "preset_color_schemes/custom":
-        name: "custom"
-        back_color: 0xFFFFFF #候选条背景色
-        text_color: 0x424242 #高亮选中词颜色
-        hilited_candidate_text_color: 0xEE6E00 #候选文字颜色
-        hilited_candidate_back_color: 0xFFF0E4 #候选文字背景色
-        comment_text_color: 0x999999 #拼音等提示文字颜色
+
 

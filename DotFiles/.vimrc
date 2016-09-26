@@ -24,6 +24,9 @@ vmap L $
 nmap H ^
 vmap H ^
 inoremap jk <ESC>
+" Useful with ralativenumber
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 "--------
 " Vim UI
@@ -61,6 +64,7 @@ set report=0                                                      " always repor
 set wrap
 set scrolloff=5                                                   " 5 lines above/below cursor when scrolling
 set number                                                        " show line numbers
+set relativenumber
 set showmatch                                                     " show matching bracket (briefly jump)
 set showcmd                                                       " show typed command in status bar
 set title                                                         " show file in titlebar

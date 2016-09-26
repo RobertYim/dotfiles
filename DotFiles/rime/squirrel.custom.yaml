@@ -14,7 +14,7 @@ patch:
 # 例如，要在 Xcode 裏面默認關閉中文輸入，又要在 Alfred 裏面恢復開啓中文輸入，可如此設定：
 # example squirrel.custom.yaml
   app_options:
-    com.apple.Xcode:
+    com.apple.dt.Xcode:
       ascii_mode: true
     com.apple.dt.Xcode.Playground:
       ascii_mode: true
@@ -30,6 +30,17 @@ patch:
       ascii_mode: true
     com.microsoft.VSCode:
       ascii_mode: true
+    com.apple.ActivityMonitor:
+      ascii_mode: true
+    com.googlecode.iterm2:
+      ascii_mode: true
+    com.apple.Spotlight:
+      ascii_mode: true
+    com.blizzard.worldofwarcraft:
+      ascii_mode: true
+    2BUA8C4S2C.com.agilebits.onepassword4-helper:
+      ascii_mode: true
+
 
   preset_color_schemes:
     custom:

@@ -21,7 +21,7 @@ alias you-get='python3 $HOME/Documents/development/repos/you-get/you-get'
 alias t="python $HOME/Documents/tools/tTrans.py"
 alias ping="ping -c 10"
 alias ping6="ping6 -c 10"
-alias gen.psd="python $HOME/Documents/tools/generate_password.py"
+alias generatePwd="python $HOME/Documents/tools/generate_password.py"
 #alias remove_old_kernel='$HOME/Dropbox/dotfiles/remove_old_kernel.sh'
 alias h="history"
 alias editAlias='mvim $HOME/Documents/dotfiles/DotFiles/ShellAlias.bash'
@@ -30,7 +30,7 @@ alias tt='tmux attach'
 alias l='ls -alh'
 alias luTorrent="python $HOME/Documents/development/repos/LuTorrent/lutorrent.py"
 alias proxyIP="proxychains4 curl ipinfo.io"
-alias rentCalculatior="python $HOME/Documents/tools/rent_calculator.py"
+alias rentCalculator="python $HOME/Documents/tools/rent_calculator.py"
 # alias fetchMail="python $HOME/Documents/tools/mailinator.py"
 alias WoW="cat $HOME/Dropbox/WOWO.txt"
 alias baiduPan="python $HOME/Documents/development/repos/iScript/pan.baidu.com.py"
@@ -42,7 +42,7 @@ alias traceWithIPinfo="$HOME/Documents/tools/trace.sh"
 alias wifiMasterKey="python $HOME/Documents/tools/wifiMasterKey/wifiKeySearch.py"
 # alias sslocal="python $HOME/Documents/development/repos/shadowsocks/shadowsocks/local.py"
 alias ccal='cal | grep --color -EC6 "\b$(date +%e | sed "s/ //g")"'
-alias fakeBusy="cat /dev/urandom|hexdump -C | ag 'ca fe'"
+alias fakingBusy="cat /dev/urandom|hexdump -C | ag 'ca fe'"
 alias updateGFWList="zsh $HOME/Documents/tools/updateGFWlist.sh"
 alias simpleHTTPSServer="python $HOME/Documents/tools/simpleHTTPSServer.py $HOME/Documents/tools/server.pem"
 
@@ -72,6 +72,8 @@ alias tmux="tmux -CC"
 alias listWiFiDevices="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/listDevice.sh"
 alias rebootRouter="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/rebootRouter.sh"
 alias reloadRouter="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/reloadNetwork.sh"
+alias routerBridgeL="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/bridgeLinle.sh"
+alias routerBridgeA="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/bridgeA86481746.sh"
 
 # ADB Android
-alias adbMountReadWriteSystem="adb shell mount -o remount -o rw /system"
+alias adbMountReadWriteFileSystem="adb shell mount -o remount -o rw /system"

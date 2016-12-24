@@ -15,24 +15,48 @@ fe80::1%lo0     localhost
 # googlecode for gfwlist
 # 127.0.0.1 autoproxy-gfwlist.googlecode.com
 
+# Apple CDN
+# 17.253.85.201   osxapps.itunes.apple.com
+# 171.107.84.25   osxapps.itunes.apple.com
+183.6.240.157   osxapps.itunes.apple.com
+
+# sss.camp
+104.28.9.234    sss.camp
+
 # WoW
+121.254.200.133 cn.patch.battle.net
 122.198.64.135  us.patch.battle.net
 58.221.69.22    download008.dbu.telssr.chinacache.net
 180.97.183.132  download008.dbu.telssr.chinacache.net
 180.97.214.10   download008.dbu.telssr.chinacache.net
 58.221.69.15    download008.dbu.telssr.chinacache.net
 58.215.108.16   download008.dbu.telssr.chinacache.net
-180.97.208.5    client01.pdl.wow.battlenet.com.cn
-218.92.209.70   client02.pdl.wow.battlenet.com.cn
-222.186.20.10   client03.pdl.wow.battlenet.com.cn
-58.221.38.181   client04.pdl.wow.battlenet.com.cn.fastcdn.com
-184.25.56.82    dist.blizzard.com.edgesuite.net
+# 180.97.208.5    client01.pdl.wow.battlenet.com.cn
+# 218.92.209.70   client02.pdl.wow.battlenet.com.cn
+# 222.186.20.10   client03.pdl.wow.battlenet.com.cn
+# 58.221.38.181   client04.pdl.wow.battlenet.com.cn.fastcdn.com
+# 184.25.56.82    dist.blizzard.com.edgesuite.net
 
 #91.218.38.224   bt.inmac.org
 #91.218.38.224   inmac.org
 
-# Apple CDN
-17.253.85.201   osxapps.itunes.apple.com
+# Build Date: 2016-04-20T06:06:03.231766 (UTC)
+# API-1-ChinaNetCenter [ChinaNet] (Avg RTT: 240.878ms)
+183.61.23.8     se.itunes.apple.com
+183.61.23.8     su.itunes.apple.com
+183.61.23.8     upp.itunes.apple.com
+183.61.23.8     play.itunes.apple.com
+183.61.23.8     client-api.itunes.apple.com
+# API-2-ChinaCache [ChinaNet] (Avg RTT: 267.041ms)
+180.153.126.244 itunes.apple.com
+180.153.126.244 init.itunes.apple.com
+# API-HK-Akamai-1 [HongKong0] (Avg RTT: 74.512ms)
+184.87.97.50    search.itunes.apple.com
+# API-HK-Akamai-2-AMRadio [HongKong1] (Avg RTT: 98.571ms)
+184.87.100.246  radio.itunes.apple.com
+184.87.100.246  radio-activity.itunes.apple.com
+184.87.100.246  radio-services.itunes.apple.com
+# Appple Music Streaming and iOS/OS X Apps [ChinaNet-ChinaNetCenter]
 
 # Google
 # Map
@@ -145,5 +169,16 @@ fe80::1%lo0     localhost
 #127.0.0.1 www.baidu.com
 127.0.0.1 dup.baidustatic.com
 
-# Modify hosts start
+#pcbeta Start
+218.93.127.136 bbs.pcbeta.com
+218.93.127.136 www.pcbeta.com
+218.93.127.136 uc.pcbeta.com
+218.93.127.136 cdn.pcbeta.static.inimc.com
+218.93.127.136 cdn.pcbeta.css.inimc.com
+218.93.127.136 static.template.pcbeta.com
+218.93.127.136 i.pcbeta.com
+218.93.127.136 cdn.pcbeta.attachment.inimc.com
+218.93.127.136 mac.pcbeta.com
+218.93.127.136 cdn.pcbeta.img.inimc.com
+#pcbeta End
 

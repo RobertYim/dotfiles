@@ -272,6 +272,7 @@ local AppLayout = {}
 AppLayout['Safari'] = { large = true, full = false }
 AppLayout['WeChat'] = { small = true }
 AppLayout['iTerm2'] = { small = true }
+AppLayout['mpv'] = { large = true }
 
 function layoutApp(name, app, delayed)
     local conf = AppLayout[name]

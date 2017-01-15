@@ -72,14 +72,6 @@ source $HOME/Documents/dotfiles/DotFiles/ShellAlias.bash
 # private aliases
 source $HOME/Dropbox/backup/privateShellAlias.bash
 
-# gitignore api
-# www.gitignore.io/docs
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
-
-# finding IP infomation
-# www.ipinfo.io
-function ipInfo() { curl ipinfo.io/$@ ;}
-
 # Java
 export JAVA_HOME="/usr/libexec/java_home -v 1.8"
 

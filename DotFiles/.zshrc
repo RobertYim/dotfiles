@@ -76,7 +76,7 @@ source $HOME/Dropbox/backup/privateShellAlias.bash
 export JAVA_HOME="/usr/libexec/java_home -v 1.8"
 
 # Go
-# export GOROOT="/usr/local/opt/go/libexec"
+export GOROOT="/usr/local/opt/go/libexec"
 export GOPATH="$HOME/Library/go"
 
 # android

@@ -18,7 +18,7 @@ fe80::1%lo0     localhost
 # Apple CDN
 # 17.253.85.201   osxapps.itunes.apple.com
 # 171.107.84.25   osxapps.itunes.apple.com
-183.6.240.157   osxapps.itunes.apple.com
+# 183.6.240.157   osxapps.itunes.apple.com
 
 # sss.camp
 104.28.9.234    sss.camp

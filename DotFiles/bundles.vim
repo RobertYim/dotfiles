@@ -9,101 +9,101 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " My Bundles
-Bundle 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
 " Gist
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
 " Plist support
-Bundle 'darfink/vim-plist'
+Plugin 'darfink/vim-plist'
 
 "------------------
 " Code Completions
 "------------------
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'rdnetto/YCM-Generator'
-" Bundle 'mattn/emmet-vim'
-Bundle 'Raimondi/delimitMate'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
+Plugin 'ervandew/supertab'
+" Plugin 'mattn/emmet-vim'
+Plugin 'Raimondi/delimitMate'
 " snippets
-Bundle 'SirVer/ultisnips'
-" Bundle 'garbas/vim-snipmate'
-Bundle 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
+" Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 "------ snipmate dependencies -------
-" Bundle 'MarcWeber/vim-addon-mw-utils'
-" Bundle 'tomtom/tlib_vim'
+" Plugin 'MarcWeber/vim-addon-mw-utils'
+" Plugin 'tomtom/tlib_vim'
 
 "-----------------
 " Fast navigation
 "-----------------
-Bundle 'edsono/vim-matchit'
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion'
 
 "--------------
 " Fast editing
 "--------------
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'sjl/gundo.vim'
-Bundle 'godlygeek/tabular'
-Bundle 'nathanaelkane/vim-indent-guides'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'sjl/gundo.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 "--------------
 " IDE features
 "--------------
-Bundle 'scrooloose/nerdtree'
-" Bundle 'humiaozuzu/TabBar'
-Bundle 'majutsushi/tagbar'
-Bundle 'mileszs/ack.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'bling/vim-airline'
-Bundle 'scrooloose/syntastic'
-Bundle 'bronson/vim-trailing-whitespace'
+Plugin 'scrooloose/nerdtree'
+" Plugin 'humiaozuzu/TabBar'
+Plugin 'majutsushi/tagbar'
+Plugin 'mileszs/ack.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
+Plugin 'scrooloose/syntastic'
+Plugin 'bronson/vim-trailing-whitespace'
 
 "-------------
 " Other Utils
 "-------------
-" Bundle 'humiaozuzu/fcitx-status'
-" Bundle 'nvie/vim-togglemouse'
+" Plugin 'humiaozuzu/fcitx-status'
+" Plugin 'nvie/vim-togglemouse'
 
 "----------------------------------------
 " Syntax/Indent for language enhancement
 "----------------------------------------
 "------- web backend ---------
-" Bundle '2072/PHP-Indenting-for-VIm'
-"Bundle 'tpope/vim-rails'
-" Bundle 'lepture/vim-jinja'
-"Bundle 'digitaltoad/vim-jade'
+" Plugin '2072/PHP-Indenting-for-VIm'
+"Plugin 'tpope/vim-rails'
+" Plugin 'lepture/vim-jinja'
+"Plugin 'digitaltoad/vim-jade'
 
 "------- web frontend ----------
-" Bundle 'othree/html5.vim'
-" Bundle 'tpope/vim-haml'
-" Bundle 'pangloss/vim-javascript'
-" Bundle 'kchmck/vim-coffee-script'
-" Bundle 'nono/jquery.vim'
-" Bundle 'groenewege/vim-less'
-" Bundle 'wavded/vim-stylus'
-" Bundle 'nono/vim-handlebars'
+" Plugin 'othree/html5.vim'
+" Plugin 'tpope/vim-haml'
+" Plugin 'pangloss/vim-javascript'
+" Plugin 'kchmck/vim-coffee-script'
+" Plugin 'nono/jquery.vim'
+" Plugin 'groenewege/vim-less'
+" Plugin 'wavded/vim-stylus'
+" Plugin 'nono/vim-handlebars'
 
 "------- markup language -------
-" Bundle 'plasticboy/vim-markdown'
-" Bundle 'timcharper/textile.vim'
+" Plugin 'plasticboy/vim-markdown'
+" Plugin 'timcharper/textile.vim'
 
 "------- Ruby --------
-" Bundle 'tpope/vim-endwise'
+" Plugin 'tpope/vim-endwise'
 
 "------- Go ----------
-Bundle 'fatih/vim-go'
+Plugin 'fatih/vim-go'
 
 "------- FPs ------
-" Bundle 'kien/rainbow_parentheses.vim'
-" Bundle 'wlangstroth/vim-racket'
-" Bundle 'vim-scripts/VimClojure'
-" Bundle 'rosstimson/scala-vim-support'
+" Plugin 'kien/rainbow_parentheses.vim'
+" Plugin 'wlangstroth/vim-racket'
+" Plugin 'vim-scripts/VimClojure'
+" Plugin 'rosstimson/scala-vim-support'
 
 "--------------
 " Color Schemes
 "--------------
-Bundle 'tomasr/molokai'
+Plugin 'tomasr/molokai'
 
 call vundle#end()             " required!
 filetype plugin indent on     " required!

@@ -92,7 +92,7 @@ autocmd FileType html,htmldjango,xhtml,haml,yaml setlocal tabstop=2 shiftwidth=2
 autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 
 " syntax support
-autocmd Syntax javascript set syntax=jquery   " JQuery syntax support
+autocmd Syntax javascript   " JQuery syntax support
 " js
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
@@ -195,9 +195,9 @@ let NERDCompactSexyComs=1
 let g:user_emmet_expandabbr_key='<C-g>'
 
 " Ultisnips
-let g:UltiSnipsExpandTrigger="<c-f>"
-let g:UltiSnipsJumpForwardTrigger="<c-z>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -231,6 +231,9 @@ nnoremap <leader>v V`]
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/Documents/dotfiles/DotFiles/.ycm_extra_conf.py"
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
 
 "------------------
 " Useful Functions
@@ -293,3 +296,4 @@ if has("gui_running")
     map <D-9> 9gt
     map <D-0> :tablast<CR>
 endif
+

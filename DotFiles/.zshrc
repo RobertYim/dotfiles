@@ -73,7 +73,7 @@ source $HOME/Documents/dotfiles/DotFiles/ShellAlias.bash
 source $HOME/Dropbox/backup/privateShellAlias.bash
 
 # Java
-export JAVA_HOME="/usr/libexec/java_home -v 1.8"
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 
 # Go
 export GOROOT="/usr/local/opt/go/libexec"

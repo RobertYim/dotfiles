@@ -26,24 +26,26 @@ alias tt='tmux attach'
 alias l='ls -alh'
 alias luTorrent="python $HOME/Documents/development/repos/LuTorrent/lutorrent.py"
 alias proxyIP="proxychains4 curl ipinfo.io"
-alias rentCalculator="python $HOME/Documents/tools/rent_calculator.py"
+# alias rentCalculator="python $HOME/Documents/tools/rent_calculator.py"
 # alias fetchMail="python $HOME/Documents/tools/mailinator.py"
 alias WoW="cat $HOME/Dropbox/WOWO.txt"
 alias baiduPan="python $HOME/Documents/development/repos/iScript/pan.baidu.com.py"
-alias unzip="python $HOME/Documents/development/repos/iScript/unzip.py"
-alias btPy="python $HOME/Documents/development/repos/iScript/bt.py"
+# alias unzip="python $HOME/Documents/development/repos/iScript/unzip.py"
+# alias btPy="python $HOME/Documents/development/repos/iScript/bt.py"
 alias rsync="rsync -avP"
 alias du="du -sh"
 alias traceWithIPinfo="$HOME/Documents/tools/trace.sh"
 alias wifiMasterKey="python $HOME/Documents/tools/wifiMasterKey/wifiKeySearch.py"
+alias wifiMasterKey2="python $HOME/Documents/tools/WiFiMaster/WiFiMaster.py"
 # alias sslocal="python $HOME/Documents/development/repos/shadowsocks/shadowsocks/local.py"
 alias ccal='cal | grep --color -EC6 "\b$(date +%e | sed "s/ //g")"'
 alias fakingBusy="cat /dev/urandom|hexdump -C | ag 'ca fe'"
 alias updateGFWList="zsh $HOME/Documents/tools/updateGFWlist.sh"
 alias simpleHTTPSServer="python $HOME/Documents/tools/simpleHTTPSServer.py $HOME/Documents/tools/server.pem"
+alias reloadZshrc="source $HOME/.zshrc"
 
 
-# Mac only
+# macOS only
 alias openFTPServer="sudo launchctl load -w /System/Library/LaunchDaemons/ftp.plist"
 alias closeFTPServer="sudo launchctl unload -w /System/Library/LaunchDaemons/ftp.plist"
 #alias openWinDisk='open /Volumes/win7/Users/niko/Downloads'
@@ -63,13 +65,15 @@ alias brewUpdate="brew update && brew upgrade && brew cleanup"
 alias silverBox="hdiutil attach $HOME/Dropbox/SilverBox.sparsebundle"
 alias silverBoxEject="hdiutil detach /Volumes/SilverBox"
 alias tmux="tmux -CC"
+alias unmountHDD="diskutil umount 'HDD'"
+alias mountHDD="diskutil mount 'HDD'"
 
 # OpenWrt Scripts
 alias listWiFiDevices="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/listDevice.sh"
 alias rebootRouter="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/rebootRouter.sh"
 alias reloadRouter="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/reloadNetwork.sh"
-alias routerBridgeL="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/bridgeLinle.sh"
-alias routerBridgeA="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/bridgeA86481746.sh"
+# alias routerBridgeL="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/bridgeLinle.sh"
+# alias routerBridgeA="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/bridgeA86481746.sh"
 
 # ADB Android
 alias adbMountReadWriteFileSystem="adb shell mount -o remount -o rw /system"

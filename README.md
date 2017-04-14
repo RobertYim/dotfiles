@@ -3,12 +3,12 @@
 ### Tweaks and Hacks for Mac
 
 * ~~Fixed [RTC maintenance wake up][1] using [SleepWatcher][2]~~ Deprecated in 10.10.4
-* OSXSetup: credit goes to [mathiasbynens/dotfiles][3]
+* macOSSetup: credit goes to [mathiasbynens/dotfiles][3]
 * [Removed][4] some apps from Dock: ([see details][5])
 
 [1]: http://www.insanelymac.com/forum/topic/300072-wake-reason-rtc-alarm-how-to-deactivate/page-5
 [2]: http://t.cn/Rz2WFkq
-[3]: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+[3]: https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 [4]: https://gist.github.com/RobertYan/2b604886d6198b092126
 [5]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html
 
@@ -16,7 +16,7 @@
 # LICENSE
 The MIT License (MIT)
 
-Copyright (c) 2013-2016 Robert Yim
+Copyright (c) 2013-2017 Robert Yim
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

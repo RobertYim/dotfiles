@@ -15,7 +15,7 @@ set clipboard=unnamed
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 if exists("&undodir")
-	set undodir=~/.vim/undo
+    set undodir=~/.vim/undo
 endif
 
 " remap

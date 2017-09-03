@@ -93,6 +93,7 @@ export BOOKS="$HOME/Documents/books"
 # PATH
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH=$PATH:$GOPATH/bin:$GPG2/bin
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Opt out Homebrew analytics

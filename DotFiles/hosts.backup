@@ -80,6 +80,12 @@ fe80::1%lo0     localhost
 127.0.0.1 ads.gamezone.com
 127.0.0.1 monitor.uu.qq.com
 
+# Block iStat Connections
+127.0.0.1 updates.bjango.com
+#127.0.0.1 ip.bjango.com
+127.0.0.1 weather.bjango.com
+127.0.0.1 bjango.com
+
 # Block Baidu
 127.0.0.1 m1.baidu.com
 127.0.0.1 mobads.baidu.com

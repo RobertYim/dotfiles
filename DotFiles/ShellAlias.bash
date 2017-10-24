@@ -42,13 +42,16 @@ alias fakingBusy="cat /dev/urandom|hexdump -C | ag 'ca fe'"
 alias updateGFWList="zsh $HOME/Documents/tools/updateGFWlist.sh"
 alias simpleHTTPSServer="python $HOME/Documents/tools/simpleHTTPSServer.py $HOME/Documents/tools/server.pem"
 alias reloadZshrc="source $HOME/.zshrc"
+alias findSinaimgUploder="go run $HOME/Documents/tools/sinaimgUploader.go $1"
+alias ssConfigToQRcode="$HOME/Documents/tools/ssConfigToQRcode.py $1 $2"
 
 
 # macOS only
 alias openFTPServer="sudo launchctl load -w /System/Library/LaunchDaemons/ftp.plist"
 alias closeFTPServer="sudo launchctl unload -w /System/Library/LaunchDaemons/ftp.plist"
 #alias openWinDisk='open /Volumes/win7/Users/niko/Downloads'
-alias reloadSound='sudo kextunload /System/Library/Extensions/AppleHDA.kext && sudo kextload /System/Library/Extensions/AppleHDA.kext && sleep 2 && hs -c "hs.reload()"' # Reload Hammerspoon after reloading kext
+alias reloadSound='sudo kextunload /System/Library/Extensions/AppleHDA.kext && sudo kextload /System/Library/Extensions/AppleHDA.kext && sleep 2 && hs -c "hs.timer.doAfter(1, hs.reload)" ' # && hs -c "hs.reload()" # Reload Hammerspoon after reloading kext
+alias reloadCamera="sudo killall VDCAssistant"
 alias flushDNS="sudo killall -HUP mDNSResponder" ## 10.9 and 10.11
 # alias flushDNS="sudo discoveryutil udnsflushcaches" ## 10.10
 # alias flushDNS="dscacheutil -flushcache" ## 10.6
@@ -60,10 +63,10 @@ alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias TurnOffMonitors="pmset displaysleepnow"
 alias trash="$HOME/Documents/tools/trash.sh"
 # alias spotify="$HOME/Documents/development/repos/SpotifyControl/SpotifyControl"
-alias brewUpdate="brew update && brew upgrade && brew cleanup"
+alias brewUpdate="brew update && proxychains4 brew upgrade && brew cleanup"
 alias silverBox="hdiutil attach $HOME/Dropbox/SilverBox.sparsebundle"
 alias silverBoxEject="hdiutil detach /Volumes/SilverBox"
-alias tmux="tmux -CC"
+# alias tmux="tmux -CC"
 alias unmountHDD="diskutil umount 'HDD'"
 alias mountHDD="diskutil mount 'HDD'"
 

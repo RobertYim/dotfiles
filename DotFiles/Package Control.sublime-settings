@@ -1,0 +1,17 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Babel",
+		"ConvertToUTF8",
+		"Dotfiles Syntax Highlighting",
+		"FuzzyFilePath",
+		"Material Theme",
+		"Package Control",
+		"tern_for_sublime",
+		"Theme - Soda"
+	]
+}

@@ -673,7 +673,7 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 defaults write com.apple.Terminal ShowLineMarks -int 0
 
 # Install the Solarized Dark theme for iTerm
-open "${HOME}/init/Solarized Dark.itermcolors"
+# open "${HOME}/init/Solarized Dark.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
@@ -830,6 +830,9 @@ defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
 ###############################################################################
 # Sublime Text                                                                #
 ###############################################################################
+
+#系统下，按住某个键不会重复，但是会弹出一个菜单选择字符变更。在命令模式下这样并不是很好，如果你想禁用它，可以通过在终端里输入下面这个语句：
+defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 
 # Install Sublime Text settings
 cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null

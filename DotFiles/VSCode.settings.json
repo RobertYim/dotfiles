@@ -1,0 +1,24 @@
+// Place your settings in this file to overwrite the default settings
+// ~/Library/Application Support/Code/User/settings.json
+{
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": true,
+    "editor.wordWrap": true,
+    // "vim.disableAnnoyingNeovimMessage": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.useSystemClipboard": true,
+    "vim.leader": ",",
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useCtrlKeys": true,
+    "vim.surround": true,
+    "vim.hlsearch": true,
+    "workbench.colorTheme": "Dark (Monokai)",
+    "python.pythonPath": "/usr/local/bin/python3"
+}

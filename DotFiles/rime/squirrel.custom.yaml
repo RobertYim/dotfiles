@@ -40,6 +40,10 @@ patch:
       ascii_mode: true
     2BUA8C4S2C.com.agilebits.onepassword4-helper:
       ascii_mode: true
+    com.microsoft.VSCode:
+      ascii_mode: true
+    com.microsoft.VSCodeInsiders:
+      ascii_mode: true
 
 
   preset_color_schemes:

@@ -5,7 +5,7 @@
 			"characters": "."
 		}
 	],
-	"color_scheme": "Packages/User/Monokai Soda.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Monokai Soda (SL).tmTheme",
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Monaco",
@@ -17,5 +17,6 @@
 	"theme": "Soda Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"vintage_start_in_command_mode": true
+	"vintage_start_in_command_mode": true,
+	"word_wrap": true
 }

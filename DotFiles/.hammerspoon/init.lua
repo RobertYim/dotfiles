@@ -21,15 +21,18 @@ if not hs.ipc.cliStatus() then hs.ipc.cliInstall() end
 
 -- App shortcuts
 local keyApps = {
-    e = "MacVim",
+    -- e = "MacVim",
+    -- e = "Sublime Text",
+    e = "Visual Studio Code",
     c = "Google Chrome",
     -- m = "Mail",
     x = "Xcode",
     b = "iBooks",
     d = "Finder",
     p = "Preview",
-    i = "Intellij IDEA",
-    I = "Pycharm",
+    -- i = "Intellij IDEA",
+    -- I = "Pycharm",
+    -- i = "WebStorm"
 }
 for key, app in pairs(keyApps) do
     if key == string.upper(key) then
@@ -216,7 +219,7 @@ end
 local leftHalf      = hs.hotkey.bind(altShift, 'i', function() locationSet(0, 0, halfMaxWidth, hs.grid.GRIDHEIGHT) end)
 local rightHalf     = hs.hotkey.bind(altShift, 'o', function() locationSet(halfMaxWidth, 0, halfMaxWidth, hs.grid.GRIDHEIGHT) end)
 
-local fullScreen    = hs.hotkey.bind(altShift, 'f', function() hs.grid.maximizeWindow() end)
+-- local fullScreen    = hs.hotkey.bind(altShift, 'f', function() hs.grid.maximizeWindow() end)
 local centerScreen  = hs.hotkey.bind(altShift, 'c', function() locationSet(halfMaxWidth / 4, halfMaxHeight / 4, halfMaxWidth * 3 / 2, halfMaxHeight * 3 / 2) end)
 
 local upMove        = hs.hotkey.bind(altShift, 'k', function() straightlyMove(0, -1) end)

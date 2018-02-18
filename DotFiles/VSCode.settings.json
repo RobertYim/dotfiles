@@ -4,21 +4,35 @@
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.minimap.enabled": true,
-    "editor.wordWrap": true,
+    "editor.wordWrap": "on",
+    "editor.scrollbar.verticalScrollbarSize": 0,
+    "editor.formatOnSave": true,
     // "vim.disableAnnoyingNeovimMessage": true,
     "vim.insertModeKeyBindings": [
         {
-            "before": ["j","k"],
-            "after": ["<Esc>"]
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         }
     ],
-    "vim.useSystemClipboard": true,
+    "vim.cursorStylePerMode": {
+        "normal": "underline",
+        "insert": "line-thin",
+        "replace": "block-outline"
+    },
     "vim.leader": ",",
     "vim.easymotion": true,
-    "vim.incsearch": true,
     "vim.useCtrlKeys": true,
     "vim.surround": true,
     "vim.hlsearch": true,
-    "workbench.colorTheme": "Dark (Monokai)",
-    "python.pythonPath": "/usr/local/bin/python3"
+    "workbench.colorTheme": "Dark (Molokai)",
+    "python.pythonPath": "/usr/local/bin/python3",
+    "workbench.statusBar.feedback.visible": false,
+    "explorer.confirmDelete": false,
+    "eslint.autoFixOnSave": true,
+    "editor.cursorBlinking": "phase",
 }

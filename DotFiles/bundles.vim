@@ -11,23 +11,25 @@ Plugin 'VundleVim/Vundle.vim'
 " My Bundles
 Plugin 'terryma/vim-multiple-cursors'
 " Gist
-Plugin 'mattn/webapi-vim'
-Plugin 'mattn/gist-vim'
+" Plugin 'mattn/webapi-vim'
+" Plugin 'mattn/gist-vim'
 " Plist support
 Plugin 'darfink/vim-plist'
 
 "------------------
 " Code Completions
 "------------------
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'rdnetto/YCM-Generator'
+Plugin 'roxma/nvim-completion-manager'
 Plugin 'ervandew/supertab'
 " Plugin 'mattn/emmet-vim'
 Plugin 'Raimondi/delimitMate'
 " snippets
+
 Plugin 'SirVer/ultisnips'
-" Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
+" Plugin 'garbas/vim-snipmate'
 "------ snipmate dependencies -------
 " Plugin 'MarcWeber/vim-addon-mw-utils'
 " Plugin 'tomtom/tlib_vim'
@@ -51,9 +53,9 @@ Plugin 'nathanaelkane/vim-indent-guides'
 "--------------
 Plugin 'scrooloose/nerdtree'
 " Plugin 'humiaozuzu/TabBar'
-Plugin 'majutsushi/tagbar'
-Plugin 'mileszs/ack.vim'
-Plugin 'kien/ctrlp.vim'
+" Plugin 'majutsushi/tagbar'
+" Plugin 'mileszs/ack.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 Plugin 'vim-syntastic/syntastic'
@@ -92,7 +94,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 " Plugin 'tpope/vim-endwise'
 
 "------- Go ----------
-Plugin 'fatih/vim-go'
+" Plugin 'fatih/vim-go'
 
 "------- FPs ------
 " Plugin 'kien/rainbow_parentheses.vim'

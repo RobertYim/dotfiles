@@ -18,12 +18,27 @@ if exists("&undodir")
     set undodir=~/.vim/undo
 endif
 
+" NeoVim
+set termguicolors
+
+" Cursor Style
+" highlight Cursor guifg=white guibg=black
+" highlight iCursor guifg=white guibg=steelblue
+set guicursor=n-v-c:hor100-Cursora-blinkon0
+set guicursor=i:ver100-iCursor-blinkon5,v:block-vCursor
+" highlight current line
+set cursorline
+" set cursorcolumn
+
 " remap
 nmap L $
 vmap L $
 nmap H ^
 vmap H ^
 inoremap jk <ESC>
+" reindent
+nnoremap <Leader>i  mzgg=G`z
+
 " Useful with ralativenumber
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
@@ -37,13 +52,6 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 color molokai
 " Uncomment next line to set original monokai background color
 " let g:molokai_original = 1
-
-" highlight current line
-" au WinLeave * set nocursorline nocursorcolumn
-" au WinEnter * set cursorline cursorcolumn
-set cursorline
-" set cursorcolumn
-
 
 " search
 set incsearch
@@ -188,11 +196,13 @@ let NERDTreeShowBookmarks=1
 
 " nerdcommenter
 let NERDSpaceDelims=1
-" nmap <D-/> <plug>NERDCommenterToggle
 let NERDCompactSexyComs=1
+nmap <silent><leader>cc <plug>NERDCommenterToggle
+" MacVim only
+nmap <silent> <D-/> <plug>NERDCommenterToggle
 "
 " ZenCoding
-let g:user_emmet_expandabbr_key='<C-g>'
+" let g:user_emmet_expandabbr_key='<C-g>'
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -230,9 +240,9 @@ nnoremap <leader>a :Ack
 nnoremap <leader>v V`]
 
 " YouCompleteMe
-let g:ycm_global_ycm_extra_conf = "~/Documents/dotfiles/DotFiles/.ycm_extra_conf.py"
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+" let g:ycm_global_ycm_extra_conf = "~/Documents/dotfiles/DotFiles/.ycm_extra_conf.py"
+" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
 "------------------
@@ -260,40 +270,40 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " sublime key bindings
-nmap <D-]> >>
-nmap <D-[> <<
-vmap <D-[> <gv
-vmap <D-]> >gv
+" nmap <D-]> >>
+" nmap <D-[> <<
+" vmap <D-[> <gv
+" vmap <D-]> >gv
 
 " eggcache vim
 nnoremap ; :
-:command W w
-:command WQ wq
-:command Wq wq
-:command Q q
-:command Qa qa
-:command QA qa
+" :command W w
+" :command WQ wq
+" :command Wq wq
+" :command Q q
+" :command Qa qa
+" :command QA qa
 
 " for macvim
-if has("gui_running")
-    set go=aAce  " remove toolbar
-    "set transparency=30
-    set guifont=Monaco:h12
-    " set guifont=Source\ Code\ Pro:r14
-    set showtabline=1
-    set columns=120
-    set lines=60
-    " noremap <D-M-Left> :tabprevious<cr>
-    " noremap <D-M-Right> :tabnext<cr>
-    map <D-1> 1gt
-    map <D-2> 2gt
-    map <D-3> 3gt
-    map <D-4> 4gt
-    map <D-5> 5gt
-    map <D-6> 6gt
-    map <D-7> 7gt
-    map <D-8> 8gt
-    map <D-9> 9gt
-    map <D-0> :tablast<CR>
-endif
+" if has("gui_running")
+    " set go=aAce  " remove toolbar
+    " "set transparency=30
+    " set guifont=Monaco:h12
+    " " set guifont=Source\ Code\ Pro:r14
+    " set showtabline=1
+    " set columns=120
+    " set lines=60
+    " " noremap <D-M-Left> :tabprevious<cr>
+    " " noremap <D-M-Right> :tabnext<cr>
+    " map <D-1> 1gt
+    " map <D-2> 2gt
+    " map <D-3> 3gt
+    " map <D-4> 4gt
+    " map <D-5> 5gt
+    " map <D-6> 6gt
+    " map <D-7> 7gt
+    " map <D-8> 8gt
+    " map <D-9> 9gt
+    " map <D-0> :tablast<CR>
+" endif
 

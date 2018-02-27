@@ -43,7 +43,8 @@ Plugin 'Lokaltog/vim-easymotion'
 " Fast editing
 "--------------
 Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdcommenter'
+" Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-commentary'
 Plugin 'sjl/gundo.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'nathanaelkane/vim-indent-guides'

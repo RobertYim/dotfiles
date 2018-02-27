@@ -263,12 +263,12 @@ hs.hotkey.bind(altShift, '.', function()
 end)
 
 -- split view
--- SplitModal = require 'split_modal'
--- local splitModal = SplitModal.new(altShift, 'down', undo)
+SplitModal = require 'split_modal'
+local splitModal = SplitModal.new(altShift, 'down', undo)
 
--- function splitModal:hotkeysToDisable()
-    -- return {hyperUp, hyperRight, hyperLeft}
--- end
+function splitModal:hotkeysToDisable()
+    return {hyperUp, hyperRight, hyperLeft}
+end
 
 -- App layout
 local AppLayout = {}
@@ -350,55 +350,55 @@ local screenWatcher = hs.screen.watcher.new(screenChanged)
 screenWatcher:start()
 
 -- caffeinate
-hs.hotkey.bind(hyper, 'c', function()
-    local c = hs.caffeinate
-    if not c then return end
-    if c.get('displayIdle') or c.get('systemIdle') or c.get('system') then
-        if menuCaff then
-            menuCaffRelease()
-        else
-            addMenuCaff()
-            local type
-            if c.get('displayIdle') then type = 'displayIdle' end
-            if c.get('systemIdle') then type = 'systemIdle' end
-            if c.get('system') then type = 'system' end
-            hs.alert('Caffeine already on for '..type)
-        end
-    else
-        acAndBatt = hs.battery.powerSource() == 'Battery Power'
-        c.set('system', true, acAndBatt)
-        hs.alert('Caffeinated '..(acAndBatt and '' or 'on AC Power'))
-        addMenuCaff()
-    end
-end)
+-- hs.hotkey.bind(hyper, 'c', function()
+--     local c = hs.caffeinate
+--     if not c then return end
+--     if c.get('displayIdle') or c.get('systemIdle') or c.get('system') then
+--         if menuCaff then
+--             menuCaffRelease()
+--         else
+--             addMenuCaff()
+--             local type
+--             if c.get('displayIdle') then type = 'displayIdle' end
+--             if c.get('systemIdle') then type = 'systemIdle' end
+--             if c.get('system') then type = 'system' end
+--             hs.alert('Caffeine already on for '..type)
+--         end
+--     else
+--         acAndBatt = hs.battery.powerSource() == 'Battery Power'
+--         c.set('system', true, acAndBatt)
+--         hs.alert('Caffeinated '..(acAndBatt and '' or 'on AC Power'))
+--         addMenuCaff()
+--     end
+-- end)
 
-function addMenuCaff()
-    menuCaff = hs.menubar.new()
-    menuCaff:setIcon("~/.hammerspoon/caffeine-on.pdf")
-    menuCaff:setClickCallback(menuCaffRelease)
-end
+-- function addMenuCaff()
+--     menuCaff = hs.menubar.new()
+--     menuCaff:setIcon("~/.hammerspoon/caffeine-on.pdf")
+--     menuCaff:setClickCallback(menuCaffRelease)
+-- end
 
-function menuCaffRelease()
-    local c = hs.caffeinate
-    if not c then return end
-    if c.get('displayIdle') then
-        c.set('displayIdle', false, true)
-    end
-    if c.get('systemIdle') then
-        c.set('systemIdle', false, true)
-    end
-    if c.get('system') then
-        c.set('system', false, true)
-    end
-    if menuCaff then
-        menuCaff:delete()
-        menuCaff = nil
-    end
-    hs.alert('Decaffeinated')
-end
+-- function menuCaffRelease()
+--     local c = hs.caffeinate
+--     if not c then return end
+--     if c.get('displayIdle') then
+--         c.set('displayIdle', false, true)
+--     end
+--     if c.get('systemIdle') then
+--         c.set('systemIdle', false, true)
+--     end
+--     if c.get('system') then
+--         c.set('system', false, true)
+--     end
+--     if menuCaff then
+--         menuCaff:delete()
+--         menuCaff = nil
+--     end
+--     hs.alert('Decaffeinated')
+-- end
 
 -- console
-hs.hotkey.bind(altCommandShift, ';', hs.openConsole)
+-- hs.hotkey.bind(altCommandShift, ';', hs.openConsole)
 
 -- Auto reload Config
 function reloadConfig(files)

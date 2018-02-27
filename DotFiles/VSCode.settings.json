@@ -19,6 +19,57 @@
             ]
         }
     ],
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "H"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                "L"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            "before": [
+                ":"
+            ],
+            "after": [
+                ";"
+            ]
+        },
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                ":"
+            ]
+        },
+        {
+            "before": [
+                "Z",
+                "Z"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                },
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
+        },
+    ],
     "vim.cursorStylePerMode": {
         "normal": "underline",
         "insert": "line-thin",
@@ -29,10 +80,14 @@
     "vim.useCtrlKeys": true,
     "vim.surround": true,
     "vim.hlsearch": true,
-    "workbench.colorTheme": "Dark (Molokai)",
+    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
     "python.pythonPath": "/usr/local/bin/python3",
     "workbench.statusBar.feedback.visible": false,
     "explorer.confirmDelete": false,
     "eslint.autoFixOnSave": true,
     "editor.cursorBlinking": "phase",
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "nvim",
+    "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+    "editor.lineNumbers": "relative",
 }

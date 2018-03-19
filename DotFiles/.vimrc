@@ -38,6 +38,8 @@ vmap H ^
 inoremap jk <ESC>
 " reindent
 nnoremap <Leader>i  mzgg=G`z
+"
+nmap <backspace> :nohl<CR>
 
 " Useful with ralativenumber
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')

@@ -67,7 +67,7 @@
                     "command": "workbench.action.closeActiveEditor",
                     "args": []
                 }
-            ]
+            ],
         },
     ],
     "vim.cursorStylePerMode": {
@@ -90,4 +90,8 @@
     "vim.neovimPath": "nvim",
     "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
     "editor.lineNumbers": "relative",
+    "workbench.startupEditor": "none",
+    "javascript.validate.enable": false,
+    "flow.useNPMPackagedFlow": true,
+    "flow.pathToFlow": "${workspaceRoot}/node_modules/.bin/flow",
 }

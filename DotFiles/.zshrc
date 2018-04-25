@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="custom"
+ZSH_THEME="ys"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -55,11 +55,12 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  # export EDITOR='subl'
+  export EDITOR='vscode'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -85,6 +86,9 @@ export GOPATH="$HOME/Library/go"
 # MacGPG2
 export GPG2="/usr/local/MacGPG2"
 
+# Python unversioned symlinks
+export Python_PATH="/usr/local/opt/python/libexec/bin"
+
 # Path alias
 export HDD="/Volumes/HDD/Storage"
 export DOWNLOADS="$HOME/Downloads/"
@@ -92,9 +96,9 @@ export BOOKS="$HOME/Documents/books"
 
 # PATH
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH=$PATH:$GOPATH/bin:$GPG2/bin
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH=$GOPATH/bin:$GPG2/bin:$Python_PATH:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Opt out Homebrew analytics
 export HOMEBREW_NO_ANALYTICS=1
+

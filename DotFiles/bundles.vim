@@ -103,10 +103,14 @@ Plugin 'bronson/vim-trailing-whitespace'
 " Plugin 'vim-scripts/VimClojure'
 " Plugin 'rosstimson/scala-vim-support'
 
+"------- TypeScript --------
+Plugin 'leafgarland/typescript-vim'
+
 "--------------
 " Color Schemes
 "--------------
 Plugin 'tomasr/molokai'
+Plugin 'rakr/vim-one'
 
 call vundle#end()             " required!
 filetype plugin indent on     " required!

@@ -80,18 +80,37 @@
     "vim.useCtrlKeys": true,
     "vim.surround": true,
     "vim.hlsearch": true,
-    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
     "python.pythonPath": "/usr/local/bin/python3",
     "workbench.statusBar.feedback.visible": false,
     "explorer.confirmDelete": false,
-    "eslint.autoFixOnSave": true,
+    "eslint.autoFixOnSave": false,
     "editor.cursorBlinking": "phase",
     "vim.enableNeovim": true,
-    "vim.neovimPath": "nvim",
-    "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+    "vim.neovimPath": "/usr/local/bin/nvim",
     "editor.lineNumbers": "relative",
     "workbench.startupEditor": "none",
-    "javascript.validate.enable": false,
-    "flow.useNPMPackagedFlow": true,
+    "javascript.validate.enable": true,
+    "flow.useNPMPackagedFlow": false,
     "flow.pathToFlow": "${workspaceRoot}/node_modules/.bin/flow",
+    "eslint.packageManager": "yarn",
+    "files.associations": {
+        "*.js": "javascript"
+    },
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "editor.fontWeight": "500",
+    "workbench.iconTheme": "Monokai Pro (Filter Ristretto) Icons",
+    "workbench.colorTheme": "Monokai Pro (Filter Ristretto)",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.cursorStyle": "underline",
+    "[javascript]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+    "[html]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+    "prettier.eslintIntegration": true,
+    "prettier.singleQuote": true
 }

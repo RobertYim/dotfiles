@@ -1,5 +1,5 @@
-" enable Vundles plugin
-source ~/.vim/bundles.vim
+" enable pathogen.vim plugin
+execute pathogen#infect()
 " encoding dectection
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 " enable filetype dectection and ft specific plugin/indent
@@ -123,9 +123,6 @@ autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
 autocmd FileType html,htmldjango,xhtml,haml,yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
 autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
-
-" syntax support
-autocmd Syntax javascript   " JQuery syntax support
 " js
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
@@ -148,68 +145,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Rainbow parentheses for Lisp and variants
-" let g:rbpt_colorpairs = [
-"     \ ['brown',       'RoyalBlue3'],
-"     \ ['Darkblue',    'SeaGreen3'],
-"     \ ['darkgray',    'DarkOrchid3'],
-"     \ ['darkgreen',   'firebrick3'],
-"     \ ['darkcyan',    'RoyalBlue3'],
-"     \ ['darkred',     'SeaGreen3'],
-"     \ ['darkmagenta', 'DarkOrchid3'],
-"     \ ['brown',       'firebrick3'],
-"     \ ['gray',        'RoyalBlue3'],
-"     \ ['black',       'SeaGreen3'],
-"     \ ['darkmagenta', 'DarkOrchid3'],
-"     \ ['Darkblue',    'firebrick3'],
-"     \ ['darkgreen',   'RoyalBlue3'],
-"     \ ['darkcyan',    'SeaGreen3'],
-"     \ ['darkred',     'DarkOrchid3'],
-"     \ ['red',         'firebrick3'],
-"     \ ]
-" let g:rbpt_max = 16
-" autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
-
-" tabbar
-" let g:Tb_MaxSize = 2
-" let g:Tb_TabWrap = 1
-" hi Tb_Normal guifg=white ctermfg=white
-" hi Tb_Changed guifg=green ctermfg=green
-" hi Tb_VisibleNormal ctermbg=252 ctermfg=235
-" hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
-
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader><Leader>'
-
-" Tagbar
-" let g:tagbar_left=1
-" let g:tagbar_width=30
-" let g:tagbar_autofocus = 1
-" let g:tagbar_sort = 0
-" let g:tagbar_compact = 1
-" tag for coffee
-" if executable('coffeetags')
-"   let g:tagbar_type_coffee = {
-"         \ 'ctagsbin' : 'coffeetags',
-"         \ 'ctagsargs' : '',
-"         \ 'kinds' : [
-"         \ 'f:functions',
-"         \ 'o:object',
-"         \ ],
-"         \ 'sro' : ".",
-"         \ 'kind2scope' : {
-"         \ 'f' : 'object',
-"         \ 'o' : 'object',
-"         \ }
-"         \ }
-"   let g:tagbar_type_markdown = {
-"     \ 'ctagstype' : 'markdown',
-"     \ 'sort' : 0,
-"     \ 'kinds' : [
-"         \ 'h:sections'
-"     \ ]
-"     \ }
-" endif
 
 " Nerd Tree
 let NERDChristmasTree=0
@@ -219,13 +156,6 @@ let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$', '\.DS_Store$']
 " let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
 let NERDTreeShowBookmarks=1
 
-" nerdcommenter
-" let NERDSpaceDelims=1
-" let NERDCompactSexyComs=1
-" nmap <silent><leader>cc <plug>NERDCommenterToggle
-" MacVim only
-" nmap <silent> <D-/> <plug>NERDCommenterToggle
-
 " ZenCoding
 " let g:user_emmet_expandabbr_key='<C-g>'
 
@@ -234,32 +164,19 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType c setlocal omnifunc=ccomplete#Complete
-if !exists('g:neocomplcache_omni_patterns')
-  let g:neocomplcache_omni_patterns = {}
-endif
-let g:neocomplcache_omni_patterns.erlang = '[a-zA-Z]\|:'
-
 " SuperTab
 " let g:SuperTabDefultCompletionType='context'
 let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
 let g:SuperTabRetainCompletionType=2
 
 " ctrlp
-set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+" set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
+" let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " Keybindings for plugin toggle
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
-nmap <F5> :TagbarToggle<cr>
 nmap <F3> :NERDTreeToggle<cr>
-nmap <F6> :GundoToggle<cr>
 nmap <F4> :IndentGuidesToggle<cr>
 nnoremap <leader>a :Ack
 nnoremap <leader>v V`]

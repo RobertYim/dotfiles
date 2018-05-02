@@ -3,9 +3,9 @@
 {
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
-    "editor.minimap.enabled": true,
+    "editor.minimap.enabled": false,
     "editor.wordWrap": "on",
-    "editor.scrollbar.verticalScrollbarSize": 0,
+    "editor.scrollbar.verticalScrollbarSize": 4,
     "editor.formatOnSave": true,
     // "vim.disableAnnoyingNeovimMessage": true,
     "vim.insertModeKeyBindings": [
@@ -91,7 +91,7 @@
     "workbench.startupEditor": "none",
     "javascript.validate.enable": true,
     "flow.useNPMPackagedFlow": false,
-    "flow.pathToFlow": "${workspaceRoot}/node_modules/.bin/flow",
+    // "flow.pathToFlow": "${workspaceRoot}/node_modules/.bin/flow",
     "eslint.packageManager": "yarn",
     "files.associations": {
         "*.js": "javascript"
@@ -99,7 +99,7 @@
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "editor.fontWeight": "500",
-    "workbench.iconTheme": "Monokai Pro (Filter Ristretto) Icons",
+    "workbench.iconTheme": null,
     "workbench.colorTheme": "Monokai Pro (Filter Ristretto)",
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.cursorStyle": "underline",
@@ -112,5 +112,13 @@
         "editor.tabSize": 2
     },
     "prettier.eslintIntegration": true,
-    "prettier.singleQuote": true
+    "prettier.singleQuote": true,
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": true,
+    "editor.hideCursorInOverviewRuler": true,
+    "workbench.editor.showIcons": false,
+    "explorer.openEditors.visible": 0,
+    "editor.folding": false,
+    "editor.renderIndentGuides": false,
+    "editor.renderLineHighlight": "gutter"
 }

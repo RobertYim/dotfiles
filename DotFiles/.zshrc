@@ -90,9 +90,9 @@ export GPG2="/usr/local/MacGPG2"
 export Python_PATH="/usr/local/opt/python/libexec/bin"
 
 # Path alias
-export HDD="/Volumes/HDD/Storage"
+export HDD="/Volumes/HDD/Storage/"
 export DOWNLOADS="$HOME/Downloads/"
-export BOOKS="$HOME/Documents/books"
+export BOOKS="$HOME/Documents/books/"
 
 # PATH
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"

@@ -5,7 +5,7 @@
 patch:
   show_notifications_via_notification_center: true
   us_keyboard_layout: true                               # 美式键盘布局
-  show_notifications_when: appropriate                   # 状态通知，适当，也可设为全开（always）全关（never）
+  show_notifications_when: appropriate                   # 状态通知，适当(appropriate)，也可设为全开（always）全关（never）
   style/color_scheme: custom                             # 选择配色方案
 
 

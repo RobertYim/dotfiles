@@ -2,7 +2,7 @@ patch:
   switcher:
     caption: 〔方案选单〕
     hotkeys:
-    - Control+grave
+    - Control+Shift+grave
 
   # 候选词 5 个
   menu:

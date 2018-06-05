@@ -9,7 +9,7 @@
 (show-paren-mode 1)
 
 ;;; This is the binary name of my scheme implementation
-(setq scheme-program-name "/usr/local/bin/scheme")
+; (setq scheme-program-name "/usr/local/bin/scheme")
 
 ;;; Set size
 (defun set-frame-size-according-to-resolution ()
@@ -26,12 +26,12 @@
     ;; from the screen height (for panels, menubars and
     ;; whatnot), then divide by the height of a char to
     ;; get the height we want
-    (add-to-list 'default-frame-alist 
+    (add-to-list 'default-frame-alist
          (cons 'height (/ (- (x-display-pixel-height) 200)
                              (frame-char-height)))))))
 (set-frame-size-according-to-resolution)
 
- ;;; Color theme
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(load-theme 'monokai t)
+;;; Color theme
+; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+;;; (load-theme 'monokai t)
 

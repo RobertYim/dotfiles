@@ -68,10 +68,10 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# private aliases
+source $HOME/Google\ Drive/backup/privateShellAlias.bash
 # Source aliases
 source $HOME/Documents/dotfiles/DotFiles/ShellAlias.bash
-# private aliases
-source $HOME/Dropbox/backup/privateShellAlias.bash
 
 # Java
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
@@ -84,10 +84,16 @@ export GOPATH="$HOME/Library/go"
 # export ANDROID="$HOME/Library/Android/sdk/platform-tools"
 
 # MacGPG2
-export GPG2="/usr/local/MacGPG2"
+export GPG2="/usr/local/MacGPG2/bin"
 
 # Python unversioned symlinks
-export Python_PATH="/usr/local/opt/python/libexec/bin"
+# export Python_PATH="/usr/local/opt/python/libexec/bin"
+
+# Conda
+export Conda="/usr/local/miniconda3/bin"
+
+# OpenSSL
+export OpenSSL="/usr/local/opt/openssl/bin"
 
 # Path alias
 export HDD="/Volumes/HDD/Storage/"
@@ -96,7 +102,7 @@ export BOOKS="$HOME/Documents/books/"
 
 # PATH
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH=$GOPATH/bin:$GPG2/bin:$Python_PATH:$PATH
+export PATH=$OpenSSL:$GOPATH/bin:$GPG2:$Conda:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Opt out Homebrew analytics

@@ -18,16 +18,13 @@ if exists("&undodir")
     set undodir=~/.vim/undo
 endif
 
-" NeoVim
-set termguicolors
-
 " Cursor Style
-" highlight Cursor guifg=white guibg=black
-" highlight iCursor guifg=white guibg=steelblue
+highlight Cursor guifg=white guibg=black
+highlight iCursor guifg=white guibg=steelblue
 set guicursor=n-v-c:hor100-Cursora-blinkon0
 set guicursor=i:ver100-iCursor-blinkon5,v:block-vCursor
 " highlight current line
-set cursorline
+" set cursorline
 " set cursorcolumn
 
 " remap
@@ -67,16 +64,18 @@ if (empty($TMUX))
 endif
 "
 " color scheme
-color one
+color palenight
 set background=dark
 "
-let g:one_allow_italics = 1                                       "One theme italic support
+"One theme italic support
+" let g:one_allow_italics = 1
 "
 " Uncomment next line to set original monokai background color
 " let g:molokai_original = 1
 "
 " Airline theme
-let g:airline_theme='one'
+" let g:airline_theme='palenight'
+"
 
 " search
 set incsearch
@@ -87,34 +86,51 @@ set smartcase
 " editor settings
 set history=1000
 set nocompatible
-set nofoldenable                                                  " disable folding"
-set confirm                                                       " prompt when existing from an unsaved file
-set backspace=indent,eol,start                                    " More powerful backspacing
-set t_Co=256                                                      " Explicitly tell vim that the terminal has 256 colors "
-set mouse=a                                                       " use mouse in all modes
-set report=0                                                      " always report number of lines changed                "
-" set nowrap                                                        " dont wrap lines
+" disable folding
+set nofoldenable
+" prompt when existing from an unsaved file
+set confirm
+" More powerful backspacing
+set backspace=indent,eol,start
+" Explicitly tell vim that the terminal has 256 colors
+" set t_Co=256
+" use mouse in all modes
+set mouse=a
+" always report number of lines changed
+set report=0
 set wrap
-set scrolloff=5                                                   " 5 lines above/below cursor when scrolling
-set number                                                        " show line numbers
+" 5 lines above/below cursor when scrolling
+set scrolloff=5
+" show line numbers
+set number
 set relativenumber
-set showmatch                                                     " show matching bracket (briefly jump)
-set showcmd                                                       " show typed command in status bar
-set title                                                         " show file in titlebar
-set laststatus=2                                                  " use 2 lines for the status bar
-set matchtime=2                                                   " show matching bracket for 0.2 seconds
-set matchpairs+=<:>                                               " specially for html
-" set relativenumber
+" show matching bracket (briefly jump)
+set showmatch
+" show typed command in status bar
+set showcmd
+" show file in titlebar
+set title
+" use 2 lines for the status bar
+set laststatus=2
+" show matching bracket for 0.2 seconds
+set matchtime=2
+" specially for html
+set matchpairs+=<:>
 
 " Default Indentation
+" indent when
 set autoindent
-" set smartindent     " indent when
-set tabstop=4       " tab width
-set softtabstop=4   " backspace
-set shiftwidth=4    " indent width
+" set smartindent
+" tab width
+set tabstop=4
+" backspace
+set softtabstop=4
+" indent width
+set shiftwidth=4
 " set textwidth=79
 " set smarttab
-set expandtab       " expand tab to space
+" expand tab to space
+set expandtab
 
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120

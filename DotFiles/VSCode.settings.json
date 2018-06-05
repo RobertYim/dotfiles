@@ -1,124 +1,124 @@
 // Place your settings in this file to overwrite the default settings
 // ~/Library/Application Support/Code/User/settings.json
 {
-    "editor.fontFamily": "Fira Code",
-    "editor.fontLigatures": true,
-    "editor.minimap.enabled": false,
-    "editor.wordWrap": "on",
-    "editor.scrollbar.verticalScrollbarSize": 4,
-    "editor.formatOnSave": true,
-    // "vim.disableAnnoyingNeovimMessage": true,
-    "vim.insertModeKeyBindings": [
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "on",
+  "editor.scrollbar.verticalScrollbarSize": 2,
+  "editor.formatOnSave": true,
+  // "vim.disableAnnoyingNeovimMessage": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.otherModesKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    {
+      "before": [
+        ":"
+      ],
+      "after": [
+        ";"
+      ]
+    },
+    {
+      "before": [
+        ";"
+      ],
+      "after": [
+        ":"
+      ]
+    },
+    {
+      "before": [
+        "Z",
+        "Z"
+      ],
+      "after": [],
+      "commands": [
         {
-            "before": [
-                "j",
-                "k"
-            ],
-            "after": [
-                "<Esc>"
-            ]
+          "command": "workbench.action.files.save",
+          "args": []
+        },
+        {
+          "command": "workbench.action.closeActiveEditor",
+          "args": []
         }
-    ],
-    "vim.otherModesKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "H"
-            ],
-            "after": [
-                "^"
-            ]
-        },
-        {
-            "before": [
-                "L"
-            ],
-            "after": [
-                "$"
-            ]
-        },
-        {
-            "before": [
-                ":"
-            ],
-            "after": [
-                ";"
-            ]
-        },
-        {
-            "before": [
-                ";"
-            ],
-            "after": [
-                ":"
-            ]
-        },
-        {
-            "before": [
-                "Z",
-                "Z"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save",
-                    "args": []
-                },
-                {
-                    "command": "workbench.action.closeActiveEditor",
-                    "args": []
-                }
-            ],
-        },
-    ],
-    "vim.cursorStylePerMode": {
-        "normal": "underline",
-        "insert": "line-thin",
-        "replace": "block-outline"
-    },
-    "vim.leader": ",",
-    "vim.easymotion": true,
-    "vim.useCtrlKeys": true,
-    "vim.surround": true,
-    "vim.hlsearch": true,
-    "python.pythonPath": "/usr/local/bin/python3",
-    "workbench.statusBar.feedback.visible": false,
-    "explorer.confirmDelete": false,
-    "eslint.autoFixOnSave": false,
-    "editor.cursorBlinking": "phase",
-    "vim.enableNeovim": true,
-    "vim.neovimPath": "/usr/local/bin/nvim",
-    "editor.lineNumbers": "relative",
-    "workbench.startupEditor": "none",
-    "javascript.validate.enable": true,
-    "flow.useNPMPackagedFlow": false,
-    // "flow.pathToFlow": "${workspaceRoot}/node_modules/.bin/flow",
-    "eslint.packageManager": "yarn",
-    "files.associations": {
-        "*.js": "javascript"
-    },
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "editor.fontWeight": "500",
-    "workbench.iconTheme": null,
-    "workbench.colorTheme": "Monokai Pro (Filter Ristretto)",
-    "terminal.external.osxExec": "iTerm.app",
-    "terminal.integrated.cursorStyle": "underline",
-    "[javascript]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2
-    },
-    "[html]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2
-    },
-    "prettier.eslintIntegration": true,
-    "prettier.singleQuote": true,
-    "workbench.activityBar.visible": false,
-    "workbench.statusBar.visible": true,
-    "editor.hideCursorInOverviewRuler": true,
-    "workbench.editor.showIcons": false,
-    "explorer.openEditors.visible": 0,
-    "editor.folding": false,
-    "editor.renderIndentGuides": false,
-    "editor.renderLineHighlight": "gutter"
+      ]
+    }
+  ],
+  "vim.cursorStylePerMode": {
+    "normal": "underline",
+    "insert": "line-thin",
+    "replace": "block-outline"
+  },
+  "vim.leader": ",",
+  "vim.easymotion": true,
+  "vim.useCtrlKeys": true,
+  "vim.surround": true,
+  "vim.hlsearch": true,
+  "python.pythonPath": "/usr/local/miniconda3/bin/python3",
+  "workbench.statusBar.feedback.visible": false,
+  "explorer.confirmDelete": false,
+  "eslint.autoFixOnSave": false,
+  "editor.cursorBlinking": "phase",
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "editor.lineNumbers": "relative",
+  "workbench.startupEditor": "none",
+  "javascript.validate.enable": true,
+  // "flow.useNPMPackagedFlow": false,
+  // "flow.pathToFlow": "${workspaceRoot}/node_modules/.bin/flow",
+  "eslint.packageManager": "yarn",
+  "files.associations": {
+    "*.js": "javascript"
+  },
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "editor.fontWeight": "500",
+  "workbench.iconTheme": null,
+  "workbench.colorTheme": "Monokai Pro (Filter Ristretto)",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.cursorStyle": "line",
+  "[javascript]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[html]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+  "workbench.activityBar.visible": false,
+  "workbench.statusBar.visible": true,
+  "editor.hideCursorInOverviewRuler": true,
+  "workbench.editor.showIcons": false,
+  "explorer.openEditors.visible": 0,
+  "editor.folding": false,
+  "editor.renderIndentGuides": true,
+  "editor.renderLineHighlight": "gutter"
 }

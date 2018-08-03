@@ -64,7 +64,7 @@ if (empty($TMUX))
 endif
 "
 " color scheme
-color palenight
+color sublimemonokai
 set background=dark
 "
 "One theme italic support
@@ -152,14 +152,10 @@ let g:netrw_liststyle=3
 "-----------------
 " Plugin settings
 "-----------------
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" Ale
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader><Leader>'

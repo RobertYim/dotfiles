@@ -100,7 +100,7 @@
   "telemetry.enableCrashReporter": false,
   "editor.fontWeight": "500",
   "workbench.iconTheme": null,
-  "workbench.colorTheme": "Monokai Pro (Filter Ristretto)",
+  "workbench.colorTheme": "Night Owl",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.cursorStyle": "line",
   "[javascript]": {
@@ -120,5 +120,10 @@
   "explorer.openEditors.visible": 0,
   "editor.folding": false,
   "editor.renderIndentGuides": true,
-  "editor.renderLineHighlight": "gutter"
+  "editor.renderLineHighlight": "gutter",
+  "window.zoomLevel": 0,
+  "editor.fontSize": 12,
+  "markdown-preview-enhanced.liveUpdate": true,
+  "markdown-pdf.executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "window.nativeTabs": false,
 }

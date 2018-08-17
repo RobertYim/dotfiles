@@ -1,0 +1,94 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# f_myphrases.dict.yaml
+#
+
+---
+name: f_myphrases
+version: "2016.06.17"
+sort: by_weight
+use_preset_vocabulary: false
+...
+
+# 无码表的词库
+
+亦可赛艇
+抹大拉的玛丽亚
+
+# 有码表的词库, 格式
+# (注意是用制表符分割)：
+# 文字	编码	频次(可省略)
+
+lithromantic	lithromantic	10000
+http	http
+https	https
+API	api	10000
+BBC	bbc	10000
+GSW	gsw
+Golden State Warriors	gsw
+JavaScript	js	10000
+Markdown	md	10000
+NBA	nba	10000
+OS X	osx	10000
+PSP	psp	10000
+QQ	qq	10000
+TV	tv	10000
+v2ex	vtex	10000
+V2EX	vtex	10001
+Wiki	wiki	10000
+Wikipedia	wikipedia	10000
+Xbox	xbox	10000
+Rails	rails	10000
+Ruby on Rails	ror	10000
+清风不识字何故乱翻书	qingfengbushiziheguluanfanshu
+清風不識字何故亂翻書	qingfengbushiziheguluanfanshu
+清风不识字何故乱翻书	qfbszhglfs
+清風不識字何故亂翻書	qfbszhglfs
+
+# emoji
+
+❤️	heart
+❤️	xin	1
+🚀	rocket
+💋	kiss
+😁	kaixin	1
+😃	kan	1
+😄	xiao	1
+😊	xiao	1
+🎈	qiqiu
+💊	yaowan
+🍀	siyecao
+🌚🌝	jiong
+🆘	sos
+🎵	yinyue
+🏀	lanqiu
+🏆	guanjun
+☀️	taiyang
+🌙	yueliang
+🍭	bangbangtang
+
+# 常见符号
+
+⌘	cmd
+⏎	return
+⏏	eject
+⇪	cap
+⇧	shift
+⌥	opt
+⌃	ctrl
+⌫	del
+°	degree
+℃	degreec
+℉	degreef
+✓	right	10000
+✓	duigou	10001
+✗	wrong	10000
+✗	shanchu	10000
+✗	cha	10000
+✗	chazi	10000
+°	du	10000
+℉	huashidu
+℃	sheshidu
+
+#	...	10000

@@ -10,53 +10,39 @@
   // "vim.disableAnnoyingNeovimMessage": true,
   "vim.insertModeKeyBindings": [
     {
-      "before": [
-        "j",
-        "k"
-      ],
-      "after": [
-        "<Esc>"
-      ]
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
     }
   ],
-  "vim.otherModesKeyBindingsNonRecursive": [
+  "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "H"
-      ],
-      "after": [
-        "^"
-      ]
+      "before": ["H"],
+      "after": ["^"]
     },
     {
-      "before": [
-        "L"
-      ],
-      "after": [
-        "$"
-      ]
+      "before": ["L"],
+      "after": ["$"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["H"],
+      "after": ["^"]
     },
     {
-      "before": [
-        ":"
-      ],
-      "after": [
-        ";"
-      ]
+      "before": ["L"],
+      "after": ["$"]
     },
     {
-      "before": [
-        ";"
-      ],
-      "after": [
-        ":"
-      ]
+      "before": [":"],
+      "after": [";"]
     },
     {
-      "before": [
-        "Z",
-        "Z"
-      ],
+      "before": [";"],
+      "after": [":"]
+    },
+    {
+      "before": ["Z", "Z"],
       "after": [],
       "commands": [
         {
@@ -70,11 +56,9 @@
       ]
     }
   ],
-  "vim.cursorStylePerMode": {
-    "normal": "underline",
-    "insert": "line-thin",
-    "replace": "block-outline"
-  },
+  "vim.cursorStylePerMode.insert": "line-thin",
+  "vim.cursorStylePerMode.normal": "underline",
+  "vim.cursorStylePerMode.replace": "block-outline",
   "vim.leader": ",",
   "vim.easymotion": true,
   "vim.useCtrlKeys": true,
@@ -100,7 +84,7 @@
   "telemetry.enableCrashReporter": false,
   "editor.fontWeight": "500",
   "workbench.iconTheme": null,
-  "workbench.colorTheme": "Night Owl",
+  "workbench.colorTheme": "Monokai Pro",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.cursorStyle": "line",
   "[javascript]": {
@@ -123,7 +107,6 @@
   "editor.renderLineHighlight": "gutter",
   "window.zoomLevel": 0,
   "editor.fontSize": 12,
-  "markdown-preview-enhanced.liveUpdate": true,
   "markdown-pdf.executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-  "window.nativeTabs": false,
+  "window.nativeTabs": false
 }

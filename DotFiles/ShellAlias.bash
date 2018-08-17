@@ -47,6 +47,7 @@ alias ssConfigToQRcode="$HOME/Documents/tools/ssConfigToQRcode.py $1 $2"
 alias setProxy="export https_proxy=http://127.0.0.1:9000;export http_proxy=http://127.0.0.1:9000"
 alias unSetProxy="export https_proxy= ; export http_proxy= "
 alias mongod="mongod --config /usr/local/etc/mongod.conf"
+alias getVPSStats="node $HOME/Documents/tools/getVPSStats.js"
 
 
 # macOS only

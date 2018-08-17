@@ -17,5 +17,5 @@
             { "key": "preceding_text", "operator": "not_regex_match", "operand": "^.*\\{$", "match_all": true  },
             { "key": "auto_complete_visible", "operator": "equal", "operand": false }
         ]
-    }
+    },
 ]

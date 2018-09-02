@@ -48,11 +48,12 @@ alias setProxy="export https_proxy=http://127.0.0.1:9000;export http_proxy=http:
 alias unSetProxy="export https_proxy= ; export http_proxy= "
 alias mongod="mongod --config /usr/local/etc/mongod.conf"
 alias getVPSStats="node $HOME/Documents/tools/getVPSStats.js"
+alias gcl="git clone --recursive --depth 1"
 
 
 # macOS only
-alias openFTPServer="sudo launchctl load -w /System/Library/LaunchDaemons/ftp.plist"
-alias closeFTPServer="sudo launchctl unload -w /System/Library/LaunchDaemons/ftp.plist"
+# alias openFTPServer="sudo launchctl load -w /System/Library/LaunchDaemons/ftp.plist"
+# alias closeFTPServer="sudo launchctl unload -w /System/Library/LaunchDaemons/ftp.plist"
 #alias openWinDisk='open /Volumes/win7/Users/niko/Downloads'
 alias reloadSound='sudo kextunload /System/Library/Extensions/AppleHDA.kext && sudo kextload /System/Library/Extensions/AppleHDA.kext && sleep 2 && hs -c "hs.timer.doAfter(1, hs.reload)" ' # && hs -c "hs.reload()" # Reload Hammerspoon after reloading kext
 alias reloadCamera="sudo killall VDCAssistant"
@@ -68,7 +69,7 @@ alias vi="nvim"
 alias TurnOffMonitors="pmset displaysleepnow"
 alias trash="$HOME/Documents/tools/trash.sh"
 # alias spotify="$HOME/Documents/development/repos/SpotifyControl/SpotifyControl"
-alias brewUpdate="setProxy ; brew upgrade && brew cleanup; unSetProxy"
+# alias brewUpdate="setProxy ; brew upgrade && brew cleanup; unSetProxy"
 alias silverBox="hdiutil attach $HOME/'Google Drive'/SilverBox.sparsebundle"
 alias silverBoxEject="hdiutil detach /Volumes/SilverBox"
 # alias tmux="tmux -CC"

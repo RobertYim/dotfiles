@@ -1,4 +1,0 @@
-# ~/Library/Rime
-# 默认英文
-patch:
-  "switches/@0/reset": 1

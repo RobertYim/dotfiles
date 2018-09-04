@@ -1,0 +1,4 @@
+--external-downloader aria2c
+--external-downloader-args '-c -x2 -s2'
+--output '%(title)s.%(ext)s'
+

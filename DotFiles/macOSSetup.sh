@@ -48,6 +48,7 @@ ln -s $HOME/Documents/dotfiles/DotFiles/.tmux.conf $HOME
 # unzip "$(curl -LO rime.zip https://bitbucket.org/RobertYan/rimedict/get/f48da5512c2d.zip)" && mv RobertYan-rimedict-f48da5512c2d $HOME/Library/Rime && rm rime.zip
 ln -s $HOME/Documents/dotfiles/DotFiles/Rime/*.yaml $HOME/Library/Rime
 
+mkdir -p $HOME/Library/Applications\ Support/Code
 ln -s $HOME/Documents/dotfiles/DotFiles/Code/User $HOME/Library/Application\ Support/Code
 
 ln -s $HOME/Google\ Drive/backup/1Password\ 4/Backups $HOME/Library/Application\ Support/1Password\ 4

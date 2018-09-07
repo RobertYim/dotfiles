@@ -97,6 +97,8 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Finder
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool true
+# Finder: show path bar
+defaults write com.apple.finder ShowPathbar -bool true
 # Show Posix Path in Finder
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 # Finder: disable window animations and Get Info animations
@@ -125,6 +127,12 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # chflags nohidden ~/Library
 # Show the /Volumes folder
 # sudo chflags nohidden /Volumes
+# Enable snap-to-grid for icons on the desktop and in other icon views
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+
+
 
 ############
 # Dock
@@ -144,6 +152,8 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
+# Show indicator lights for open applications in the Dock
+defaults write com.apple.dock show-process-indicators -bool true
 # Hot corners
 # Possible values:
 #  0: no-op
@@ -209,6 +219,29 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 # Reduce transparency
 # defaults write com.apple.universalaccess reduceTransparency -bool true
 
+# Trackpad: enable tap to click for this user and for the login screen
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Increase window resize speed for Cocoa applications
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+# Avoid creating .DS_Store files on network or USB volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+# Disable disk image verification
+defaults write com.apple.frameworks.diskimages skip-verify -bool true
+defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
+defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
+
+# Enable subpixel font rendering on non-Apple LCDs
+# Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
+defaults write NSGlobalDomain AppleFontSmoothing -int 1
+
+# Disable the crash reporter
+defaults write com.apple.CrashReporter DialogType -string "none"
+
 # SSD no accesstime flag
 sudo cp $HOME/Documents/dotfiles/DotFiles/com.ssd.noatime.plist
 sudo launchctl load -w /Library/LaunchDaemons/com.ssd.noatime.plist
@@ -225,15 +258,6 @@ sudo chflags uchg /var/vm/sleepimage
 
 # Set timezone; see 'systemsetup -listtimezones' for other values
 sudo systemsetup -settimezone "Asia/Taipei" > /dev/null
-
-############
-# Hackintosh Only
-############
-# Fix Trackpad Preference Pane
-# Download  Trackpad.prefpane
-# Extrack it into /System/Library/PreferencePanes
-# Download Trackpad configuration files
-# Copy all configuration files to /System/Library/PreferencePanes/Trackpad.prefpane/Contents/Resources/English.lproj
 
 ############
 # Kill affected applications

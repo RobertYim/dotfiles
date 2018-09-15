@@ -69,20 +69,40 @@ hs.hotkey.bind(altShift, '0', function()
         hs.alert('Muted!')
     end
 end)
+
+-- hs.hotkey.bind(altShift, '-', function()
+--     auv = dod:outputVolume() - 5
+--     dod:setVolume(auv)
+--     hs.alert('Volume: ' .. auv)
+--     print(dod:outputVolume())
+-- end)
+
+-- hs.hotkey.bind(altShift, '=', function()
+--     auv = dod:outputVolume() + 5
+--     dod:setVolume(auv)
+--     hs.alert('Volume: ' .. auv)
+--     print(dod:outputVolume())
+-- end)
+
+-- Brightness
+bs = hs.brightness.get()
 hs.hotkey.bind(altShift, '-', function()
-    auv = dod:outputVolume() - 5
-    dod:setVolume(auv)
-    hs.alert('Volume: ' .. auv)
-    print(dod:outputVolume())
+    bs = bs - 8
+    if bs < 0 then
+        bs = 0
+    end
+    hs.brightness.set(bs)
+    hs.alert('Brightness: ' .. bs)
 end)
 
 hs.hotkey.bind(altShift, '=', function()
-    auv = dod:outputVolume() + 5
-    dod:setVolume(auv)
-    hs.alert('Volume: ' .. auv)
-    print(dod:outputVolume())
+    bs = bs + 8
+    if bs > 100 then
+        bs = 100
+    end
+    hs.brightness.set(bs)
+    hs.alert('Brightness: ' .. bs)
 end)
-
 
 -- undo
 local undo = require 'undo'
@@ -275,8 +295,8 @@ end
 -- App layout
 local AppLayout = {}
 AppLayout['Safari'] = { large = true, full = false }
-AppLayout['WeChat'] = { small = true }
-AppLayout['iTerm2'] = { small = true }
+-- AppLayout['WeChat'] = { small = true }
+-- AppLayout['iTerm2'] = { small = true }
 AppLayout['mpv'] = { large = true }
 
 function layoutApp(name, app, delayed)

@@ -44,6 +44,8 @@ patch:
       ascii_mode: true
     com.microsoft.VSCodeInsiders:
       ascii_mode: true
+    com.sublimetext.3:
+      ascii_mode: true
 
 
   preset_color_schemes:

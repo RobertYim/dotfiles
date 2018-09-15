@@ -31,7 +31,7 @@ ln -s $HOME/Documents/dotfiles/DotFiles/.gitignore_global $HOME
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.aria2 $HOME
 
-ln -s $HOME/Documents/dotfiles/DotFiles/.youtube-dl $HOME/.config
+ln -s $HOME/Documents/dotfiles/DotFiles/youtube-dl $HOME/.config
 
 mkdir -p $HOME/"Library/Application Support/Sublime Text 3/Packages/User"
 ln -s $HOME/Documents/dotfiles/DotFiles/"Sublime Text 3"/* $HOME/"Library/Application Support/Sublime Text 3/Packages/User"

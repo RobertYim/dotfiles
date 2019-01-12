@@ -58,8 +58,8 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  # export EDITOR='subl'
-  export EDITOR='vscode'
+  export EDITOR='subl'
+  # export EDITOR='code'
 fi
 
 # Compilation flags
@@ -74,7 +74,7 @@ source $HOME/Google\ Drive/backup/privateShellAlias.bash
 source $HOME/Documents/dotfiles/DotFiles/ShellAlias.bash
 
 # Java
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+# export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 
 # Go
 export GOROOT="/usr/local/opt/go/libexec"
@@ -98,7 +98,7 @@ export OpenSSL="/usr/local/opt/openssl/bin"
 # Path alias
 export HDD="/Volumes/HDD/Storage/"
 export DOWNLOADS="$HOME/Downloads/"
-export BOOKS="$HOME/Documents/books/"
+export BOOKS="$HDD/BOOKS"
 
 # PATH
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"

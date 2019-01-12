@@ -46,7 +46,10 @@ patch:
       ascii_mode: true
     com.sublimetext.3:
       ascii_mode: true
-
+    org.rehabman.github.MaciASLv1.31:
+      ascii_mode: true
+    com.apple.Dictionary:
+      ascii_mode: true
 
   preset_color_schemes:
     custom:

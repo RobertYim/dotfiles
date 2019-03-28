@@ -45,7 +45,7 @@ for key, app in pairs(keyApps) do
 end
 
 -- Hints
-hs.hotkey.bind(altCommand, 'h', function()
+hs.hotkey.bind(altCommand, 'j', function()
     hs.hints.windowHints(getAllValidWindows())
 end)
 
@@ -70,39 +70,39 @@ hs.hotkey.bind(altShift, '0', function()
     end
 end)
 
--- hs.hotkey.bind(altShift, '-', function()
---     auv = dod:outputVolume() - 5
---     dod:setVolume(auv)
---     hs.alert('Volume: ' .. auv)
---     print(dod:outputVolume())
--- end)
-
--- hs.hotkey.bind(altShift, '=', function()
---     auv = dod:outputVolume() + 5
---     dod:setVolume(auv)
---     hs.alert('Volume: ' .. auv)
---     print(dod:outputVolume())
--- end)
-
--- Brightness
-bs = hs.brightness.get()
 hs.hotkey.bind(altShift, '-', function()
-    bs = bs - 8
-    if bs < 0 then
-        bs = 0
-    end
-    hs.brightness.set(bs)
-    hs.alert('Brightness: ' .. bs)
+    auv = dod:outputVolume() - 5
+    dod:setVolume(auv)
+    hs.alert('Volume: ' .. auv)
+    print(dod:outputVolume())
 end)
 
 hs.hotkey.bind(altShift, '=', function()
-    bs = bs + 8
-    if bs > 100 then
-        bs = 100
-    end
-    hs.brightness.set(bs)
-    hs.alert('Brightness: ' .. bs)
+    auv = dod:outputVolume() + 5
+    dod:setVolume(auv)
+    hs.alert('Volume: ' .. auv)
+    print(dod:outputVolume())
 end)
+
+-- Brightness
+-- bs = hs.brightness.get()
+-- hs.hotkey.bind(altShift, '-', function()
+--     bs = bs - 8
+--     if bs < 0 then
+--         bs = 0
+--     end
+--     hs.brightness.set(bs)
+--     hs.alert('Brightness: ' .. bs)
+-- end)
+
+-- hs.hotkey.bind(altShift, '=', function()
+--     bs = bs + 8
+--     if bs > 100 then
+--         bs = 100
+--     end
+--     hs.brightness.set(bs)
+--     hs.alert('Brightness: ' .. bs)
+-- end)
 
 -- undo
 local undo = require 'undo'

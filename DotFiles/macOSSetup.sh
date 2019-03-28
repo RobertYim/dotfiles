@@ -17,6 +17,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ln -s $HOME/Documents/dotfiles/DotFiles/.zshrc $HOME
 
 mkdir -p $HOME/.vim/autoload
+mkdir -p $HOME/.vim/swaps
+mkdir -p $HOME/.vim/backups
 mkdir -p $HOME/.vim/bundle
 mkdir -p $HOME/.config
 ln -s $HOME/.vim $HOME/.config/nvim
@@ -37,7 +39,7 @@ mkdir -p $HOME/"Library/Application Support/Sublime Text 3/Packages/User"
 ln -s $HOME/Documents/dotfiles/DotFiles/"Sublime Text 3"/* $HOME/"Library/Application Support/Sublime Text 3/Packages/User"
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin
 
-ln -s "/Applications/apps/Visual Studio Code.app/Contents/Resources/app/bin/code" /usr/local/bin
+ln -s "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" /usr/local/bin
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.hammerspoon $HOME
 
@@ -47,6 +49,7 @@ ln -s $HOME/Documents/dotfiles/DotFiles/.tmux.conf $HOME
 
 # Download Rime Dictionary and unzip
 # unzip "$(curl -LO rime.zip https://bitbucket.org/RobertYan/rimedict/get/f48da5512c2d.zip)" && mv RobertYan-rimedict-f48da5512c2d $HOME/Library/Rime && rm rime.zip
+mkdir -p $HOME/Library/Rime
 ln -s $HOME/Documents/dotfiles/DotFiles/Rime/*.yaml $HOME/Library/Rime
 
 mkdir -p $HOME/Library/Applications\ Support/Code
@@ -69,6 +72,8 @@ rm -r $HOME/Movies
 ln -s $HDD/Movies $HOME
 
 ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin
+
+ln -s $HOME/Documents/tools/gpuStat /usr/local/bin
 
 ############
 # App Configurations
@@ -244,7 +249,7 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 1
 defaults write com.apple.CrashReporter DialogType -string "none"
 
 # SSD no accesstime flag
-sudo cp $HOME/Documents/dotfiles/DotFiles/com.ssd.noatime.plist
+sudo cp $HOME/Documents/dotfiles/DotFiles/com.ssd.noatime.plist /Library/LaunchDaemons
 sudo launchctl load -w /Library/LaunchDaemons/com.ssd.noatime.plist
 
 # Use sleep instead of hibernate
@@ -259,6 +264,15 @@ sudo chflags uchg /var/vm/sleepimage
 
 # Set timezone; see 'systemsetup -listtimezones' for other values
 sudo systemsetup -settimezone "Asia/Taipei" > /dev/null
+
+# Blurriness on macOS Mojave
+# https://code.visualstudio.com/docs/supporting/faq#_blurriness-on-macos-mojave
+#If you have updated to macOS 10.14 (Mojave), you might have noticed that fonts in VS Code look blurry if you are not using a high-DPI monitor. A workaround for this is to run:
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+
+# Use Only a Dark Menu Bar and Dock in Mojave
+defaults write -g NSRequiresAquaSystemAppearance -bool Yes
+# defaults delete -g NSRequiresAquaSystemAppearance
 
 ############
 # Kill affected applications

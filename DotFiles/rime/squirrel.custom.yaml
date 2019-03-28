@@ -50,6 +50,10 @@ patch:
       ascii_mode: true
     com.apple.Dictionary:
       ascii_mode: true
+    com.apple.finder:
+      ascii_mode: true
+    com.apple.Console:
+      ascii_mode: true
 
   preset_color_schemes:
     custom:

@@ -11,7 +11,7 @@ alias ...='../..'
 # alias goagent='python $HOME/Downloads/goagent/local/proxy.py'
 # alias editHosts='e $HOME/Documents/dotfiles/DotFiles/hosts.backup'
 # alias updateHosts='sudo zsh $HOME/Documents/tools/UpdateHosts.sh'
-alias you-get='python3 $HOME/Documents/development/repos/you-get/you-get'
+# alias you-get='python3 $HOME/Documents/development/repos/you-get/you-get'
 #alias drbox='$HOME/Documents/tools/Dropbox-Uploader/dropbox_uploader.sh'
 alias t="$HOME/Documents/tools/youdao-translate.js"
 alias ping="ping -c 10"
@@ -48,25 +48,26 @@ alias unSetProxy="export https_proxy= ; export http_proxy= "
 alias mongod="mongod --config /usr/local/etc/mongod.conf"
 alias getVPSStats="node $HOME/Documents/tools/getVPSStats.js"
 alias gcl="git clone --recursive --depth 1"
-alias kcpStart="zsh $HOME/Downloads/kcptun/kcp.sh > $HOME/Downloads/kcptun/access.log"
-alias vrStart="zsh $HOME/Downloads/v2ray/startUp.sh"
+alias kcpStart="zsh $HOME/Documents/kcp/kcp.sh > /dev/null "
+alias vrStart="ka v2ray && nohup $HOME/Documents/v2ray/v2rayStartUp.sh > /dev/null"
 
 # macOS only
 # alias openFTPServer="sudo launchctl load -w /System/Library/LaunchDaemons/ftp.plist"
 # alias closeFTPServer="sudo launchctl unload -w /System/Library/LaunchDaemons/ftp.plist"
 #alias openWinDisk='open /Volumes/win7/Users/niko/Downloads'
-alias reloadSound='sudo kextunload /System/Library/Extensions/AppleHDA.kext && sudo kextload /System/Library/Extensions/AppleHDA.kext && sleep 2 && hs -c "hs.timer.doAfter(1, hs.reload)" ' # && hs -c "hs.reload()" # Reload Hammerspoon after reloading kext
+# alias reloadSound='sudo kextunload /System/Library/Extensions/AppleHDA.kext && sudo kextload /System/Library/Extensions/AppleHDA.kext && sleep 2 && hs -c "hs.timer.doAfter(1, hs.reload)" ' # && hs -c "hs.reload()" # Reload Hammerspoon after reloading kext
 alias reloadCamera="sudo killall VDCAssistant"
 alias flushDNS="sudo killall -HUP mDNSResponder" ## 10.9 and 10.11
 # alias flushDNS="sudo discoveryutil udnsflushcaches" ## 10.10
 # alias flushDNS="dscacheutil -flushcache" ## 10.6
-alias mountSSDEFI="sudo diskutil mount EFI"
-alias mountHDDEFI="sudo diskutil mount HDDEFI"
+alias mountRC500EFI="sudo diskutil mount EFIRC500"
+alias mountHDDEFI="sudo diskutil mount EFIHDD"
 # alias wifi="networksetup -setairportnetwork en1 '(╯‵□′)╯︵┻━┻'"
 # alias vim="nvim"
 alias vi="nvim"
 # alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias turnOffMonitors="pmset displaysleepnow"
+alias sleepNow="(sleep 5 && pmset sleepnow) & ; disown"
 alias trash="$HOME/Documents/tools/trash.sh"
 # alias spotify="$HOME/Documents/development/repos/SpotifyControl/SpotifyControl"
 # alias brewUpdate="setProxy ; brew upgrade && brew cleanup; unSetProxy"
@@ -77,11 +78,12 @@ alias unmountHDD="diskutil umount 'HDD'"
 alias mountHDD="diskutil mount 'HDD'"
 
 # OpenWrt Scripts
-alias listWiFiDevices="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/listDevice.sh"
+alias listRouterDevices="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/listDevice.sh"
 alias rebootRouter="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/rebootRouter.sh"
 alias reloadRouter="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/reloadNetwork.sh"
-# alias routerBridgeL="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/bridgeLinle.sh"
-# alias routerBridgeA="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/bridgeA86481746.sh"
+alias routerScan="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/scan.sh"
+alias routerBridge2G="ssh newifi 'sh -s' < $HOME/Google\ Drive/backup/bridgeChinaNet2G.sh"
+alias routerBridge5G="ssh newifi 'sh -s' < $HOME/Google\ Drive/backup/bridgeTP5G.sh"
 
 # ADB Android
 alias adbMountReadWriteFileSystem="adb shell mount -o remount -o rw /system"

@@ -39,7 +39,7 @@ mkdir -p $HOME/"Library/Application Support/Sublime Text 3/Packages/User"
 ln -s $HOME/Documents/dotfiles/DotFiles/"Sublime Text 3"/* $HOME/"Library/Application Support/Sublime Text 3/Packages/User"
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin
 
-ln -s "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" /usr/local/bin
+ln -s "/Applications/VSCodium.app/Contents/Resources/app/bin/code" /usr/local/bin
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.hammerspoon $HOME
 
@@ -52,8 +52,8 @@ ln -s $HOME/Documents/dotfiles/DotFiles/.tmux.conf $HOME
 mkdir -p $HOME/Library/Rime
 ln -s $HOME/Documents/dotfiles/DotFiles/Rime/*.yaml $HOME/Library/Rime
 
-mkdir -p $HOME/Library/Applications\ Support/Code
-ln -s $HOME/Documents/dotfiles/DotFiles/Code/User $HOME/Library/Application\ Support/Code
+mkdir -p $HOME/Library/Applications\ Support/VSCodium
+ln -s $HOME/Documents/dotfiles/DotFiles/Code/User Library/Application\ Support/VSCodium/
 
 ln -s $HOME/Google\ Drive/backup/1Password\ 4/Backups $HOME/Library/Application\ Support/1Password\ 4
 
@@ -82,9 +82,10 @@ ln -s $HOME/Documents/tools/gpuStat /usr/local/bin
 ############
 # VSCode
 # For VS Code
-defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+# defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false
 # For VS Code Insider
-defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
+# defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
 # If necessary, reset global default
 # defaults delete -g ApplePressAndHoldEnabled
 
@@ -282,7 +283,7 @@ for app in "Dock" \
     "Finder" \
     "Safari" \
     "SystemUIServer" \
-    "Visual Studio Code" \
+    "VSCodium" \
     "Sublime Text"; do
     killall "${app}" &> /dev/null
 done

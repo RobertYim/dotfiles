@@ -22,13 +22,11 @@ patch:
       ascii_mode: true
     org.vim.MacVim:
       ascii_mode: true
-    com.runningwithcrayons.Alfred-3:
+    com.runningwithcrayons.Alfred:
       ascii_mode: true
     com.google.Chrome:
       ascii_mode: true
     com.agilebits.onepassword-osx:
-      ascii_mode: true
-    com.microsoft.VSCode:
       ascii_mode: true
     com.apple.ActivityMonitor:
       ascii_mode: true
@@ -43,6 +41,8 @@ patch:
     com.microsoft.VSCode:
       ascii_mode: true
     com.microsoft.VSCodeInsiders:
+      ascii_mode: true
+    com.visualstudio.code.oss:
       ascii_mode: true
     com.sublimetext.3:
       ascii_mode: true

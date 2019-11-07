@@ -23,7 +23,7 @@ if not hs.ipc.cliStatus() then hs.ipc.cliInstall() end
 local keyApps = {
     -- e = "MacVim",
     -- e = "Sublime Text",
-    e = "Visual Studio Code",
+    e = "VSCodium",
     c = "Google Chrome",
     -- m = "Mail",
     m = "mpv",

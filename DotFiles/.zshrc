@@ -58,7 +58,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='subl'
+  export EDITOR='nvim'
   # export EDITOR='code'
 fi
 
@@ -107,4 +107,7 @@ export PATH=$OpenSSL:$GOPATH/bin:$GPG2:$Conda:$PATH
 
 # Opt out Homebrew analytics
 export HOMEBREW_NO_ANALYTICS=1
+
+export https_proxy=http://127.0.0.1:9000
+export http_proxy=http://127.0.0.1:9000
 

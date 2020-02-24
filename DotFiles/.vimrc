@@ -1,12 +1,18 @@
 " Vim-plug
 call plug#begin('~/.vim/bundle')
+Plug 'fatih/molokai'
+Plug 'phanviet/vim-monokai-pro'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-commentary'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
-Plug 'neoclide/coc.nvim', {'branch': 'release'},
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'leafgarland/typescript-vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'honza/vim-snippets'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 " encoding dectection
@@ -21,11 +27,14 @@ let maplocalleader="\\"
 " use system pasteboard
 set clipboard=unnamed
 " Centralize backups, swapfiles and undo history
-set backupdir=~/.vim/backups
+" set backupdir=~/.vim/backups
+set nobackup
+set nowritebackup
 set directory=~/.vim/swaps
 if exists("&undodir")
     set undodir=~/.vim/undo
 endif
+set autowrite
 
 " Cursor Style
 highlight Cursor guifg=white guibg=black
@@ -47,13 +56,9 @@ nnoremap <Leader>i  mzgg=G`z
 "
 nmap <backspace> :nohl<CR>
 inoremap <c-c> <ESC>
-" When the <Enter> key is pressed while the popup menu is visible, it only
-" hides the menu. Use this mapping to close the menu and also start a new
-" line.
-" inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
-" Use <TAB> to select the popup menu:
-" inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
 
 
 " Useful with ralativenumber
@@ -76,6 +81,8 @@ endif
 "
 " color scheme
 color gruvbox
+let g:rehash256 = 1
+" let g:molokai_original =1
 " let g:airline_theme='onehalfdark'
 set background=dark
 "
@@ -141,8 +148,7 @@ set shiftwidth=4
 set expandtab
 set hidden
 
-
-autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
 autocmd FileType coffee,javascript,typescript setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
@@ -185,57 +191,54 @@ let g:EasyMotion_leader_key = '<Leader><Leader>'
 " ZenCoding
 " let g:user_emmet_expandabbr_key='<C-g>'
 
-" Ultisnips
-" let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsJumpForwardTrigger="<tab>"
-" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-" SuperTab
-" let g:SuperTabDefultCompletionType='context'
-" let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
-" let g:SuperTabRetainCompletionType=2
-
 " ctrlp
-" set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
-" let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " Keybindings for plugin toggle
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 " nmap <F3> :NERDTreeToggle<cr>
 nmap <F4> :IndentGuidesToggle<cr>
-nnoremap <leader>a :Ack
+" nnoremap <leader>a :Ack
 nnoremap <leader>v V`]
 
-" YouCompleteMe
-" let g:ycm_global_ycm_extra_conf = '~/Documents/dotfiles/DotFiles/.ycm_extra_conf.py'
-" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-" let g:SuperTabDefaultCompletionType = '<C-n>'
-
-" ncm2
-" enable ncm2 for all buffers
-" autocmd BufEnter * call ncm2#enable_for_buffer()
-" IMPORTANTE: :help Ncm2PopupOpen for more inform
-" set completeopt=noinsert,menuone,noselect
-" wrap existing omnifunc
-" Note that omnifunc does not run in background and may probably block the
-" editor. If you don't want to be blocked by omnifunc too often, you could
-" add 180ms delay before the omni wrapper:
-"  'on_complete': ['ncm2#on_complete#delay', 180,
-"               \ 'ncm2#on_complete#omni', 'csscomplete#CompleteCSS'],
-" au User Ncm2Plugin call ncm2#register_source({
-"         \ 'name' : 'css',
-"         \ 'priority': 9,
-"         \ 'subscope_enable': 1,
-"         \ 'scope': ['css','scss'],
-"         \ 'mark': 'css',
-"         \ 'word_pattern': '[\w\-]+',
-"         \ 'complete_pattern': ':\s*',
-"         \ 'on_complete': ['ncm2#on_complete#omni', 'csscomplete#CompleteCSS'],
-"     \ })
+" Vim-Go
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
+autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+autocmd FileType go nmap <Leader>i <Plug>(go-info)
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+let g:go_metalinter_deadline = "5s"
+let g:go_list_type = "quickfix"
+let g:go_fmt_command = "goimports"
+let g:go_highlight_types = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1
+let g:go_auto_type_info = 1
+let g:go_auto_sameids = 1
+" let g:go_highlight_fields = 1
 
 " CoC
+set cmdheight=2
+set updatetime=100
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
 " always show signcolumns
@@ -252,23 +255,30 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Use <c-space> for trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 " Use <cr> for confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" Or use `complete_info` if your vim support it, like:
+" inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 " Use `[c` and `]c` for navigate diagnostics
 nmap <silent> [c <Plug>(coc-diagnostic-prev)
 nmap <silent> ]c <Plug>(coc-diagnostic-next)
+" Json comment highlight
+autocmd FileType json syntax match Comment +\/\/.\+$+
+let g:coc_snippet_next = '<tab>'
 
 "------------------
 " Useful Functions
 "------------------
 " easier navigation between split windows
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+" nnoremap <c-j> <c-w>j
+" nnoremap <c-k> <c-w>k
+" nnoremap <c-h> <c-w>h
+" nnoremap <c-l> <c-w>l
 
 " When editing a file, always jump to the last cursor position
 autocmd BufReadPost *
@@ -299,27 +309,3 @@ nnoremap ; :
 " :command Q q
 " :command Qa qa
 " :command QA qa
-
-" for macvim
-" if has("gui_running")
-    " set go=aAce  " remove toolbar
-    " "set transparency=30
-    " set guifont=Monaco:h12
-    " " set guifont=Source\ Code\ Pro:r14
-    " set showtabline=1
-    " set columns=120
-    " set lines=60
-    " " noremap <D-M-Left> :tabprevious<cr>
-    " " noremap <D-M-Right> :tabnext<cr>
-    " map <D-1> 1gt
-    " map <D-2> 2gt
-    " map <D-3> 3gt
-    " map <D-4> 4gt
-    " map <D-5> 5gt
-    " map <D-6> 6gt
-    " map <D-7> 7gt
-    " map <D-8> 8gt
-    " map <D-9> 9gt
-    " map <D-0> :tablast<CR>
-" endif
-

@@ -48,8 +48,9 @@ alias unSetProxy="export https_proxy= ; export http_proxy= "
 alias mongod="mongod --config /usr/local/etc/mongod.conf"
 alias getVPSStats="node $HOME/Documents/tools/getVPSStats.js"
 alias gcl="git clone --recursive --depth 1"
-alias kcpStart="zsh $HOME/Documents/kcp/kcp.sh > /dev/null "
-alias vrStart="ka v2ray && nohup $HOME/Documents/v2ray/v2rayStartUp.sh > /dev/null"
+alias kcpStart="ka kcp && zsh $HOME/Documents/kcp/kcp.sh > /dev/null 2>&1"
+alias vrStart="ka v2ray && nohup $HOME/Documents/v2ray/v2rayStartUp.sh > /dev/null 2>&1"
+alias rclone="rclone -P --stats-one-line"
 
 # macOS only
 # alias openFTPServer="sudo launchctl load -w /System/Library/LaunchDaemons/ftp.plist"
@@ -76,6 +77,7 @@ alias silverBoxEject="hdiutil detach /Volumes/SilverBox"
 # alias tmux="tmux -CC"
 alias unmountHDD="diskutil umount 'HDD'"
 alias mountHDD="diskutil mount 'HDD'"
+alias dp="$HOME/Documents/tools/dp.sh"
 
 # OpenWrt Scripts
 alias listRouterDevices="ssh newifi 'sh -s' < $HOME/Documents/dotfiles/OpenWrtScripts/listDevice.sh"

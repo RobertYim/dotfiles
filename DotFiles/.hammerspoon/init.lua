@@ -85,26 +85,15 @@ hs.hotkey.bind(altShift, '=', function()
 end)
 
 -- Brightness
--- bs = hs.brightness.get()
--- hs.hotkey.bind(altShift, '-', function()
---     bs = bs - 8
---     if bs < 0 then
---         bs = 0
---     end
---     hs.brightness.set(bs)
---     hs.alert('Brightness: ' .. bs)
--- end)
+hs.hotkey.bind(altShift, '[', function()
+    hs.execute('/usr/local/bin/ddcctl -d 1 -b 8-')
+end)
 
--- hs.hotkey.bind(altShift, '=', function()
---     bs = bs + 8
---     if bs > 100 then
---         bs = 100
---     end
---     hs.brightness.set(bs)
---     hs.alert('Brightness: ' .. bs)
--- end)
+hs.hotkey.bind(altShift, ']', function()
+    hs.execute('/usr/local/bin/ddcctl -d 1 -b 8+')
+end)
 
--- undo
+-- -- undo
 local undo = require 'undo'
 hs.hotkey.bind(altCommand, 'z', function() undo:undo() end)
 

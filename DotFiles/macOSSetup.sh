@@ -23,8 +23,9 @@ mkdir -p $HOME/.vim/bundle
 mkdir -p $HOME/.config
 ln -s $HOME/.vim $HOME/.config/nvim
 ln -s $HOME/Documents/dotfiles/DotFiles/.vimrc $HOME/.config/nvim/init.vim
-# Install Pathogen
-curl -LSso $HOME/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+# Install VimPlug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.emacs $HOME
 
@@ -48,14 +49,12 @@ ln -s $HOME/Google\ Drive/backup/.SpechtLite $HOME
 ln -s $HOME/Documents/dotfiles/DotFiles/.tmux.conf $HOME
 
 # Download Rime Dictionary and unzip
-# unzip "$(curl -LO rime.zip https://bitbucket.org/RobertYan/rimedict/get/f48da5512c2d.zip)" && mv RobertYan-rimedict-f48da5512c2d $HOME/Library/Rime && rm rime.zip
-mkdir -p $HOME/Library/Rime
-ln -s $HOME/Documents/dotfiles/DotFiles/Rime/*.yaml $HOME/Library/Rime
+git clone --depth 1 git@gitlab.com:RobertYim/rime-settings.git ~/Library/Rime
 
 mkdir -p $HOME/Library/Applications\ Support/VSCodium
 ln -s $HOME/Documents/dotfiles/DotFiles/Code/User Library/Application\ Support/VSCodium/
 
-ln -s $HOME/Google\ Drive/backup/1Password\ 4/Backups $HOME/Library/Application\ Support/1Password\ 4
+#ln -s $HOME/Google\ Drive/backup/1Password\ 4/Backups $HOME/Library/Application\ Support/1Password\ 4
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.npmrc $HOME
 
@@ -227,6 +226,9 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 # defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Trackpad: enable tap to click for this user and for the login screen
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults write com.apple.AppleMultitouchTrackpad Dragging -bool true
+defaults write com.apple.AppleMultitouchTrackpad DragLock -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
@@ -244,7 +246,7 @@ defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 
 # Enable subpixel font rendering on non-Apple LCDs
 # Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
-defaults write NSGlobalDomain AppleFontSmoothing -int 1
+defaults write NSGlobalDomain AppleFontSmoothing -int 3
 
 # Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
@@ -272,8 +274,7 @@ sudo systemsetup -settimezone "Asia/Taipei" > /dev/null
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 
 # Use Only a Dark Menu Bar and Dock in Mojave
-defaults write -g NSRequiresAquaSystemAppearance -bool Yes
-# defaults delete -g NSRequiresAquaSystemAppearance
+# defaults write -g NSRequiresAquaSystemAppearance -bool Yes
 
 ############
 # Kill affected applications

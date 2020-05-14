@@ -16,6 +16,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.zshrc $HOME
 
+ln -s $HOME/Documents/dotfiles/DotFiles/.alacritty.yml $HOME
+
 mkdir -p $HOME/.vim/autoload
 mkdir -p $HOME/.vim/swaps
 mkdir -p $HOME/.vim/backups
@@ -23,6 +25,7 @@ mkdir -p $HOME/.vim/bundle
 mkdir -p $HOME/.config
 ln -s $HOME/.vim $HOME/.config/nvim
 ln -s $HOME/Documents/dotfiles/DotFiles/.vimrc $HOME/.config/nvim/init.vim
+ln -s $HOME/Documents/dotfiles/DotFiles/coc-settings.json $HOME/.vim
 # Install VimPlug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -149,7 +152,7 @@ defaults write com.apple.dock mineffect -string "scale"
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
 # Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
+# defaults write com.apple.dashboard mcx-disabled -bool true
 # Don’t show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool true
 # Remove the auto-hiding Dock delay
@@ -206,18 +209,61 @@ defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 defaults write com.apple.Safari ShowSidebarInTopSites -bool true
 # Show bookmark sidebar
 defaults write com.apple.Safari SidebarViewModeIdentifier "Bookmarks"
-# Show Developer Menu
+# Show Developer Menu and Web Inspector
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 # Disable AutoFill
 defaults write com.apple.Safari AutoFillFromAddressBook -bool false
 defaults write com.apple.Safari AutoFillPasswords -bool false
 defaults write com.apple.Safari AutoFillCreditCardData -bool false
 defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
+# Set Safari’s home page to `about:blank` for faster loading
+defaults write com.apple.Safari HomePage -string "about:blank"
+# Disable Safari’s thumbnail cache for History and Top Sites
+defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
 
 ############
 # Time Machine
 # Disable local Time Machine backups
 hash tmutil &> /dev/null && sudo tmutil disablelocal
+
+############
+# Spotlight
+# Disable Spotlight indexing for any volume that gets mounted and has not yet
+# been indexed before.
+# Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
+sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+# Change indexing order and disable some search results
+defaults write com.apple.Spotlight orderedItems -array \
+	'{"enabled" = 1;"name" = "APPLICATIONS";}' \
+	'{"enabled" = 1;"name" = "SYSTEM_PREFS";}' \
+	'{"enabled" = 1;"name" = "DIRECTORIES";}' \
+	'{"enabled" = 1;"name" = "PDF";}' \
+	'{"enabled" = 1;"name" = "FONTS";}' \
+	'{"enabled" = 0;"name" = "DOCUMENTS";}' \
+	'{"enabled" = 0;"name" = "MESSAGES";}' \
+	'{"enabled" = 0;"name" = "CONTACT";}' \
+	'{"enabled" = 0;"name" = "EVENT_TODO";}' \
+	'{"enabled" = 0;"name" = "IMAGES";}' \
+	'{"enabled" = 0;"name" = "BOOKMARKS";}' \
+	'{"enabled" = 0;"name" = "MUSIC";}' \
+	'{"enabled" = 0;"name" = "MOVIES";}' \
+	'{"enabled" = 0;"name" = "PRESENTATIONS";}' \
+	'{"enabled" = 0;"name" = "SPREADSHEETS";}' \
+	'{"enabled" = 0;"name" = "SOURCE";}' \
+	'{"enabled" = 0;"name" = "MENU_DEFINITION";}' \
+	'{"enabled" = 0;"name" = "MENU_OTHER";}' \
+	'{"enabled" = 0;"name" = "MENU_CONVERSION";}' \
+	'{"enabled" = 0;"name" = "MENU_EXPRESSION";}' \
+	'{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
+	'{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
+# Load new settings before rebuilding the index
+killall mds > /dev/null 2>&1
+# Make sure indexing is enabled for the main volume
+sudo mdutil -i on / > /dev/null
+# Rebuild the index from scratch
+sudo mdutil -E / > /dev/null
 
 ############
 # Miscellaneous
@@ -250,6 +296,42 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 3
 
 # Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
+
+# Set highlight color to purple
+defaults write NSGlobalDomain AppleHighlightColor -string "0.968627 0.831373 1.000000 Purple"
+defaults write NSGlobalDomain AppleAccentColor -int 5
+
+# Auto dark mode
+defaults write NSGlobalDomain AppleInterfaceStyleSwitchesAutomatically -bool true
+
+# Scroll bar when scrolling
+defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
+
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# Disable Resume system-wide
+defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
+
+# Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+
+# Use scroll gesture with the Ctrl (^) modifier key to zoom
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+# Follow the keyboard focus while zoomed in
+defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
+
+# Show language menu in the top right corner of the boot screen
+sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
+
+# Prevent Photos from opening automatically when devices are plugged in
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+
 
 # SSD no accesstime flag
 sudo cp $HOME/Documents/dotfiles/DotFiles/com.ssd.noatime.plist /Library/LaunchDaemons

@@ -26,12 +26,11 @@ local keyApps = {
     e = "VSCodium",
     c = "Google Chrome",
     -- m = "Mail",
-    m = "mpv",
     x = "Xcode",
     b = "iBooks",
     d = "Dash",
     p = "Preview",
-    n = "Postman",
+    n = "Alacritty",
     -- i = "Intellij IDEA",
     -- I = "Pycharm",
     -- i = "WebStorm"
@@ -285,7 +284,7 @@ end
 local AppLayout = {}
 AppLayout['Safari'] = { large = true, full = false }
 -- AppLayout['WeChat'] = { small = true }
--- AppLayout['iTerm2'] = { small = true }
+-- AppLayout['iTerm'] = { small = true }
 AppLayout['mpv'] = { large = true }
 
 function layoutApp(name, app, delayed)

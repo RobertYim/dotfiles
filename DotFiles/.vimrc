@@ -1,7 +1,6 @@
 " Vim-plug
 call plug#begin('~/.vim/bundle')
-Plug 'fatih/molokai'
-Plug 'phanviet/vim-monokai-pro'
+Plug 'morhetz/gruvbox'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-commentary'
 Plug 'Raimondi/delimitMate'
@@ -85,6 +84,8 @@ let g:rehash256 = 1
 " let g:molokai_original =1
 " let g:airline_theme='onehalfdark'
 set background=dark
+hi! Normal ctermbg=NONE guibg=NONE
+" hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 "
 " Airline theme
 let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'

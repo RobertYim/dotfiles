@@ -42,7 +42,7 @@ ln -s $HOME/Documents/dotfiles/DotFiles/youtube-dl $HOME/.config
 mkdir -p $HOME/"Library/Application Support/Sublime Text 3/Packages/User"
 ln -s $HOME/Documents/dotfiles/DotFiles/"Sublime Text 3"/* $HOME/"Library/Application Support/Sublime Text 3/Packages/User"
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin
-
+ln -s /Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge /usr/local/bin
 ln -s "/Applications/VSCodium.app/Contents/Resources/app/bin/code" /usr/local/bin
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.hammerspoon $HOME

@@ -14,6 +14,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Symlinks
 ############
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+ln -s /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh $HOME/.oh-my-zsh/custom/
+
 ln -s $HOME/Documents/dotfiles/DotFiles/.zshrc $HOME
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.alacritty.yml $HOME
@@ -22,6 +26,7 @@ mkdir -p $HOME/.vim/autoload
 mkdir -p $HOME/.vim/swaps
 mkdir -p $HOME/.vim/backups
 mkdir -p $HOME/.vim/bundle
+mkdir -p $HOME/.vim/colors
 mkdir -p $HOME/.config
 ln -s $HOME/.vim $HOME/.config/nvim
 ln -s $HOME/Documents/dotfiles/DotFiles/.vimrc $HOME/.config/nvim/init.vim
@@ -47,7 +52,10 @@ ln -s "/Applications/VSCodium.app/Contents/Resources/app/bin/code" /usr/local/bi
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.hammerspoon $HOME
 
-ln -s $HOME/Google\ Drive/backup/.SpechtLite $HOME
+#ln -s $HOME/Google\ Drive/backup/.SpechtLite $HOME
+ln -s $HOME/Google\ Drive/backup/clash $HOME/.config
+mkdir -p $HOME/.config/rclone
+ln -s $HOME/Google\ Drive/backup/rclone.conf $HOME/.config/rclone
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.tmux.conf $HOME
 

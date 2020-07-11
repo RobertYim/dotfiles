@@ -7,7 +7,6 @@ Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'leafgarland/typescript-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'honza/vim-snippets'
@@ -58,6 +57,8 @@ inoremap <c-c> <ESC>
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
+" 'Q' in normal mode enters Ex mode. You almost never want this.
+nmap Q <Nop> 
 
 
 " Useful with ralativenumber
@@ -79,13 +80,13 @@ set termguicolors
 endif
 "
 " color scheme
+set background=dark
 color gruvbox
-let g:rehash256 = 1
+" let g:rehash256 = 1
 " let g:molokai_original =1
 " let g:airline_theme='onehalfdark'
-set background=dark
 hi! Normal ctermbg=NONE guibg=NONE
-" hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
 "
 " Airline theme
 let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
@@ -241,7 +242,7 @@ let g:go_auto_sameids = 1
 set cmdheight=2
 set updatetime=100
 " don't give |ins-completion-menu| messages.
-set shortmess+=c
+set shortmess+=I
 " always show signcolumns
 set signcolumn=yes
 " Use tab for trigger completion with characters ahead and navigate.

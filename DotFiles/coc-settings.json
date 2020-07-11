@@ -1,4 +1,5 @@
 {
+  "rust-analyzer.serverPath": "/usr/local/bin/rust-analyzer",
   "languageserver": {
     "golang": {
       "command": "gopls",
@@ -7,11 +8,6 @@
       "initializationOptions": {
         "usePlaceholders": true
       }
-    },
-    "rust": {
-      "command": "rust-analyzer",
-      "filetypes": ["rust"],
-      "rootPatterns": ["Cargo.toml"]
     },
     "clangd": {
       "command": "clangd",

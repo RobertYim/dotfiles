@@ -2,7 +2,8 @@ local mod = {}
 
 -- Anycomplete
 function mod.anycomplete()
-    local GOOGLE_ENDPOINT = 'https://suggestqueries.google.com/complete/search?client=firefox&q=%s'
+    -- local ENDPOINT = 'https://suggestqueries.google.com/complete/search?client=firefox&q=%s'
+    local ENDPOINT = 'https://duckduckgo.com/ac/?q=%s'
     local current = hs.application.frontmostApplication()
 
     local chooser = hs.chooser.new(function(choosen)
@@ -13,15 +14,23 @@ function mod.anycomplete()
     chooser:queryChangedCallback(function(string)
         local query = hs.http.encodeForQuery(string)
 
-        hs.http.asyncGet(string.format(GOOGLE_ENDPOINT, query), nil, function(status, data)
+        hs.http.asyncGet(string.format(ENDPOINT, query), nil, function(status, data)
             if not data then return end
 
             local ok, results = pcall(function() return hs.json.decode(data) end)
             if not ok then return end
 
-            choices = hs.fnutils.imap(results[2], function(result)
+            -- Google
+            -- choices = hs.fnutils.imap(results[2], function(result)
+            --     return {
+            --         ["text"] = result,
+            --     }
+            -- end)
+
+            -- DuckCuckGo
+            choices = hs.fnutils.imap(results, function(result)
                 return {
-                    ["text"] = result,
+                    ["text"] = result["phrase"],
                 }
             end)
 

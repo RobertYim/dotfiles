@@ -7,7 +7,7 @@ setxkbmap -option ctrl:nocaps
 
 # set background image
 #feh --bg-scale ~/Pictures/walls/wallpaper_52_magic_universe_by_zpecter-d2yw38i.jpg
-# feh --bg-scale ~/Pictures/walls/Andromeda\ Galaxy.jpg
+betterlockscreen -w
 
 # mount partitons
 # /dev/sda5 --> PersonalData
@@ -24,4 +24,4 @@ setxkbmap -option ctrl:nocaps
 # https://wiki.archlinux.org/index.php/ICC_profiles#Loading_ICC_profiles
 # device_id="xrandr-LVDS1"
 # colormgr device-make-profile-default device_id profile_id
-/usr/bin/xcalib -d :1 .local/share/icc/Display\ Calibrated.icc
+/usr/bin/xcalib -d :1 $HOME/.local/share/icc/Display\ Calibrated.icc

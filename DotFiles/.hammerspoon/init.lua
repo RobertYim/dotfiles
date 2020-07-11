@@ -1,7 +1,7 @@
 -- Plugins
 local anycomplete = require "anycomplete/anycomplete"
-hs.alert.closeAll()
 local ignored = require 'ignored'
+-- local spaces = require("hs._asm.undocumented.spaces")
 
 -- default trigger hotkey: ⌃⌥⌘G
 anycomplete.registerDefaultBindings({"alt"}, "/")
@@ -21,14 +21,14 @@ if not hs.ipc.cliStatus() then hs.ipc.cliInstall() end
 
 -- App shortcuts
 local keyApps = {
-    -- e = "MacVim",
     -- e = "Sublime Text",
     e = "VSCodium",
-    c = "Google Chrome",
-    -- m = "Mail",
+    c = "Brave Browser",
+    -- c = "Google Chrome",
+    -- m = "mpv",
     x = "Xcode",
-    b = "iBooks",
-    d = "Dash",
+    o = "iBooks",
+    d = "Finder",
     p = "Preview",
     n = "Alacritty",
     -- i = "Intellij IDEA",
@@ -48,13 +48,6 @@ hs.hotkey.bind(altCommand, 'j', function()
     hs.hints.windowHints(getAllValidWindows())
 end)
 
-
--- iTunes control
--- hs.hotkey.bind(altCommandShift, '7', function() hs.itunes.previous() end)
--- hs.hotkey.bind(altCommandShift, '8', function() hs.itunes.playpause() end)
--- hs.hotkey.bind(altCommandShift, '9', function() hs.itunes.next() end)
-
-
 -- Sound
 --- dod default_output_audio
 dod = hs.audiodevice.defaultOutputDevice()
@@ -62,34 +55,29 @@ hs.hotkey.bind(altShift, '0', function()
     is_muted = dod:muted()
     if is_muted then
         dod:setMuted(false)
-        hs.alert('Unmuted!')
+        hs.alert.closeAll()
+        hs.alert('🔊')
     else
         dod:setMuted(true)
-        hs.alert('Muted!')
+        hs.alert.closeAll()
+        hs.alert('🔇')
     end
 end)
 
 hs.hotkey.bind(altShift, '-', function()
-    auv = dod:outputVolume() - 5
+    auv = math.floor(dod:outputVolume() - 5)
     dod:setVolume(auv)
-    hs.alert('Volume: ' .. auv)
+    hs.alert.closeAll()
+    hs.alert('🔉: ' .. auv)
     print(dod:outputVolume())
 end)
 
 hs.hotkey.bind(altShift, '=', function()
-    auv = dod:outputVolume() + 5
+    auv = math.floor(dod:outputVolume() + 5)
     dod:setVolume(auv)
-    hs.alert('Volume: ' .. auv)
+    hs.alert.closeAll()
+    hs.alert('🔉: ' .. auv)
     print(dod:outputVolume())
-end)
-
--- Brightness
-hs.hotkey.bind(altShift, '[', function()
-    hs.execute('/usr/local/bin/ddcctl -d 1 -b 8-')
-end)
-
-hs.hotkey.bind(altShift, ']', function()
-    hs.execute('/usr/local/bin/ddcctl -d 1 -b 8+')
 end)
 
 -- -- undo
@@ -229,7 +217,7 @@ end
 local leftHalf      = hs.hotkey.bind(altShift, 'i', function() locationSet(0, 0, halfMaxWidth, hs.grid.GRIDHEIGHT) end)
 local rightHalf     = hs.hotkey.bind(altShift, 'o', function() locationSet(halfMaxWidth, 0, halfMaxWidth, hs.grid.GRIDHEIGHT) end)
 
--- local fullScreen    = hs.hotkey.bind(altShift, 'f', function() hs.grid.maximizeWindow() end)
+local fullScreen    = hs.hotkey.bind(altShift, 'f', function() hs.grid.maximizeWindow() end)
 local centerScreen  = hs.hotkey.bind(altShift, 'c', function() locationSet(halfMaxWidth / 4, halfMaxHeight / 4, halfMaxWidth * 3 / 2, halfMaxHeight * 3 / 2) end)
 
 local upMove        = hs.hotkey.bind(altShift, 'k', function() straightlyMove(0, -1) end)
@@ -243,7 +231,7 @@ local leftExtend    = hs.hotkey.bind(ctrlAlt, 'h', function() straightlyExtendin
 local rightExtend   = hs.hotkey.bind(ctrlAlt, 'l', function() straightlyExtendingWindow(1, 0) end)
 
 
--- Move Screen
+-- Move current window to different screen
 hs.hotkey.bind(altShift, ',', function()
     local w = hs.window.focusedWindow()
     if not w then
@@ -272,13 +260,32 @@ hs.hotkey.bind(altShift, '.', function()
     end
 end)
 
--- split view
-SplitModal = require 'split_modal'
-local splitModal = SplitModal.new(altShift, 'down', undo)
+-- Move current window to the different space, ordered by number
+-- Required module: https://github.com/asmagill/hs._asm.undocumented.spaces
+-- function MoveWindowToSpace(sp)
+--     local win = hs.window.focusedWindow()      -- current window
+--     local uuid = win:screen():spacesUUID()     -- uuid for current screen
+--     local spaceID = spaces.layout()[uuid][sp]  -- internal index for sp
+--     spaces.moveWindowToSpace(win:id(), spaceID) -- move window to new space
+--     spaces.changeToSpace(spaceID)              -- follow window to new space
+-- end
+-- hs.hotkey.bind(altShift, '1', function() MoveWindowToSpace(1) end)
+-- hs.hotkey.bind(altShift, '2', function() MoveWindowToSpace(2) end)
+-- hs.hotkey.bind(altShift, '3', function() MoveWindowToSpace(3) end)
+-- hs.hotkey.bind(altShift, '4', function() MoveWindowToSpace(4) end)
+-- hs.hotkey.bind(altShift, '5', function() MoveWindowToSpace(5) end)
+-- hs.hotkey.bind(altShift, '6', function() MoveWindowToSpace(6) end)
+-- hs.hotkey.bind(altShift, '7', function() MoveWindowToSpace(7) end)
+-- hs.hotkey.bind(altShift, '8', function() MoveWindowToSpace(8) end)
+-- hs.hotkey.bind(altShift, '9', function() MoveWindowToSpace(9) end)
 
-function splitModal:hotkeysToDisable()
-    return {hyperUp, hyperRight, hyperLeft}
-end
+-- split view
+-- SplitModal = require 'split_modal'
+-- local splitModal = SplitModal.new(altShift, 'down', undo)
+
+-- function splitModal:hotkeysToDisable()
+--     return {hyperUp, hyperRight, hyperLeft}
+-- end
 
 -- App layout
 local AppLayout = {}
@@ -358,54 +365,6 @@ screenChanged()
 
 local screenWatcher = hs.screen.watcher.new(screenChanged)
 screenWatcher:start()
-
--- caffeinate
--- hs.hotkey.bind(hyper, 'c', function()
---     local c = hs.caffeinate
---     if not c then return end
---     if c.get('displayIdle') or c.get('systemIdle') or c.get('system') then
---         if menuCaff then
---             menuCaffRelease()
---         else
---             addMenuCaff()
---             local type
---             if c.get('displayIdle') then type = 'displayIdle' end
---             if c.get('systemIdle') then type = 'systemIdle' end
---             if c.get('system') then type = 'system' end
---             hs.alert('Caffeine already on for '..type)
---         end
---     else
---         acAndBatt = hs.battery.powerSource() == 'Battery Power'
---         c.set('system', true, acAndBatt)
---         hs.alert('Caffeinated '..(acAndBatt and '' or 'on AC Power'))
---         addMenuCaff()
---     end
--- end)
-
--- function addMenuCaff()
---     menuCaff = hs.menubar.new()
---     menuCaff:setIcon("~/.hammerspoon/caffeine-on.pdf")
---     menuCaff:setClickCallback(menuCaffRelease)
--- end
-
--- function menuCaffRelease()
---     local c = hs.caffeinate
---     if not c then return end
---     if c.get('displayIdle') then
---         c.set('displayIdle', false, true)
---     end
---     if c.get('systemIdle') then
---         c.set('systemIdle', false, true)
---     end
---     if c.get('system') then
---         c.set('system', false, true)
---     end
---     if menuCaff then
---         menuCaff:delete()
---         menuCaff = nil
---     end
---     hs.alert('Decaffeinated')
--- end
 
 -- console
 -- hs.hotkey.bind(altCommandShift, ';', hs.openConsole)

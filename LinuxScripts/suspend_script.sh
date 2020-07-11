@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-betterlockscreen -l ;xset dpms force off 
+$HOME/Documents/dotfiles/LinuxScripts/i3lock.sh && sleep 1 && xset dpms force standby

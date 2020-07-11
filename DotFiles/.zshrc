@@ -73,6 +73,14 @@ source $HOME/Google\ Drive/backup/privateShellAlias.bash
 # Source aliases
 source $HOME/Documents/dotfiles/DotFiles/ShellAlias.bash
 
+# PATH
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+export https_proxy=http://127.0.0.1:9000
+export http_proxy=http://127.0.0.1:9000
+
+### macOS Only
+if [[ $OSTYPE == darwin* ]]; then
 # Java
 # export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 
@@ -90,24 +98,19 @@ export GPG2="/usr/local/MacGPG2/bin"
 # export Python_PATH="/usr/local/opt/python/libexec/bin"
 
 # Conda
-export Conda="/usr/local/miniconda3/bin"
+# export Conda="/usr/local/miniconda3/bin"
+
+# Rust
+export RUSTPATH="$HOME/.cargo"
 
 # OpenSSL
 export OpenSSL="/usr/local/opt/openssl/bin"
 
-# Path alias
-export HDD="/Volumes/HDD/Storage/"
-export DOWNLOADS="$HOME/Downloads/"
-export BOOKS="$HDD/BOOKS"
-
-# PATH
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH=$OpenSSL:$GOPATH/bin:$GPG2:$Conda:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH=$RUSTPATH/bin:$OpenSSL:$GOPATH/bin:$GPG2:$PATH
 
 # Opt out Homebrew analytics
 export HOMEBREW_NO_ANALYTICS=1
 
-export https_proxy=http://127.0.0.1:9000
-export http_proxy=http://127.0.0.1:9000
+fi
+###
 

@@ -1,9 +1,9 @@
 .DS_Store
+DotFiles/.aria2/aria2.session
 DotFiles/.mpv/watch_later
-DotFiles/.cow/stat
-DotFiles/.cow/stat.bak
-DotFiles/.cow/blocked
-DotFiles/.cow/direct
 DotFiles/.karabiner.d/log
 OpenWrtScripts/bridge*
 DotFiles/Code/User/workspaceStorage/
+DotFiles/Code/User/globalStorage/
+DotFiles/fcitx5/conf/cached*
+DotFiles/.hammerspoon/hs/

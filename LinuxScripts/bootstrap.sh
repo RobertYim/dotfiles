@@ -16,6 +16,7 @@ sudo ln -s $HOME/Documents/dotfiles/LinuxScripts/70-synaptics.conf /etc/X11/xorg
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 rm $HOME/.zshrc
 ln -s $HOME/Documents/dotfiles/DotFiles/.zshrc $HOME
+ln -s /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh $HOME/.oh-my-zsh/custom/
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.alacritty.yml $HOME
 

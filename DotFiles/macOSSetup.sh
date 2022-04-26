@@ -22,21 +22,27 @@ ln -s $HOME/Documents/dotfiles/DotFiles/.zshrc $HOME
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.alacritty.yml $HOME
 
+mkdir -p /usr/local/bin
+
+chown `whoami`:admin /usr/local/bin
+
 mkdir $HOME/Library/go
+
+mkdir -p $HOME/.config
+
 mkdir -p $HOME/.vim/autoload
 mkdir -p $HOME/.vim/swaps
 mkdir -p $HOME/.vim/backups
-mkdir -p $HOME/.vim/bundle
+mkdir -p $HOME/.vim/plugged
 mkdir -p $HOME/.vim/colors
-mkdir -p $HOME/.config
 ln -s $HOME/.vim $HOME/.config/nvim
 ln -s $HOME/Documents/dotfiles/DotFiles/.vimrc $HOME/.config/nvim/init.vim
 ln -s $HOME/Documents/dotfiles/DotFiles/coc-settings.json $HOME/.vim
 # Install VimPlug and color theme
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/morhetz/gruvbox/master/colors/gruvbox.vim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+#     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.emacs $HOME
 
@@ -49,26 +55,24 @@ ln -s $HOME/Documents/dotfiles/DotFiles/youtube-dl $HOME/.config
 
 mkdir -p $HOME/"Library/Application Support/Sublime Text 3/Packages/User"
 ln -s $HOME/Documents/dotfiles/DotFiles/"Sublime Text 3"/* $HOME/"Library/Application Support/Sublime Text 3/Packages/User"
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin
-ln -s /Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge /usr/local/bin
-ln -s "/Applications/VSCodium.app/Contents/Resources/app/bin/code" /usr/local/bin
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/
+ln -s "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" /usr/local/bin/
+ln -s "/Applications/VSCodium.app/Contents/Resources/app/bin/code" /usr/local/bin/
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.hammerspoon $HOME
 
-#ln -s $HOME/Google\ Drive/backup/.SpechtLite $HOME
 ln -s $HOME/Google\ Drive/backup/clash $HOME/.config
+
 mkdir -p $HOME/.config/rclone
 ln -s $HOME/Google\ Drive/backup/rclone.conf $HOME/.config/rclone
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.tmux.conf $HOME
 
-# Download Rime Dictionary and unzip
-git clone --depth 1 git@gitlab.com:RobertYim/rime-settings.git ~/Library/Rime
+# Download Rime Dictionary
+git clone --depth 1 git@gitlab.com:RobertYim/rime-settings.git $HOME/Library/Rime
 
 mkdir -p $HOME/Library/Application\ Support/VSCodium
 ln -s $HOME/Documents/dotfiles/DotFiles/Code/User Library/Application\ Support/VSCodium/
-
-#ln -s $HOME/Google\ Drive/backup/1Password\ 4/Backups $HOME/Library/Application\ Support/1Password\ 4
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.npmrc $HOME
 
@@ -84,9 +88,9 @@ ln -s $HDD/Music $HOME
 rm -r $HOME/Movies
 ln -s $HDD/Movies $HOME
 
-ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin
+ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/
 
-ln -s $HOME/Documents/tools/gpuStat /usr/local/bin
+ln -s $HOME/Documents/tools/gpuStat /usr/local/bin/
 
 ############
 # App Configurations
@@ -202,6 +206,11 @@ defaults write com.apple.dock wvous-br-modifier -int 1048576
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
 #defaults write com.apple.dock persistent-apps -array
+# Resize Launchpad Icons
+defaults write com.apple.dock springboard-columns -int 7
+defaults write com.apple.dock ResetLaunchPad -bool TRUE
+
+
 
 ############
 # Safari

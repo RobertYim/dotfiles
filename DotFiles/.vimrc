@@ -1,5 +1,5 @@
 " Vim-plug
-call plug#begin('~/.vim/bundle')
+call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-commentary'

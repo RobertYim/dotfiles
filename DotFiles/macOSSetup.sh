@@ -16,8 +16,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-ln -s /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh $HOME/.oh-my-zsh/custom/
-
 ln -s $HOME/Documents/dotfiles/DotFiles/.zshrc $HOME
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.alacritty.yml $HOME
@@ -37,7 +35,8 @@ mkdir -p $HOME/.vim/plugged
 mkdir -p $HOME/.vim/colors
 ln -s $HOME/.vim $HOME/.config/nvim
 ln -s $HOME/Documents/dotfiles/DotFiles/.vimrc $HOME/.config/nvim/init.vim
-ln -s $HOME/Documents/dotfiles/DotFiles/coc-settings.json $HOME/.vim
+ln -s $HOME/Documents/dotfiles/DotFiles/.vimrc $HOME
+ln -s $HOME/Documents/dotfiles/DotFiles/coc-settings.json $HOME/.vim/
 # Install VimPlug and color theme
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -51,20 +50,21 @@ ln -s $HOME/Documents/dotfiles/DotFiles/.gitignore_global $HOME
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.aria2 $HOME
 
-ln -s $HOME/Documents/dotfiles/DotFiles/youtube-dl $HOME/.config
+ln -s $HOME/Documents/dotfiles/DotFiles/youtube-dl $HOME/.config/
+ln -s $HOME/Documents/dotfiles/DotFiles/youtube-dl $HOME/.config/yt-dlp
 
 mkdir -p $HOME/"Library/Application Support/Sublime Text 3/Packages/User"
-ln -s $HOME/Documents/dotfiles/DotFiles/"Sublime Text 3"/* $HOME/"Library/Application Support/Sublime Text 3/Packages/User"
+ln -s $HOME/Documents/dotfiles/DotFiles/"Sublime Text 3"/* $HOME/"Library/Application Support/Sublime Text 3/Packages/User/"
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/
 ln -s "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" /usr/local/bin/
-ln -s "/Applications/VSCodium.app/Contents/Resources/app/bin/code" /usr/local/bin/
+ln -s "/Applications/VSCodium.app/Contents/Resources/app/bin/codium" /usr/local/bin/
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.hammerspoon $HOME
 
-ln -s $HOME/Google\ Drive/backup/clash $HOME/.config
+ln -s $HOME/Google\ Drive/backup/clash $HOME/.config/
 
 mkdir -p $HOME/.config/rclone
-ln -s $HOME/Google\ Drive/backup/rclone.conf $HOME/.config/rclone
+ln -s $HOME/Google\ Drive/backup/rclone.conf $HOME/.config/rclone/
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.tmux.conf $HOME
 
@@ -107,14 +107,20 @@ defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false
 # defaults delete -g ApplePressAndHoldEnabled
 
 ############
-# SublimeText3
-defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
+# SublimeText
+defaults write com.sublimetext.4 ApplePressAndHoldEnabled -bool false
 
 ############
 # ScreenSaver
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# ScreenShot
+# Save screenshot to Downloads folder
+defaults write com.apple.screencapture location -string "${HOME}/Downloads/"
+# Disable screenshot shadow
+defaults write com.apple.screencapture disable-shadow -bool true
 
 
 ############
@@ -207,7 +213,7 @@ defaults write com.apple.dock wvous-br-modifier -int 1048576
 # the Dock to launch apps.
 #defaults write com.apple.dock persistent-apps -array
 # Resize Launchpad Icons
-defaults write com.apple.dock springboard-columns -int 7
+defaults write com.apple.dock springboard-columns -int 13
 defaults write com.apple.dock ResetLaunchPad -bool TRUE
 
 
@@ -354,11 +360,16 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 
 # SSD no accesstime flag
-sudo cp $HOME/Documents/dotfiles/DotFiles/com.ssd.noatime.plist /Library/LaunchDaemons
-sudo launchctl load -w /Library/LaunchDaemons/com.ssd.noatime.plist
+# sudo cp $HOME/Documents/dotfiles/DotFiles/com.ssd.noatime.plist /Library/LaunchDaemons
+# sudo launchctl load -w /Library/LaunchDaemons/com.ssd.noatime.plist
 
-# Use sleep instead of hibernate
+# Use sleep instead of hibernate, disable all kinds of wakeups
 sudo pmset -a hibernatemode 0
+sudo pmset autopoweroff 0
+sudo pmset powernap 0
+sudo pmset standby 0
+sudo pmset proximitywake 0
+sudo pmset tcpkeepalive 0
 
 # Remove the sleep image file to save disk space
 sudo rm /var/vm/sleepimage

@@ -3,7 +3,7 @@
 	"auto_complete_triggers":
 	[
 		{
-			"characters": "."
+			"characters": ".",
 		}
 	],
 	"binary_file_patterns":
@@ -15,7 +15,7 @@
 	"caret_extra_top": 2,
 	"caret_extra_width": 1,
 	"caret_style": "blink",
-	"color_scheme": "Packages/Theme - Monokai Pro/Monokai Pro (Filter Spectrum).tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Mariana.sublime-color-scheme",
 	"default_line_ending": "unix",
 	"draw_white_space": "none",
 	"ensure_newline_at_eof_on_save": true,
@@ -42,11 +42,16 @@
 	"scroll_past_end": false,
 	"show_definitions": false,
 	"show_tab_close_buttons": true,
-	"theme": "SoDaReloaded Dark.sublime-theme",
+	"theme": "Default Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"tree_animation_enabled": false,
 	"trim_trailing_white_space_on_save": true,
 	"update_check": false,
 	"vintage_start_in_command_mode": true,
-	"word_wrap": true
+	"word_wrap": true,
+	"dark_theme": "Default Dark.sublime-theme",
+	"light_theme": "Default.sublime-theme",
+	"dark_color_scheme": "Packages/Color Scheme - Default/Mariana.sublime-color-scheme",
+	"light_color_scheme": "Packages/Color Scheme - Default/Breakers.sublime-color-scheme",
+	"font_size": 11,
 }

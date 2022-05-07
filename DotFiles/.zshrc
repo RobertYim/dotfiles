@@ -108,6 +108,8 @@ export OpenSSL="/usr/local/opt/openssl/bin"
 
 export PATH=$RUSTPATH/bin:$OpenSSL:$GOPATH/bin:$GPG2:$PATH
 
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # Opt out Homebrew analytics
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1

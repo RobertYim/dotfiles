@@ -39,8 +39,8 @@ return packer.startup(function(use)
 		"catppuccin/nvim",
 		as = "catppuccin",
 	})
-
-	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
+	use("ellisonleao/gruvbox.nvim")
+	use("sainnhe/sonokai")
 
 	-- essential plugins
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)

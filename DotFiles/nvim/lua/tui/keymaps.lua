@@ -36,16 +36,28 @@ keymap.set("n", "<leader>-", "<C-x>") -- decrement
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
-keymap.set("n", "<leader>x", ":close<CR>") -- close current split window
+keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
 keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
+
+-- buffers management
+-- close current buffer
+keymap.set("n", "<leader>x", ":bd<CR>")
+-- goto next buffer
+keymap.set("n", "<tab>", ":bnext<CR>")
+-- goto previous buffer
+keymap.set("n", "<s-tab>", ":bprev<CR>")
 
 -- Useful movemeent
 keymap.set("n", "H", "^")
 keymap.set("n", "L", "$")
 keymap.set("v", "H", "^")
 keymap.set("v", "L", "$")
+keymap.set("n", "<c-h>", "<c-w>h")
+keymap.set("n", "<c-j>", "<c-w>j")
+keymap.set("n", "<c-k>", "<c-w>k")
+keymap.set("n", "<c-l>", "<c-w>l")
 
 -- Use C-s to save file
 keymap.set("n", "<C-s>", ":w<CR>")
@@ -56,15 +68,12 @@ keymap.set("n", "k", "v:count ? 'k' : 'gk'", { noremap = true, expr = true })
 keymap.set("x", "j", "v:count ? 'j' : 'gj'", { noremap = true, expr = true })
 keymap.set("x", "k", "v:count ? 'k' : 'gk'", { noremap = true, expr = true })
 
---
+-- 'Q' in normal mode enters Ex mode. You almost never want this
 keymap.set("n", "Q", "<nop>")
 
 ----------------------
 -- Plugin Keybinds
 ----------------------
-
--- vim-maximizer
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
 
 -- nvim-tree
 keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>") -- toggle file explorer

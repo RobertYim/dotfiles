@@ -59,6 +59,9 @@ opt.matchtime = 2
 opt.fileencodings = [[utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1]]
 opt.wildmenu = true
 opt.report = 0
+opt.guicursor = "n-v-c-sm:hor10,i-ci-ve:ver25,r-cr-o:hor20"
+
+g.sonokai_style = "shusia"
 
 -- disable some builtin vim plugins
 local default_plugins = {

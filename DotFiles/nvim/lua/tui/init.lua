@@ -5,8 +5,8 @@ require("tui.keymaps")
 
 -- go to last loc when opening a buffer
 vim.api.nvim_create_autocmd(
-	"BufReadPost",
-	{ command = [[if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g`\"" | endif]] }
+    "BufReadPost",
+    { command = [[if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g`\"" | endif]] }
 )
 
 -- don't auto comment new line

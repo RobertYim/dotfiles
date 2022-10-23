@@ -1,6 +1,6 @@
 if vim.g.vscode then
-	-- vscode neovim
-	require("vscode")
+    -- vscode neovim
+    require("vscode")
 else
-	require("tui")
+    require("tui")
 end

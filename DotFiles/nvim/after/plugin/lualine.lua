@@ -1,19 +1,19 @@
 -- import lualine plugin safely
 local status, lualine = pcall(require, "lualine")
 if not status then
-	return
+    return
 end
 
 -- configure lualine with modified theme
 local config = {
-	options = {
-		-- Disable sections and component separators
-		component_separators = "",
-		section_separators = "",
+    options = {
+        -- Disable sections and component separators
+        component_separators = "",
+        section_separators = "",
 
-		theme = "sonokai",
-		-- theme = "catppuccin",
-	},
+        theme = "sonokai",
+        -- theme = "poimandres",
+    },
 }
 
 lualine.setup(config)

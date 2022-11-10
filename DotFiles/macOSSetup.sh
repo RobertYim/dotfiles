@@ -28,20 +28,7 @@ mkdir $HOME/Library/go
 
 mkdir -p $HOME/.config
 
-mkdir -p $HOME/.vim/autoload
-mkdir -p $HOME/.vim/swaps
-mkdir -p $HOME/.vim/backups
-mkdir -p $HOME/.vim/plugged
-mkdir -p $HOME/.vim/colors
-ln -s $HOME/.vim $HOME/.config/nvim
-ln -s $HOME/Documents/dotfiles/DotFiles/.vimrc $HOME/.config/nvim/init.vim
-ln -s $HOME/Documents/dotfiles/DotFiles/.vimrc $HOME
-ln -s $HOME/Documents/dotfiles/DotFiles/coc-settings.json $HOME/.vim/
-# Install VimPlug and color theme
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-# curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-#     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ln -s $HOME/Documents/dotfiles/DotFiles/nvim $HOME/.config/
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.emacs $HOME
 
@@ -57,7 +44,7 @@ mkdir -p $HOME/"Library/Application Support/Sublime Text 3/Packages/User"
 ln -s $HOME/Documents/dotfiles/DotFiles/"Sublime Text 3"/* $HOME/"Library/Application Support/Sublime Text 3/Packages/User/"
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/
 ln -s "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" /usr/local/bin/
-ln -s "/Applications/VSCodium.app/Contents/Resources/app/bin/codium" /usr/local/bin/
+# ln -s "/Applications/VSCodium.app/Contents/Resources/app/bin/codium" /usr/local/bin/
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.hammerspoon $HOME
 
@@ -73,6 +60,8 @@ git clone --depth 1 git@gitlab.com:RobertYim/rime-settings.git $HOME/Library/Rim
 
 mkdir -p $HOME/Library/Application\ Support/VSCodium
 ln -s $HOME/Documents/dotfiles/DotFiles/Code/User Library/Application\ Support/VSCodium/
+mkdir -p $HOME/Library/Application\ Support/Code
+ln -s $HOME/Documents/dotfiles/DotFiles/Code/User Library/Application\ Support/Code/
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.npmrc $HOME
 
@@ -99,7 +88,7 @@ ln -s $HOME/Documents/tools/gpuStat /usr/local/bin/
 ############
 # VSCode
 # For VS Code
-# defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false
 # For VS Code Insider
 # defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
@@ -388,6 +377,16 @@ defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 
 # Use Only a Dark Menu Bar and Dock in Mojave
 # defaults write -g NSRequiresAquaSystemAppearance -bool Yes
+
+# Disable AppStore notification:
+# https://lapcatsoftware.com/articles/mas-notifications.html
+defaults write com.apple.appstored LastUpdateNotification -date "2039-12-12 12:00:00 +0000"
+
+# Disable System update notification, SIP disabling is required:
+sudo chmod -x /System/Library/PrivateFrameworks/SoftwareUpdate.framework/Resources/SoftwareUpdateNotificationManager.app/Contents/MacOS/SoftwareUpdateNotificationManager
+
+# Disable cash reporter, SIP disabling is required:
+sudo chmod -x /System/Library/CoreServices/ReportCrash
 
 ############
 # Kill affected applications

@@ -20,6 +20,7 @@ null_ls.setup({
         formatting.prettierd, -- js/ts formatter
         formatting.stylua, -- lua formatter
         formatting.autopep8, -- python formatter
+        formatting.prismaFmt, -- prisma formatter
 
         -- diagnostics.eslint_d, -- js/ts linter
     },

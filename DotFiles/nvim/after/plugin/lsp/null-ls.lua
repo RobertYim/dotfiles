@@ -21,8 +21,10 @@ null_ls.setup({
         formatting.stylua, -- lua formatter
         formatting.autopep8, -- python formatter
         formatting.prismaFmt, -- prisma formatter
+        formatting.rustfmt, -- rust formatter
 
         -- diagnostics.eslint_d, -- js/ts linter
+        diagnostics.shellcheck, -- bash diagnostics
     },
     -- configure format on save
     -- on_attach = function(current_client, bufnr)

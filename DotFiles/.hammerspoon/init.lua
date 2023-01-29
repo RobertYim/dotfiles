@@ -22,15 +22,16 @@ if not hs.ipc.cliStatus() then hs.ipc.cliInstall() end
 -- App shortcuts
 local keyApps = {
     -- e = "Sublime Text",
-    e = "VSCodium",
+    e = "Visual Studio Code",
     c = "Brave Browser",
     -- c = "Google Chrome",
-    -- m = "mpv",
+    m = "mpv",
     x = "Xcode",
-    o = "iBooks",
+    o = "Hoppscotch",
     d = "Finder",
-    p = "Preview",
-    n = "Alacritty",
+    p = "Skim",
+    -- p = "Preview",
+    -- n = "Alacritty",
     -- i = "Intellij IDEA",
     -- I = "Pycharm",
     -- i = "WebStorm"

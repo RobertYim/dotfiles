@@ -56,10 +56,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='vi'
 else
   export EDITOR='nvim'
-  # export EDITOR='code'
 fi
 
 # Compilation flags
@@ -96,6 +95,7 @@ export GPG2="/usr/local/MacGPG2/bin"
 
 # Python unversioned symlinks
 # export Python_PATH="/usr/local/opt/python/libexec/bin"
+export Python_PATH="$HOME/Library/Python/3.8/bin"
 
 # Conda
 # export Conda="/usr/local/miniconda3/bin"
@@ -105,15 +105,25 @@ export RUSTPATH="$HOME/.cargo"
 
 # OpenSSL
 export OpenSSL="/usr/local/opt/openssl/bin"
+export PATH=$Python_PATH:$RUSTPATH/bin:$OpenSSL:$GOPATH/bin:$GPG2:$PATH
 
-export PATH=$RUSTPATH/bin:$OpenSSL:$GOPATH/bin:$GPG2:$PATH
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
 
 # Opt out Homebrew analytics
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+# Load zsh-autosuggestions plugin
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 fi
 ###
+
 

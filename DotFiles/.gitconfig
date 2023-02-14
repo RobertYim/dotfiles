@@ -1,24 +1,10 @@
 [core]
 	excludesfile = $HOME/.gitignore_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[user]
-	email = nikolai.jon@gmail.com
-	name = Robert Yim
-[github]
-	user = RobertYan
+	editor = nvim
 [https]
     proxy = http://127.0.0.1:9000
 [http]
     proxy = http://127.0.0.1:9000
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-[commit]
-	template = $HOME/.stCommitMsg
+[user]
+	name = Robert Yim
+	email = nikolai.jon@gmail.com

@@ -40,6 +40,7 @@ alias turnOffMonitors="pmset displaysleepnow"
 alias sleepNow="(sleep 5 && pmset sleepnow) & ; disown"
 # alias tmux="tmux -CC"
 alias afk="(sleep 2700 && osascript -e 'tell application \"System Events\" to keystroke \"q\" using {control down, command down}') &"
+alias tuic="launchctl unload -w $HOME/Library/LaunchAgents/tuic.plist && launchctl load -w $HOME/Library/LaunchAgents/tuic.plist"
 fi
 
 if [[ $OSTYPE == linux* ]]; then

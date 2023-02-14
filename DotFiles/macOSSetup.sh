@@ -58,11 +58,6 @@ ln -s $HOME/Documents/dotfiles/DotFiles/.tmux.conf $HOME
 # Download Rime Dictionary
 git clone --depth 1 git@gitlab.com:RobertYim/rime-settings.git $HOME/Library/Rime
 
-mkdir -p $HOME/Library/Application\ Support/VSCodium
-ln -s $HOME/Documents/dotfiles/DotFiles/Code/User Library/Application\ Support/VSCodium/
-mkdir -p $HOME/Library/Application\ Support/Code
-ln -s $HOME/Documents/dotfiles/DotFiles/Code/User Library/Application\ Support/Code/
-
 ln -s $HOME/Documents/dotfiles/DotFiles/.npmrc $HOME
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.mpv $HOME

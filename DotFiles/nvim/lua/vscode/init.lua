@@ -6,7 +6,7 @@ keymap.set("v", "H", "^")
 keymap.set("v", "L", "$")
 keymap.set("n", "<Esc>", ":nohl<CR>")
 
-opt.ignorecase = true
-opt.smartcase = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 vim.opt.guicursor = "n-v-c-sm:hor10,i-ci-ve:ver25,r-cr-o:hor20"
 

@@ -10,6 +10,11 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.macOSSetup` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# Create nessesary folder for symlink
+mkdir -p /usr/local/bin
+
+chown `whoami`:admin /usr/local/bin
+
 ############
 # Symlinks
 ############
@@ -19,10 +24,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ln -s $HOME/Documents/dotfiles/DotFiles/.zshrc $HOME
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.alacritty.yml $HOME
-
-mkdir -p /usr/local/bin
-
-chown `whoami`:admin /usr/local/bin
 
 mkdir $HOME/Library/go
 
@@ -48,15 +49,12 @@ ln -s "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" /usr/l
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.hammerspoon $HOME
 
-ln -s $HOME/Google\ Drive/backup/clash $HOME/.config/
-
 mkdir -p $HOME/.config/rclone
-ln -s $HOME/Google\ Drive/backup/rclone.conf $HOME/.config/rclone/
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.tmux.conf $HOME
 
 # Download Rime Dictionary
-git clone --depth 1 git@gitlab.com:RobertYim/rime-settings.git $HOME/Library/Rime
+#git clone --depth 1 git@gitlab.com:RobertYim/rime-settings.git $HOME/Library/Rime
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.npmrc $HOME
 
@@ -66,11 +64,11 @@ ln -s $HOME/Documents/dotfiles/DotFiles/.pip $HOME
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.wgetrc $HOME
 
-rm -r $HOME/Music
-ln -s $HDD/Music $HOME
+#rm -r $HOME/Music
+#ln -s $HDD/Music $HOME
 
-rm -r $HOME/Movies
-ln -s $HDD/Movies $HOME
+#rm -r $HOME/Movies
+#ln -s $HDD/Movies $HOME
 
 ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/
 

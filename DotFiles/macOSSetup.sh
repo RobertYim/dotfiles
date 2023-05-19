@@ -72,7 +72,7 @@ ln -s $HOME/Documents/dotfiles/DotFiles/.wgetrc $HOME
 
 ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/
 
-ln -s $HOME/Documents/tools/gpuStat /usr/local/bin/
+#ln -s $HOME/Documents/tools/gpuStat /usr/local/bin/
 
 ############
 # App Configurations
@@ -179,17 +179,17 @@ defaults write com.apple.dock show-process-indicators -bool true
 # 11: Launchpad
 # 12: Notification Center
 # Top LEFT
-defaults write com.apple.dock wvous-tl-corner -int 1
-defaults write com.apple.dock wvous-tl-modifier -int 1048576
+# defaults write com.apple.dock wvous-tl-corner -int 1
+# defaults write com.apple.dock wvous-tl-modifier -int 1048576
 # Top RIGHT
-defaults write com.apple.dock wvous-tr-corner -int 2
-defaults write com.apple.dock wvous-tr-modifier -int 0
+# defaults write com.apple.dock wvous-tr-corner -int 2
+# defaults write com.apple.dock wvous-tr-modifier -int 0
 # Bottom LEFT
-defaults write com.apple.dock wvous-bl-corner -int 3
-defaults write com.apple.dock wvous-bl-modifier -int 0
+# defaults write com.apple.dock wvous-bl-corner -int 3
+# defaults write com.apple.dock wvous-bl-modifier -int 0
 # Bottom RIGHT
-defaults write com.apple.dock wvous-br-corner -int 1
-defaults write com.apple.dock wvous-br-modifier -int 1048576
+# defaults write com.apple.dock wvous-br-corner -int 1
+# defaults write com.apple.dock wvous-br-modifier -int 1048576
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
@@ -300,7 +300,7 @@ defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 
 # Enable subpixel font rendering on non-Apple LCDs
 # Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
-defaults write NSGlobalDomain AppleFontSmoothing -int 3
+# defaults write NSGlobalDomain AppleFontSmoothing -int 3
 
 # Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
@@ -376,10 +376,12 @@ defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 defaults write com.apple.appstored LastUpdateNotification -date "2039-12-12 12:00:00 +0000"
 
 # Disable System update notification, SIP disabling is required:
-sudo chmod -x /System/Library/PrivateFrameworks/SoftwareUpdate.framework/Resources/SoftwareUpdateNotificationManager.app/Contents/MacOS/SoftwareUpdateNotificationManager
+# BigSur and lower only
+# sudo chmod -x /System/Library/PrivateFrameworks/SoftwareUpdate.framework/Resources/SoftwareUpdateNotificationManager.app/Contents/MacOS/SoftwareUpdateNotificationManager
 
 # Disable cash reporter, SIP disabling is required:
-sudo chmod -x /System/Library/CoreServices/ReportCrash
+# BigSur and lower only
+# sudo chmod -x /System/Library/CoreServices/ReportCrash
 
 ############
 # Kill affected applications

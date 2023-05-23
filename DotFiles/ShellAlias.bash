@@ -19,7 +19,8 @@ alias setProxy="export https_proxy=http://127.0.0.1:9000;export http_proxy=http:
 alias unSetProxy="export https_proxy= ; export http_proxy= "
 alias gcl="git clone --recursive --depth 1"
 alias rclone="rclone -P --stats-one-line"
-alias ytd1080="yt-dlp -f 303+140"
+alias ytd1080="yt-dlp -f 303+251"
+alias ytd1080p30="yt-dlp -f 248+251"
 alias yt="yt-dlp -f 22"
 alias tuic="ka tuic; /usr/local/bin/tuic -c $HOME/Google\ Drive/backup/tuic.json > /dev/null 2>&1 &"
 
@@ -39,7 +40,7 @@ alias turnOffMonitors="pmset displaysleepnow"
 alias sleepNow="(sleep 5 && pmset sleepnow) & ; disown"
 # alias tmux="tmux -CC"
 alias afk="(sleep 2700 && osascript -e 'tell application \"System Events\" to keystroke \"q\" using {control down, command down}') &"
-alias tuic="launchctl unload -w $HOME/Library/LaunchAgents/tuic.plist && launchctl load -w $HOME/Library/LaunchAgents/tuic.plist"
+alias toggleSystemProxy="bash $HOME/Documents/dotfiles/DotFiles/toggleMacOSProxy.sh"
 fi
 
 if [[ $OSTYPE == linux* ]]; then

@@ -19,8 +19,7 @@ alias setProxy="export https_proxy=http://127.0.0.1:9000;export http_proxy=http:
 alias unSetProxy="export https_proxy= ; export http_proxy= "
 alias gcl="git clone --recursive --depth 1"
 alias rclone="rclone -P --stats-one-line"
-alias ytd1080="yt-dlp -f 303+251"
-alias ytd1080p30="yt-dlp -f 248+251"
+alias ytd1080="yt-dlp -S 'res:1080,fps'"
 alias yt="yt-dlp -f 22"
 alias tuic="ka tuic; /usr/local/bin/tuic -c $HOME/Google\ Drive/backup/tuic.json > /dev/null 2>&1 &"
 

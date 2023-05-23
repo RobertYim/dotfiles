@@ -34,12 +34,6 @@ return packer.startup(function(use)
     use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
     -- preferred colorscheme
-    use("olivercederborg/poimandres.nvim")
-    use({
-        "catppuccin/nvim",
-        as = "catppuccin",
-    })
-    use("ellisonleao/gruvbox.nvim")
     use("sainnhe/sonokai")
 
     -- essential plugins
@@ -81,8 +75,6 @@ return packer.startup(function(use)
     use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
     use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
     use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
-    use("tzachar/cmp-tabnine", { run = "./install.sh" })
-
     -- formatting & linting
     use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
     -- use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls

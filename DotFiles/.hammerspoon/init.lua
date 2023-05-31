@@ -50,35 +50,35 @@ end)
 
 -- Sound
 --- dod default_output_audio
-dod = hs.audiodevice.defaultOutputDevice()
-hs.hotkey.bind(altShift, '0', function()
-    is_muted = dod:muted()
-    if is_muted then
-        dod:setMuted(false)
-        hs.alert.closeAll()
-        hs.alert('🔊')
-    else
-        dod:setMuted(true)
-        hs.alert.closeAll()
-        hs.alert('🔇')
-    end
-end)
-
-hs.hotkey.bind(altShift, '-', function()
-    auv = math.floor(dod:outputVolume() - 5)
-    dod:setVolume(auv)
-    hs.alert.closeAll()
-    hs.alert('🔉: ' .. auv)
-    print(dod:outputVolume())
-end)
-
-hs.hotkey.bind(altShift, '=', function()
-    auv = math.floor(dod:outputVolume() + 5)
-    dod:setVolume(auv)
-    hs.alert.closeAll()
-    hs.alert('🔉: ' .. auv)
-    print(dod:outputVolume())
-end)
+-- dod = hs.audiodevice.defaultOutputDevice()
+-- hs.hotkey.bind(altShift, '0', function()
+--     is_muted = dod:muted()
+--     if is_muted then
+--         dod:setMuted(false)
+--         hs.alert.closeAll()
+--         hs.alert('🔊')
+--     else
+--         dod:setMuted(true)
+--         hs.alert.closeAll()
+--         hs.alert('🔇')
+--     end
+-- end)
+--
+-- hs.hotkey.bind(altShift, '-', function()
+--     auv = math.floor(dod:outputVolume() - 5)
+--     dod:setVolume(auv)
+--     hs.alert.closeAll()
+--     hs.alert('🔉: ' .. auv)
+--     print(dod:outputVolume())
+-- end)
+--
+-- hs.hotkey.bind(altShift, '=', function()
+--     auv = math.floor(dod:outputVolume() + 5)
+--     dod:setVolume(auv)
+--     hs.alert.closeAll()
+--     hs.alert('🔉: ' .. auv)
+--     print(dod:outputVolume())
+-- end)
 
 -- -- undo
 local undo = require 'undo'
@@ -86,7 +86,7 @@ hs.hotkey.bind(altCommand, 'z', function() undo:undo() end)
 
 -- Grids
 hs.grid.GRIDWIDTH = 16
-hs.grid.GRIDHEIGHT = 8
+hs.grid.GRIDHEIGHT = 9
 hs.grid.MARGINX = 0
 hs.grid.MARGINY  = 0
 
@@ -218,7 +218,7 @@ local leftHalf      = hs.hotkey.bind(altShift, 'i', function() locationSet(0, 0,
 local rightHalf     = hs.hotkey.bind(altShift, 'o', function() locationSet(halfMaxWidth, 0, halfMaxWidth, hs.grid.GRIDHEIGHT) end)
 
 local fullScreen    = hs.hotkey.bind(altShift, 'f', function() hs.grid.maximizeWindow() end)
-local centerScreen  = hs.hotkey.bind(altShift, 'c', function() locationSet(halfMaxWidth / 4, halfMaxHeight / 4, halfMaxWidth * 3 / 2, halfMaxHeight * 3 / 2) end)
+-- local centerScreen  = hs.hotkey.bind(altShift, 'c', function() locationSet(halfMaxWidth / 4, halfMaxHeight / 4, halfMaxWidth * 3 / 2, halfMaxHeight * 3 / 2) end)
 
 local upMove        = hs.hotkey.bind(altShift, 'k', function() straightlyMove(0, -1) end)
 local downMove      = hs.hotkey.bind(altShift, 'j', function() straightlyMove(0, 1) end)

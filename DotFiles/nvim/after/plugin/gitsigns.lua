@@ -6,11 +6,11 @@ end
 
 local options = {
     signs = {
-        add = { hl = "GitSignsAdd", text = "│", numhl = "GitSignsAddNr" },
-        change = { hl = "GitSignsChange", text = "│", numhl = "GitSignsChangeNr" },
-        delete = { hl = "GitSignsDelete", text = "", numhl = "GitSignsDeleteNr" },
-        topdelete = { hl = "GitSignsDelete", text = "‾", numhl = "GitSignsDeleteNr" },
-        changedelete = { hl = "GitSignsChangeDelete", text = "~", numhl = "GitSignsChangeNr" },
+        add = { text = "│" },
+        change = { text = "│" },
+        delete = { text = "" },
+        topdelete = { text = "‾" },
+        changedelete = { text = "~" },
     },
 }
 

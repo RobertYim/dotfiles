@@ -11,8 +11,8 @@ if not cmp_nvim_lsp_status then
 end
 
 -- import typescript plugin safely
-local typescript_setup, typescript = pcall(require, "typescript")
-if not typescript_setup then
+local ts_ls, typescript = pcall(require, "ts_ls")
+if not ts_ls then
     return
 end
 
@@ -42,7 +42,7 @@ local on_attach = function(client, bufnr)
     keymap.set("n", "<leader>fm", "<cmd>lua vim.lsp.buf.format({ bufnr = bufnr })<CR>", opts)
 
     -- typescript specific keymaps (e.g. rename file and update imports)
-    if client.name == "tsserver" then
+    if client.name == "ts_ls" then
         keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>")
     end
 end
@@ -59,67 +59,67 @@ for type, icon in pairs(signs) do
 end
 
 -- configure html server
-lspconfig["html"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-})
+-- lspconfig["html"].setup({
+--     capabilities = capabilities,
+--     on_attach = on_attach,
+-- })
 
 -- configure typescript server with plugin
-typescript.setup({
-    server = {
-        capabilities = capabilities,
-        on_attach = on_attach,
-    },
-})
+-- typescript.setup({
+--     server = {
+--         capabilities = capabilities,
+--         on_attach = on_attach,
+--     },
+-- })
 
 -- configure css server
-lspconfig["cssls"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-})
+-- lspconfig["cssls"].setup({
+--     capabilities = capabilities,
+--     on_attach = on_attach,
+-- })
 
 -- configure tailwindcss server
-lspconfig["tailwindcss"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-})
+-- lspconfig["tailwindcss"].setup({
+--     capabilities = capabilities,
+--     on_attach = on_attach,
+-- })
 
 -- configure emmet server
-lspconfig["emmet_ls"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-})
+-- lspconfig["emmet_ls"].setup({
+--     capabilities = capabilities,
+--     on_attach = on_attach,
+-- })
 
 -- configure pyright server
-lspconfig["pyright"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-})
+-- lspconfig["pyright"].setup({
+--     capabilities = capabilities,
+--     on_attach = on_attach,
+-- })
 
 -- configure lua server (with special settings)
-lspconfig["lua_ls"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-    settings = { -- custom settings for lua
-        Lua = {
-            -- make the language server recognize "vim" global
-            diagnostics = {
-                globals = { "vim" },
-            },
-            workspace = {
-                -- make language server aware of runtime files
-                library = {
-                    [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                    [vim.fn.stdpath("config") .. "/lua"] = true,
-                },
-            },
-        },
-    },
-})
+-- lspconfig["lua_ls"].setup({
+--     capabilities = capabilities,
+--     on_attach = on_attach,
+--     settings = { -- custom settings for lua
+--         Lua = {
+--             -- make the language server recognize "vim" global
+--             diagnostics = {
+--                 globals = { "vim" },
+--             },
+--             workspace = {
+--                 -- make language server aware of runtime files
+--                 library = {
+--                     [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+--                     [vim.fn.stdpath("config") .. "/lua"] = true,
+--                 },
+--             },
+--         },
+--     },
+-- })
 
 -- configure rust-analyzer server
-lspconfig["rust_analyzer"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-})
+-- lspconfig["rust_analyzer"].setup({
+--     capabilities = capabilities,
+--     on_attach = on_attach,
+-- })
 

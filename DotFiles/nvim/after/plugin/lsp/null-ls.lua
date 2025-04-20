@@ -17,14 +17,14 @@ null_ls.setup({
     sources = {
         --  to disable file types use
         --  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
-        formatting.prettierd, -- js/ts formatter
-        formatting.stylua, -- lua formatter
-        formatting.autopep8, -- python formatter
-        formatting.prismaFmt, -- prisma formatter
-        formatting.rustfmt, -- rust formatter
+        null_ls.builtins.formatting.prettierd, -- js/ts formatter
+        null_ls.builtins.formatting.stylua, -- lua formatter
+        -- null_ls.builtins.formatting.autopep8, -- python formatter
+        -- null_ls.builtins.formatting.prisma_format, -- prisma formatter
+        -- null_ls.builtins.formatting.rustfmt, -- rust formatter
 
         -- diagnostics.eslint_d, -- js/ts linter
-        diagnostics.shellcheck, -- bash diagnostics
+        -- diagnostics.shellcheck, -- bash diagnostics
     },
     -- configure format on save
     -- on_attach = function(current_client, bufnr)

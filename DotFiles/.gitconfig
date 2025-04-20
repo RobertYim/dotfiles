@@ -2,9 +2,9 @@
 	excludesfile = $HOME/.gitignore_global
 	editor = nvim
 [https]
-    proxy = http://127.0.0.1:9000
+    ; proxy = http://127.0.0.1:9000
 [http]
-    proxy = http://127.0.0.1:9000
+    ; proxy = http://127.0.0.1:9000
 [user]
 	name = Robert Yim
 	email = nikolai.jon@gmail.com

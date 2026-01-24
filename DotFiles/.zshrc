@@ -73,10 +73,10 @@ source $HOME/Google\ Drive/backup/privateShellAlias.bash
 source $HOME/Documents/dotfiles/DotFiles/ShellAlias.bash
 
 # PATH
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$HOME/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-export https_proxy=http://127.0.0.1:9000
-export http_proxy=http://127.0.0.1:9000
+# export https_proxy=http://127.0.0.1:9000
+# export http_proxy=http://127.0.0.1:9000
 
 ### macOS Only
 if [[ $OSTYPE == darwin* ]]; then

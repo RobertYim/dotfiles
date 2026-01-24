@@ -29,7 +29,7 @@ mkdir $HOME/Library/go
 
 mkdir -p $HOME/.config
 
-ln -s $HOME/Documents/dotfiles/DotFiles/nvim $HOME/.config/
+ln -s $HOME/Developer/nvim-config $HOME/.config/nvim
 
 ln -s $HOME/Documents/dotfiles/DotFiles/.emacs $HOME
 
